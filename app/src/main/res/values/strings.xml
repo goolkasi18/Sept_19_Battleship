@@ -7,4 +7,8 @@
     <string name="title_activity_test_grid_layout">test_grid_layout</string>
     <string name="o">o</string>
     <string name="ship">this_is_a_ship</string>
+    <string name = "title"> Battleship</string>
+    <string name = "newGameWithRobot">New Game Against Robot</string>
+    <string name = "new2PlayerGame">New Two Player Game</string>
+    <string name= "title_activity_start_page">StartPage</string>
 </resources>

@@ -17,6 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Start_Page"
+            android:label="@string/title_activity_start__page" >
+        </activity>
     </application>
 
 </manifest>
