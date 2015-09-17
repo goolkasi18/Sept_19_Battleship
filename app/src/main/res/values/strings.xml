@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Battleship</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hit_or_miss_picture">hit_or_miss</string>
+    <string name="title_activity_test_grid_layout">test_grid_layout</string>
+    <string name="o">o</string>
+    <string name="ship">this_is_a_ship</string>
+</resources>
