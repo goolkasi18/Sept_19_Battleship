@@ -8,3138 +8,1695 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:id="@+id/left_image_grid"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/left_button_grid"
         android:layout_alignParentTop="true"
         android:layout_marginTop="30dp">
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/image_0_0"
-            android:layout_row="0"
-            android:layout_column="0"
+            android:id="@+id/left_0_0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/image_0_1"
-            android:layout_row="0"
-            android:layout_column="1"
+            android:id="@+id/left_0_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView22"
-            android:layout_row="0"
-            android:layout_column="2"
+            android:id="@+id/left_0_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView23"
-            android:layout_row="0"
-            android:layout_column="3"
+            android:id="@+id/left_0_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView24"
-            android:layout_row="0"
-            android:layout_column="4"
+            android:id="@+id/left_0_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView25"
-            android:layout_row="0"
-            android:layout_column="5"
+            android:id="@+id/left_0_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView26"
-            android:layout_row="0"
-            android:layout_column="6"
+            android:id="@+id/left_0_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView27"
-            android:layout_row="0"
-            android:layout_column="7"
+            android:id="@+id/left_0_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView28"
-            android:layout_row="0"
-            android:layout_column="8"
+            android:id="@+id/left_0_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView29"
-            android:layout_row="0"
-            android:layout_column="9"
+            android:id="@+id/left_0_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView30"
+            android:id="@+id/left_1_0"
             android:layout_row="1"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView31"
-            android:layout_row="1"
-            android:layout_column="1"
+            android:id="@+id/left_1_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView32"
-            android:layout_row="1"
-            android:layout_column="2"
+            android:id="@+id/left_1_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView33"
-            android:layout_row="1"
-            android:layout_column="3"
+            android:id="@+id/left_1_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView34"
-            android:layout_row="1"
-            android:layout_column="4"
+            android:id="@+id/left_1_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView35"
-            android:layout_row="1"
-            android:layout_column="5"
+            android:id="@+id/left_1_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView36"
-            android:layout_row="1"
-            android:layout_column="6"
+            android:id="@+id/left_1_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView37"
-            android:layout_row="1"
-            android:layout_column="7"
+            android:id="@+id/left_1_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView38"
-            android:layout_row="1"
-            android:layout_column="8"
+            android:id="@+id/left_1_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView39"
-            android:layout_row="1"
-            android:layout_column="9"
+            android:id="@+id/left_1_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView40"
+            android:id="@+id/left_2_0"
             android:layout_row="2"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView41"
-            android:layout_row="2"
-            android:layout_column="1"
+            android:id="@+id/left_2_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView42"
-            android:layout_row="2"
-            android:layout_column="2"
+            android:id="@+id/left_2_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView43"
-            android:layout_row="2"
-            android:layout_column="3"
+            android:id="@+id/left_2_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView44"
-            android:layout_row="2"
-            android:layout_column="4"
+            android:id="@+id/left_2_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView45"
-            android:layout_row="2"
-            android:layout_column="5"
+            android:id="@+id/left_2_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView46"
-            android:layout_row="2"
-            android:layout_column="6"
+            android:id="@+id/left_2_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView47"
-            android:layout_row="2"
-            android:layout_column="7"
+            android:id="@+id/left_2_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView48"
-            android:layout_row="2"
-            android:layout_column="8"
+            android:id="@+id/left_2_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView49"
-            android:layout_row="2"
-            android:layout_column="9"
+            android:id="@+id/left_2_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView50"
+            android:id="@+id/left_3_0"
             android:layout_row="3"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView51"
-            android:layout_row="3"
-            android:layout_column="1"
+            android:id="@+id/left_3_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView52"
-            android:layout_row="3"
-            android:layout_column="2"
+            android:id="@+id/left_3_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView53"
-            android:layout_row="3"
-            android:layout_column="3"
+            android:id="@+id/left_3_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView54"
-            android:layout_row="3"
-            android:layout_column="4"
+            android:id="@+id/left_3_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView55"
-            android:layout_row="3"
-            android:layout_column="5"
+            android:id="@+id/left_3_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView56"
-            android:layout_row="3"
-            android:layout_column="6"
+            android:id="@+id/left_3_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView57"
-            android:layout_row="3"
-            android:layout_column="7"
+            android:id="@+id/left_3_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView58"
-            android:layout_row="3"
-            android:layout_column="8"
+            android:id="@+id/left_3_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView59"
-            android:layout_row="3"
-            android:layout_column="9"
+            android:id="@+id/left_3_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView60"
+            android:id="@+id/left_4_0"
             android:layout_row="4"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView61"
+            android:id="@+id/left_4_1"
             android:layout_row="4"
             android:layout_column="1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView62"
+            android:id="@+id/left_4_2"
             android:layout_row="4"
             android:layout_column="2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView63"
+            android:id="@+id/left_4_3"
             android:layout_row="4"
             android:layout_column="3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView64"
+            android:id="@+id/left_4_4"
             android:layout_row="4"
             android:layout_column="4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView65"
+            android:id="@+id/left_4_5"
             android:layout_row="4"
             android:layout_column="5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView66"
+            android:id="@+id/left_4_6"
             android:layout_row="4"
             android:layout_column="6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView67"
+            android:id="@+id/left_4_7"
             android:layout_row="4"
             android:layout_column="7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView68"
+            android:id="@+id/left_4_8"
             android:layout_row="4"
             android:layout_column="8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView69"
+            android:id="@+id/left_4_9"
             android:layout_row="4"
             android:layout_column="9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView70"
+            android:id="@+id/left_5_0"
             android:layout_row="5"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView71"
-            android:layout_row="5"
-            android:layout_column="1"
+            android:id="@+id/left_5_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView72"
-            android:layout_row="5"
-            android:layout_column="2"
+            android:id="@+id/left_5_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView73"
-            android:layout_row="5"
-            android:layout_column="3"
+            android:id="@+id/left_5_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView74"
-            android:layout_row="5"
-            android:layout_column="4"
+            android:id="@+id/left_5_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView75"
-            android:layout_row="5"
-            android:layout_column="5"
+            android:id="@+id/left_5_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView76"
-            android:layout_row="5"
-            android:layout_column="6"
+            android:id="@+id/left_5_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView77"
-            android:layout_row="5"
-            android:layout_column="7"
+            android:id="@+id/left_5_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView78"
-            android:layout_row="5"
-            android:layout_column="8"
+            android:id="@+id/left_5_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView79"
-            android:layout_row="5"
-            android:layout_column="9"
+            android:id="@+id/left_5_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView80"
+            android:id="@+id/left_6_0"
             android:layout_row="6"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView81"
-            android:layout_row="6"
-            android:layout_column="1"
+            android:id="@+id/left_6_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView82"
-            android:layout_row="6"
-            android:layout_column="2"
+            android:id="@+id/left_6_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView83"
-            android:layout_row="6"
-            android:layout_column="3"
+            android:id="@+id/left_6_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView84"
-            android:layout_row="6"
-            android:layout_column="4"
+            android:id="@+id/left_6_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView85"
-            android:layout_row="6"
-            android:layout_column="5"
+            android:id="@+id/left_6_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView86"
-            android:layout_row="6"
-            android:layout_column="6"
+            android:id="@+id/left_6_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView87"
-            android:layout_row="6"
-            android:layout_column="7"
+            android:id="@+id/left_6_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView88"
-            android:layout_row="6"
-            android:layout_column="8"
+            android:id="@+id/left_6_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView89"
-            android:layout_row="6"
-            android:layout_column="9"
+            android:id="@+id/left_6_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView90"
+            android:id="@+id/left_7_0"
             android:layout_row="7"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView91"
-            android:layout_row="7"
-            android:layout_column="1"
+            android:id="@+id/left_7_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView92"
-            android:layout_row="7"
-            android:layout_column="2"
+            android:id="@+id/left_7_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView93"
-            android:layout_row="7"
-            android:layout_column="3"
+            android:id="@+id/left_7_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView94"
-            android:layout_row="7"
-            android:layout_column="4"
+            android:id="@+id/left_7_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView95"
-            android:layout_row="7"
-            android:layout_column="5"
+            android:id="@+id/left_7_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView96"
-            android:layout_row="7"
-            android:layout_column="6"
+            android:id="@+id/left_7_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView97"
-            android:layout_row="7"
-            android:layout_column="7"
+            android:id="@+id/left_7_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView98"
-            android:layout_row="7"
-            android:layout_column="8"
+            android:id="@+id/left_7_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView99"
-            android:layout_row="7"
-            android:layout_column="9"
+            android:id="@+id/left_7_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView100"
+            android:id="@+id/left_8_0"
             android:layout_row="8"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView101"
-            android:layout_row="8"
-            android:layout_column="1"
+            android:id="@+id/left_8_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView102"
-            android:layout_row="8"
-            android:layout_column="2"
+            android:id="@+id/left_8_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView103"
-            android:layout_row="8"
-            android:layout_column="3"
+            android:id="@+id/left_8_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView104"
-            android:layout_row="8"
-            android:layout_column="4"
+            android:id="@+id/left_8_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView105"
-            android:layout_row="8"
-            android:layout_column="5"
+            android:id="@+id/left_8_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView106"
-            android:layout_row="8"
-            android:layout_column="6"
+            android:id="@+id/left_8_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView107"
-            android:layout_row="8"
-            android:layout_column="7"
+            android:id="@+id/left_8_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView108"
-            android:layout_row="8"
-            android:layout_column="8"
+            android:id="@+id/left_8_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView109"
-            android:layout_row="8"
-            android:layout_column="9"
+            android:id="@+id/left_8_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView110"
+            android:id="@+id/left_9_0"
             android:layout_row="9"
             android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView111"
-            android:layout_row="9"
-            android:layout_column="1"
+            android:id="@+id/left_9_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView112"
-            android:layout_row="9"
-            android:layout_column="2"
+            android:id="@+id/left_9_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView113"
-            android:layout_row="9"
-            android:layout_column="3"
+            android:id="@+id/left_9_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView114"
-            android:layout_row="9"
-            android:layout_column="4"
+            android:id="@+id/left_9_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView115"
-            android:layout_row="9"
-            android:layout_column="5"
+            android:id="@+id/left_9_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView116"
-            android:layout_row="9"
-            android:layout_column="6"
+            android:id="@+id/left_9_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView117"
-            android:layout_row="9"
-            android:layout_column="7"
+            android:id="@+id/left_9_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView118"
-            android:layout_row="9"
-            android:layout_column="8"
+            android:id="@+id/left_9_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView119"
-            android:layout_row="9"
-            android:layout_column="9"
+            android:id="@+id/left_9_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-    </GridLayout>
-
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/left_button_grid"
-        android:layout_alignParentTop="true">
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button2"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button3"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button4"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button5"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button6"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button7"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button8"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button9"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button10"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button11"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button12"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button13"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button14"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button15"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button16"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button17"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button18"
-            android:layout_row="4"
-            android:layout_column="1"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button19"
-            android:layout_row="4"
-            android:layout_column="2"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button20"
-            android:layout_row="4"
-            android:layout_column="3"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button21"
-            android:layout_row="4"
-            android:layout_column="4"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button22"
-            android:layout_row="4"
-            android:layout_column="5"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button23"
-            android:layout_row="4"
-            android:layout_column="6"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button24"
-            android:layout_row="4"
-            android:layout_column="7"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button25"
-            android:layout_row="4"
-            android:layout_column="8"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button26"
-            android:layout_row="4"
-            android:layout_column="9"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button27"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button28"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button29"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button30"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button31"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button32"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button33"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button34"
-            android:layout_row="9"
-            android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button35"
-            android:visibility="invisible" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
     </GridLayout>
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/right_button_grid"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="false"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/right_button_grid">
+        android:layout_marginBottom="30dp">
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button36"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_0"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button37"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button38"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button39"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button40"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button41"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button42"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button43"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button44"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button45"
-            android:visibility="invisible" />
+            android:id="@+id/right_0_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button46"
+            android:id="@+id/right_1_0"
             android:layout_row="1"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button47"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button48"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button49"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button50"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button51"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button52"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button53"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button54"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button55"
-            android:visibility="invisible" />
+            android:id="@+id/right_1_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button56"
+            android:id="@+id/right_2_0"
             android:layout_row="2"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button57"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button58"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button59"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button60"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button61"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button62"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button63"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button64"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button65"
-            android:visibility="invisible" />
+            android:id="@+id/right_2_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button66"
+            android:id="@+id/right_3_0"
             android:layout_row="3"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button67"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button68"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button69"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button70"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button71"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button72"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button73"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button74"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button75"
-            android:visibility="invisible" />
+            android:id="@+id/right_3_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button76"
+            android:id="@+id/right_4_0"
             android:layout_row="4"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button77"
+            android:id="@+id/right_4_1"
             android:layout_row="4"
             android:layout_column="1"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button78"
+            android:id="@+id/right_4_2"
             android:layout_row="4"
             android:layout_column="2"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button79"
+            android:id="@+id/right_4_3"
             android:layout_row="4"
             android:layout_column="3"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button80"
+            android:id="@+id/right_4_4"
             android:layout_row="4"
             android:layout_column="4"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button81"
+            android:id="@+id/right_4_5"
             android:layout_row="4"
             android:layout_column="5"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button82"
+            android:id="@+id/right_4_6"
             android:layout_row="4"
             android:layout_column="6"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button83"
+            android:id="@+id/right_4_7"
             android:layout_row="4"
             android:layout_column="7"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button84"
+            android:id="@+id/right_4_8"
             android:layout_row="4"
             android:layout_column="8"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button85"
+            android:id="@+id/right_4_9"
             android:layout_row="4"
             android:layout_column="9"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button86"
+            android:id="@+id/right_5_0"
             android:layout_row="5"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button87"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button88"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button89"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button90"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button91"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button92"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button93"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button94"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button95"
-            android:visibility="invisible" />
+            android:id="@+id/right_5_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button96"
+            android:id="@+id/right_6_0"
             android:layout_row="6"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button97"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button98"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button99"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button100"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button101"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button102"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button103"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button104"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button105"
-            android:visibility="invisible" />
+            android:id="@+id/right_6_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button106"
+            android:id="@+id/right_7_0"
             android:layout_row="7"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button107"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button108"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button109"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button110"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button111"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button112"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button113"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button114"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button115"
-            android:visibility="invisible" />
+            android:id="@+id/right_7_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button116"
+            android:id="@+id/right_8_0"
             android:layout_row="8"
             android:layout_column="0"
-            android:visibility="invisible" />
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button117"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_1"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button118"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_2"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button119"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_3"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button120"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_4"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button121"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_5"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button122"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_6"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button123"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_7"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button124"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_8"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button125"
-            android:visibility="invisible" />
+            android:id="@+id/right_8_9"
+            android:visibility="visible"
+            android:background="@mipmap/square_space"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <Button
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/button126"
+            android:id="@+id/right_9_0"
             android:layout_row="9"
             android:layout_column="0"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button127"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button128"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button129"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button130"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button131"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button132"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button133"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button134"
-            android:visibility="invisible" />
-
-        <Button
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/button135"
-            android:visibility="invisible" />
-    </GridLayout>
-
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="false"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/right_image_grid">
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView2"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView3"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView4"
-            android:layout_row="0"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView5"
-            android:layout_row="0"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView6"
-            android:layout_row="0"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView7"
-            android:layout_row="0"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView8"
-            android:layout_row="0"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView9"
-            android:layout_row="0"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView10"
-            android:layout_row="0"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView11"
-            android:layout_row="1"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView12"
-            android:layout_row="2"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView13"
-            android:layout_row="3"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView14"
-            android:layout_row="4"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView15"
-            android:layout_row="5"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView16"
-            android:layout_row="6"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView17"
-            android:layout_row="7"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="0"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="1"
-            android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="2"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="3"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="4"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="5"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="6"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="7"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="8"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView18"
-            android:layout_row="8"
-            android:layout_column="9"
-            android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
-
-        <ImageView
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="0"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="1"
+            android:id="@+id/right_9_1"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:cropToPadding="false"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="2"
+            android:id="@+id/right_9_2"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="3"
+            android:id="@+id/right_9_3"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="4"
+            android:id="@+id/right_9_4"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="5"
+            android:id="@+id/right_9_5"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="6"
+            android:id="@+id/right_9_6"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="7"
+            android:id="@+id/right_9_7"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="8"
+            android:id="@+id/right_9_8"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="43dp"
             android:layout_height="43dp"
-            android:id="@+id/imageView19"
-            android:layout_row="9"
-            android:layout_column="9"
+            android:id="@+id/right_9_9"
+            android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/hit_or_miss_picture" />
+            android:contentDescription="@string/title_activity_test_grid_layout" />
     </GridLayout>
 
     <LinearLayout
@@ -3147,22 +1704,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:weightSum="1"
-        android:layout_below="@+id/left_image_grid"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp">
+        android:layout_below="@+id/left_button_grid"
+        android:id="@+id/left_pieces_remaining">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/imageView20"
+            android:id="@+id/left_destroyer"
             android:background="@mipmap/ship2"
             android:contentDescription="@string/ship" />
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imageView21"
+            android:id="@+id/left_submarine"
             android:background="@mipmap/ship3"
             android:contentDescription="@string/ship"
             android:layout_marginLeft="-20dp" />
@@ -3170,7 +1725,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imageView120"
+            android:id="@+id/left_cruiser"
             android:background="@mipmap/ship3"
             android:contentDescription="@string/ship"
             android:layout_marginLeft="-30dp" />
@@ -3178,7 +1733,7 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/imageView121"
+            android:id="@+id/left_battleship"
             android:background="@mipmap/ship4"
             android:contentDescription="@string/ship"
             android:layout_marginLeft="-45dp" />
@@ -3186,7 +1741,7 @@
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:id="@+id/imageView122"
+            android:id="@+id/left_aircraft_carrier"
             android:background="@mipmap/ship5"
             android:contentDescription="@string/ship"
             android:layout_marginLeft="-70dp" />
@@ -3201,12 +1756,12 @@
         android:layout_above="@+id/right_button_grid"
         android:layout_alignRight="@+id/right_button_grid"
         android:layout_alignEnd="@+id/right_button_grid"
-        android:layout_marginBottom="5dp">
+        android:id="@+id/right_pieces_remaining">
 
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:id="@+id/imageView123"
+            android:id="@+id/right_aircraft_carrier"
             android:background="@mipmap/ship5"
             android:contentDescription="@string/ship"
             android:layout_marginLeft="0dp"
@@ -3215,7 +1770,7 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:id="@+id/imageView124"
+            android:id="@+id/right_battleship"
             android:background="@mipmap/ship4"
             android:contentDescription="@string/ship"
             android:layout_marginRight="-45dp" />
@@ -3223,7 +1778,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imageView125"
+            android:id="@+id/right_cruiser"
             android:background="@mipmap/ship3"
             android:contentDescription="@string/ship"
             android:layout_marginRight="-30dp" />
@@ -3231,7 +1786,7 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:id="@+id/imageView126"
+            android:id="@+id/right_submarine"
             android:background="@mipmap/ship3"
             android:contentDescription="@string/ship"
             android:layout_marginRight="-20dp" />
@@ -3239,7 +1794,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:id="@+id/imageView127"
+            android:id="@+id/right_destroyer"
             android:background="@mipmap/ship2"
             android:contentDescription="@string/ship" />
 
