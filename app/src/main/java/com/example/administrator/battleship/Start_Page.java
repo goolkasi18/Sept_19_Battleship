@@ -24,9 +24,10 @@ public class Start_Page extends ActionBarActivity {
     }
     public void switchToSelectShips(View view)
     {
-        finish();
+
         Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
         startActivity(switchToSelect);
+        finish();
 
     }
 

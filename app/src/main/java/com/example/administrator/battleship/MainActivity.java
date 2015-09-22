@@ -13,12 +13,21 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the view to the start page
-        setContentView(R.layout.activity_start__page);
-        //switch the activity to the start page activity
-        Intent intent = new Intent(this, Start_Page.class);
-        startActivity(intent);
-        //finish the main activity for now, will be recreated
+        setContentView(R.layout.activity_main);
+
+
+
+    }
+
+    public void exitToStart(View view)
+    {
+
+        Intent exitGame = new Intent(this, Start_Page.class);
+        startActivity(exitGame);
+        finish();
+
+
+
 
     }
 

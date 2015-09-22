@@ -19,4 +19,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:onClick="switchToMain"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:id="@+id/StartGame"
+        android:layout_alignTop="@+id/switchToMain"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="startGame"/>
 </RelativeLayout>

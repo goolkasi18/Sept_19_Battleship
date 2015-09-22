@@ -12,4 +12,5 @@
     <string name = "new2PlayerGame">New Two Player Game</string>
     <string name= "title_activity_start__page">StartPage</string>
     <string name="title_activity_select__ship__positions">Select_Ship_Positions</string>
+    <string name="title_activity_game__vs__ai">Game_Vs_AI</string>
 </resources>

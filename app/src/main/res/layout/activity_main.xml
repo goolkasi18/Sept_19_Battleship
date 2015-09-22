@@ -1803,11 +1803,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:text="Exit To Start Page"
+        android:id="@+id/exitGame"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/right_pieces_remaining"
-        android:layout_alignEnd="@+id/right_pieces_remaining" />
+        android:layout_alignEnd="@+id/right_pieces_remaining"
+        android:onClick="exitToStart"/>
 
 
 </RelativeLayout>

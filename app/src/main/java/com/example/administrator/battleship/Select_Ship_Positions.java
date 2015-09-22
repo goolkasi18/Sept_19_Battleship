@@ -21,10 +21,10 @@ public class Select_Ship_Positions extends ActionBarActivity {
      */
     public void switchToMain(View view)
     {
-        finish();
+
         Intent switchToMain = new Intent(this, Start_Page.class);
         startActivity(switchToMain);
-
+        finish();
 
     }
 
@@ -35,11 +35,14 @@ public class Select_Ship_Positions extends ActionBarActivity {
 
     public void startGame(View view)
     {
-        finish();
+
         Intent startGame = new Intent(this, MainActivity.class);
         startActivity(startGame);
+        finish();
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
