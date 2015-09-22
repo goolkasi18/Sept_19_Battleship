@@ -1,11 +1,13 @@
 package com.example.administrator.battleship;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,7 +16,17 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        createMap();
 
+
+
+    }
+    public void createMap()
+    {
+        //how to declare a button, this can be used to create a hashmap of all 200 buttons
+        String button = "left_"+ 8 + "_" + 1;
+        int resId= getResources().getIdentifier(button, "drawable", MainActivity.this.getPackageName());
+        Button one = (Button)this.findViewById(resId);
 
 
     }

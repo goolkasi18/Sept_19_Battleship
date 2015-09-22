@@ -27,10 +27,7 @@
             android:name=".Select_Ship_Positions"
             android:label="@string/title_activity_select__ship__positions" >
         </activity>
-        <activity
-            android:name=".Game_Vs_AI"
-            android:label="@string/title_activity_game__vs__ai" >
-        </activity>
+
     </application>
 
 </manifest>
