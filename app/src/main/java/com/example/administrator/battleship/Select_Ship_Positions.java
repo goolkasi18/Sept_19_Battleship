@@ -8,27 +8,43 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class Select_Ship_Positions extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Set the view to the start page
-        setContentView(R.layout.activity_start__page);
-        //switch the activity to the start page activity
-        Intent intent = new Intent(this, Start_Page.class);
-        startActivity(intent);
-        //finish the main activity for now, will be recreated
+        setContentView(R.layout.activity_select__ship__positions);
+    }
+    /*
+    *  Method: switchToMain
+    *  Purpose: finishes the current activity and switches back to the start Page
+     */
+    public void switchToMain(View view)
+    {
+        finish();
+        Intent switchToMain = new Intent(this, Start_Page.class);
+        startActivity(switchToMain);
+
 
     }
 
+    /*
+    *  Method: startGame
+    *  Purpose: finishes the current activity and switches to the game
+     */
 
+    public void startGame(View view)
+    {
+        finish();
+        Intent startGame = new Intent(this, MainActivity.class);
+        startActivity(startGame);
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_select__ship__positions, menu);
         return true;
     }
 

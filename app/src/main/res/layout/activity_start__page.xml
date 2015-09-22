@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,10 +28,11 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="@string/new2PlayerGame"
-            android:id="@+id/button136"
+            android:id="@+id/vsHuman"
             android:layout_gravity="center_horizontal"
             android:background="#ff000000"
-            android:textColor="#ff22ff37" />
+            android:textColor="#ff22ff37"
+            android:onClick="switchToSelectShips"/>
 
         <ImageView
             android:layout_width="139dp"
@@ -42,9 +44,11 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="@string/newGameWithRobot"
-            android:id="@+id/button137"
+            android:id="@+id/vsAI"
             android:layout_gravity="center_horizontal"
             android:textColor="#ff22ff37"
-            android:background="#ff000000" />
+            android:background="#ff000000"
+            android:onClick = "switchToSelectShips"/>
     </LinearLayout>
+
 </RelativeLayout>

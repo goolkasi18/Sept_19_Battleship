@@ -21,6 +21,10 @@
             android:name=".Start_Page"
             android:label="@string/title_activity_start__page" >
         </activity>
+        <activity
+            android:name=".Select_Ship_Positions"
+            android:label="@string/title_activity_select__ship__positions" >
+        </activity>
     </application>
 
 </manifest>
