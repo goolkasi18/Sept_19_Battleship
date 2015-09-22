@@ -856,7 +856,7 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/right_button_grid"
+        android:id="@+id/right_button_grid1"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -1753,9 +1753,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="bottom"
-        android:layout_above="@+id/right_button_grid"
-        android:layout_alignRight="@+id/right_button_grid"
-        android:layout_alignEnd="@+id/right_button_grid"
+        android:layout_above="@+id/right_button_grid1"
+        android:layout_alignRight="@+id/right_button_grid1"
+        android:layout_alignEnd="@+id/right_button_grid1"
         android:id="@+id/right_pieces_remaining">
 
         <ImageView
