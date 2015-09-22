@@ -37,7 +37,7 @@
             android:id="@+id/left_0_2"
             android:visibility="visible"
             android:background="@mipmap/square_space"
-            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:contentDescription="@string/title_activity_test_grid_layout" />
 
         <ImageButton
             android:layout_width="40dp"

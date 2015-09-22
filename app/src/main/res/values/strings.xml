@@ -10,5 +10,5 @@
     <string name = "title"> Battleship</string>
     <string name = "newGameWithRobot">New Game Against Robot</string>
     <string name = "new2PlayerGame">New Two Player Game</string>
-    <string name= "title_activity_start_page">StartPage</string>
+    <string name= "title_activity_start__page">StartPage</string>
 </resources>
