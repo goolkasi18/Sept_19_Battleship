@@ -22,6 +22,7 @@ public class Start_Page extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_start__page, menu);
         return true;
     }
+
     public void switchToSelectShips(View view)
     {
 

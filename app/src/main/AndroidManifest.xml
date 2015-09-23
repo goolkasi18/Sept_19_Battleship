@@ -7,6 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".Start_Page"
             android:label="@string/app_name"
@@ -18,14 +19,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"
-                  android:label="Battleship" >
+        <activity
+            android:name=".MainActivity"
+            android:label="Battleship"
+            android:screenOrientation="landscape" >
 
         </activity>
 
         <activity
             android:name=".Select_Ship_Positions"
-            android:label="@string/title_activity_select__ship__positions" >
+            android:label="@string/title_activity_select__ship__positions"
+            android:screenOrientation="landscape" >
         </activity>
 
     </application>
