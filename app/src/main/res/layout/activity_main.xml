@@ -22,7 +22,8 @@
             android:id="@+id/left_0_0"
             android:visibility="visible"
             android:background="@drawable/button_bg"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -48,7 +49,8 @@
             android:id="@+id/left_0_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -56,7 +58,9 @@
             android:id="@+id/left_0_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
 
         <ImageButton
             android:layout_width="40dp"
@@ -64,7 +68,8 @@
             android:id="@+id/left_0_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -72,7 +77,8 @@
             android:id="@+id/left_0_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -80,7 +86,8 @@
             android:id="@+id/left_0_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -88,7 +95,8 @@
             android:id="@+id/left_0_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -96,7 +104,8 @@
             android:id="@+id/left_0_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -106,7 +115,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -114,7 +124,8 @@
             android:id="@+id/left_1_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -122,7 +133,8 @@
             android:id="@+id/left_1_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -130,7 +142,8 @@
             android:id="@+id/left_1_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -138,7 +151,8 @@
             android:id="@+id/left_1_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -146,7 +160,8 @@
             android:id="@+id/left_1_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -154,7 +169,8 @@
             android:id="@+id/left_1_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -162,7 +178,8 @@
             android:id="@+id/left_1_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -170,7 +187,8 @@
             android:id="@+id/left_1_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -178,7 +196,8 @@
             android:id="@+id/left_1_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -188,7 +207,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -196,7 +216,8 @@
             android:id="@+id/left_2_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -204,7 +225,8 @@
             android:id="@+id/left_2_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -212,7 +234,8 @@
             android:id="@+id/left_2_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -220,7 +243,8 @@
             android:id="@+id/left_2_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -228,7 +252,8 @@
             android:id="@+id/left_2_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -236,7 +261,8 @@
             android:id="@+id/left_2_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -244,7 +270,8 @@
             android:id="@+id/left_2_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -252,7 +279,8 @@
             android:id="@+id/left_2_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -260,7 +288,8 @@
             android:id="@+id/left_2_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -270,7 +299,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -278,7 +308,8 @@
             android:id="@+id/left_3_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -286,7 +317,8 @@
             android:id="@+id/left_3_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -294,7 +326,8 @@
             android:id="@+id/left_3_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -302,7 +335,8 @@
             android:id="@+id/left_3_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -310,7 +344,8 @@
             android:id="@+id/left_3_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -318,7 +353,8 @@
             android:id="@+id/left_3_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -326,7 +362,8 @@
             android:id="@+id/left_3_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -334,7 +371,8 @@
             android:id="@+id/left_3_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -342,7 +380,8 @@
             android:id="@+id/left_3_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -352,7 +391,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -362,7 +402,8 @@
             android:layout_column="1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -372,7 +413,8 @@
             android:layout_column="2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -382,7 +424,8 @@
             android:layout_column="3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -392,7 +435,8 @@
             android:layout_column="4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -402,7 +446,8 @@
             android:layout_column="5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -412,7 +457,8 @@
             android:layout_column="6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -422,7 +468,8 @@
             android:layout_column="7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -432,7 +479,8 @@
             android:layout_column="8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -442,7 +490,8 @@
             android:layout_column="9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -452,7 +501,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -460,7 +510,8 @@
             android:id="@+id/left_5_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -468,7 +519,8 @@
             android:id="@+id/left_5_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -476,7 +528,8 @@
             android:id="@+id/left_5_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -484,7 +537,8 @@
             android:id="@+id/left_5_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -492,7 +546,8 @@
             android:id="@+id/left_5_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -500,7 +555,8 @@
             android:id="@+id/left_5_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -508,7 +564,8 @@
             android:id="@+id/left_5_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -516,7 +573,8 @@
             android:id="@+id/left_5_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -524,7 +582,8 @@
             android:id="@+id/left_5_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -534,7 +593,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -542,7 +602,8 @@
             android:id="@+id/left_6_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -550,7 +611,8 @@
             android:id="@+id/left_6_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -558,7 +620,8 @@
             android:id="@+id/left_6_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -566,7 +629,8 @@
             android:id="@+id/left_6_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -574,7 +638,8 @@
             android:id="@+id/left_6_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -582,7 +647,8 @@
             android:id="@+id/left_6_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -590,7 +656,8 @@
             android:id="@+id/left_6_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -598,7 +665,8 @@
             android:id="@+id/left_6_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -606,7 +674,8 @@
             android:id="@+id/left_6_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -616,7 +685,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -624,7 +694,8 @@
             android:id="@+id/left_7_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -632,7 +703,8 @@
             android:id="@+id/left_7_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -640,7 +712,8 @@
             android:id="@+id/left_7_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -648,7 +721,8 @@
             android:id="@+id/left_7_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -656,7 +730,8 @@
             android:id="@+id/left_7_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -664,7 +739,8 @@
             android:id="@+id/left_7_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -672,7 +748,8 @@
             android:id="@+id/left_7_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -680,7 +757,8 @@
             android:id="@+id/left_7_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -688,7 +766,8 @@
             android:id="@+id/left_7_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -698,7 +777,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -706,7 +786,8 @@
             android:id="@+id/left_8_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -714,7 +795,8 @@
             android:id="@+id/left_8_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -722,7 +804,8 @@
             android:id="@+id/left_8_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -730,7 +813,8 @@
             android:id="@+id/left_8_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -738,7 +822,8 @@
             android:id="@+id/left_8_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -746,7 +831,8 @@
             android:id="@+id/left_8_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -754,7 +840,8 @@
             android:id="@+id/left_8_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -762,7 +849,8 @@
             android:id="@+id/left_8_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -770,7 +858,8 @@
             android:id="@+id/left_8_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -780,7 +869,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -788,7 +878,8 @@
             android:id="@+id/left_9_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -796,7 +887,8 @@
             android:id="@+id/left_9_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -804,7 +896,8 @@
             android:id="@+id/left_9_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -812,7 +905,8 @@
             android:id="@+id/left_9_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -820,7 +914,8 @@
             android:id="@+id/left_9_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -828,7 +923,8 @@
             android:id="@+id/left_9_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -836,7 +932,8 @@
             android:id="@+id/left_9_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -844,7 +941,8 @@
             android:id="@+id/left_9_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -852,7 +950,8 @@
             android:id="@+id/left_9_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
     </GridLayout>
 
@@ -872,7 +971,8 @@
             android:id="@+id/right_0_0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -880,7 +980,8 @@
             android:id="@+id/right_0_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -888,7 +989,8 @@
             android:id="@+id/right_0_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -896,7 +998,8 @@
             android:id="@+id/right_0_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -904,7 +1007,8 @@
             android:id="@+id/right_0_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -912,7 +1016,8 @@
             android:id="@+id/right_0_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -920,7 +1025,8 @@
             android:id="@+id/right_0_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -928,7 +1034,8 @@
             android:id="@+id/right_0_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -936,7 +1043,8 @@
             android:id="@+id/right_0_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -944,7 +1052,8 @@
             android:id="@+id/right_0_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -954,7 +1063,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -962,7 +1072,8 @@
             android:id="@+id/right_1_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -970,7 +1081,8 @@
             android:id="@+id/right_1_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -978,7 +1090,8 @@
             android:id="@+id/right_1_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -986,7 +1099,8 @@
             android:id="@+id/right_1_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -994,7 +1108,8 @@
             android:id="@+id/right_1_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1002,7 +1117,8 @@
             android:id="@+id/right_1_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1010,7 +1126,8 @@
             android:id="@+id/right_1_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1018,7 +1135,8 @@
             android:id="@+id/right_1_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1026,7 +1144,8 @@
             android:id="@+id/right_1_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1036,7 +1155,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1044,7 +1164,8 @@
             android:id="@+id/right_2_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1052,7 +1173,8 @@
             android:id="@+id/right_2_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1060,7 +1182,8 @@
             android:id="@+id/right_2_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1068,7 +1191,8 @@
             android:id="@+id/right_2_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1076,7 +1200,8 @@
             android:id="@+id/right_2_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1084,7 +1209,8 @@
             android:id="@+id/right_2_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1092,7 +1218,8 @@
             android:id="@+id/right_2_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1100,7 +1227,8 @@
             android:id="@+id/right_2_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1108,7 +1236,8 @@
             android:id="@+id/right_2_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1118,7 +1247,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1126,7 +1256,8 @@
             android:id="@+id/right_3_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1134,7 +1265,8 @@
             android:id="@+id/right_3_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1142,7 +1274,8 @@
             android:id="@+id/right_3_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1150,7 +1283,8 @@
             android:id="@+id/right_3_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1158,7 +1292,8 @@
             android:id="@+id/right_3_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1166,7 +1301,8 @@
             android:id="@+id/right_3_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1174,7 +1310,8 @@
             android:id="@+id/right_3_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1182,7 +1319,8 @@
             android:id="@+id/right_3_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1190,7 +1328,8 @@
             android:id="@+id/right_3_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1200,7 +1339,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1210,7 +1350,8 @@
             android:layout_column="1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1220,7 +1361,8 @@
             android:layout_column="2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1230,7 +1372,8 @@
             android:layout_column="3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1240,7 +1383,8 @@
             android:layout_column="4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1250,7 +1394,8 @@
             android:layout_column="5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1260,7 +1405,8 @@
             android:layout_column="6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1270,7 +1416,8 @@
             android:layout_column="7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1280,7 +1427,8 @@
             android:layout_column="8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1290,7 +1438,8 @@
             android:layout_column="9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1300,7 +1449,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1308,7 +1458,8 @@
             android:id="@+id/right_5_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1316,7 +1467,8 @@
             android:id="@+id/right_5_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1324,7 +1476,8 @@
             android:id="@+id/right_5_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1332,7 +1485,8 @@
             android:id="@+id/right_5_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1340,7 +1494,8 @@
             android:id="@+id/right_5_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1348,7 +1503,8 @@
             android:id="@+id/right_5_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1356,7 +1512,8 @@
             android:id="@+id/right_5_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1364,7 +1521,8 @@
             android:id="@+id/right_5_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1372,7 +1530,8 @@
             android:id="@+id/right_5_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1382,7 +1541,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1390,7 +1550,8 @@
             android:id="@+id/right_6_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1398,7 +1559,8 @@
             android:id="@+id/right_6_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1406,7 +1568,8 @@
             android:id="@+id/right_6_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1414,7 +1577,8 @@
             android:id="@+id/right_6_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1422,7 +1586,8 @@
             android:id="@+id/right_6_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1430,7 +1595,8 @@
             android:id="@+id/right_6_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1438,7 +1604,8 @@
             android:id="@+id/right_6_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1446,7 +1613,8 @@
             android:id="@+id/right_6_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1454,7 +1622,8 @@
             android:id="@+id/right_6_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1464,7 +1633,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1472,7 +1642,8 @@
             android:id="@+id/right_7_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1480,7 +1651,8 @@
             android:id="@+id/right_7_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1488,7 +1660,8 @@
             android:id="@+id/right_7_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1496,7 +1669,8 @@
             android:id="@+id/right_7_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1504,7 +1678,8 @@
             android:id="@+id/right_7_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1512,7 +1687,8 @@
             android:id="@+id/right_7_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1520,7 +1696,8 @@
             android:id="@+id/right_7_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1528,7 +1705,8 @@
             android:id="@+id/right_7_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1536,7 +1714,8 @@
             android:id="@+id/right_7_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1546,7 +1725,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1554,7 +1734,8 @@
             android:id="@+id/right_8_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1562,7 +1743,8 @@
             android:id="@+id/right_8_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1570,7 +1752,8 @@
             android:id="@+id/right_8_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1578,7 +1761,8 @@
             android:id="@+id/right_8_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1586,7 +1770,8 @@
             android:id="@+id/right_8_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1594,7 +1779,8 @@
             android:id="@+id/right_8_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1602,7 +1788,8 @@
             android:id="@+id/right_8_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1610,7 +1797,8 @@
             android:id="@+id/right_8_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1618,7 +1806,8 @@
             android:id="@+id/right_8_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1628,7 +1817,8 @@
             android:layout_column="0"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1636,7 +1826,8 @@
             android:id="@+id/right_9_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1644,7 +1835,8 @@
             android:id="@+id/right_9_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1652,7 +1844,8 @@
             android:id="@+id/right_9_3"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1660,7 +1853,8 @@
             android:id="@+id/right_9_4"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1668,7 +1862,8 @@
             android:id="@+id/right_9_5"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1676,7 +1871,8 @@
             android:id="@+id/right_9_6"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1684,7 +1880,8 @@
             android:id="@+id/right_9_7"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1692,7 +1889,8 @@
             android:id="@+id/right_9_8"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
 
         <ImageButton
             android:layout_width="40dp"
@@ -1700,7 +1898,8 @@
             android:id="@+id/right_9_9"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHitPlayer2"/>
     </GridLayout>
 
     <LinearLayout
