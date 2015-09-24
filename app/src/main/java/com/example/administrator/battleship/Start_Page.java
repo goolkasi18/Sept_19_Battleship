@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 public class Start_Page extends ActionBarActivity {
+
+    int i = 0; //used to switch background for a test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,25 @@ public class Start_Page extends ActionBarActivity {
         Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
         startActivity(switchToSelect);
         finish();
+
+    }
+
+    public void changeTheme(View view)
+    {
+
+        if (i == 0)
+        {
+            i = 1;
+            Button tiny = (Button)findViewById(R.id.settingsBtn);
+            tiny.setBackgroundResource(R.drawable.transparent);
+        }
+        else
+        {
+            i=0;
+            Button tiny = (Button)findViewById(R.id.settingsBtn);
+            tiny.setBackgroundResource(R.drawable.vibro_on);
+        }
+
 
     }
 

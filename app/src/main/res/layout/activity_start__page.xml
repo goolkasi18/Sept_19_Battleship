@@ -38,4 +38,14 @@
             android:onClick="switchToSelectShips"
             android:background="@drawable/transparent" />
     </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Change Board"
+        android:id="@+id/settingsBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="changeTheme"/>
 </RelativeLayout>
