@@ -30,7 +30,8 @@
             android:id="@+id/left_0_1"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit" />
 
         <ImageButton
             android:layout_width="40dp"
@@ -38,7 +39,8 @@
             android:id="@+id/left_0_2"
             android:visibility="visible"
             android:background="@drawable/transparent"
-            android:contentDescription="@string/title_activity_test_grid_layout" />
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
 
         <ImageButton
             android:layout_width="40dp"

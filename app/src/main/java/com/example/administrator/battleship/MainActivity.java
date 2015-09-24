@@ -43,6 +43,14 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    public void checkHit(View view)
+    {
+        //check array spot according to button ID
+        //if array is 0
+
+
+    }
+
 
 
 

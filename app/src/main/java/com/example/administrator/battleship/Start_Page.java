@@ -3,10 +3,12 @@ package com.example.administrator.battleship;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 
 public class Start_Page extends ActionBarActivity {
@@ -41,14 +43,19 @@ public class Start_Page extends ActionBarActivity {
         if (i == 0)
         {
             i = 1;
-            Button tiny = (Button)findViewById(R.id.settingsBtn);
-            tiny.setBackgroundResource(R.drawable.transparent);
+            RelativeLayout background = (RelativeLayout)findViewById(R.id.mainBackground);
+            background.setBackgroundResource(R.drawable.title);
+            Button button = (Button)findViewById(R.id.settingsBtn);
+            button.setBackgroundResource(R.drawable.blank_binder);
         }
         else
         {
             i=0;
-            Button tiny = (Button)findViewById(R.id.settingsBtn);
-            tiny.setBackgroundResource(R.drawable.vibro_on);
+            //Button tiny = (Button)findViewById(R.id.mainBackground); THIS WORKS FOR BUTTONS
+            RelativeLayout tiny = (RelativeLayout)findViewById(R.id.mainBackground);
+            tiny.setBackgroundResource(R.drawable.title2);
+            Button button = (Button)findViewById(R.id.settingsBtn);
+            button.setBackgroundResource(R.drawable.blank_metal);
         }
 
 
