@@ -61,31 +61,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     arg0.setY(y);
                     Log.i("X Position : Y Position", x + "  " + y);
 
-                    if(x<250){
-                        arg0.setX(149.47f);
-
-                        if(y<250) arg0.setY(152.266f);
-
-                        if(y<359.699 && y > 250) arg0.setY(253.233f);
-
-                        if(y<463.165 && y >359.7) arg0.setY(359.699f);
-
-                        if(y<569.13 && y > 463.165) arg0.setY(463.165f);
-
-                        if(y<667.6 && y > 569.13) arg0.setY(569.13f);
-
-                        if(y<773.565 && y > 667.6) arg0.setY(667.6f);
-
-                        if(y<878.12 && y > 773.565) arg0.setY(773.565f);
-
-                        if(y<980.09 && y > 878.12) arg0.setY(878.12f);
-
-                        if(y<1081.06 && y > 980.09) arg0.setY(980.09f);
-
-                        if(y > 1190) arg0.setY(1081.06f);
-
-
-                    }
+                    if(x<250)           arg0.setX(149.47f);
 
                     if(x<350 && x >250) arg0.setX(254.21f);
 
@@ -104,6 +80,27 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     if(x<1080 && x>980) arg0.setX(981.11f);
 
                     if(x<1165 && x >1080) arg0.setX(1085.07f);
+
+
+                    if(y<250) arg0.setY(152.266f);
+
+                    if(y<359.699 && y > 250) arg0.setY(253.233f);
+
+                    if(y<463.165 && y >359.7) arg0.setY(359.699f);
+
+                    if(y<569.13 && y > 463.165) arg0.setY(463.165f);
+
+                    if(y<667.6 && y > 569.13) arg0.setY(569.13f);
+
+                    if(y<773.565 && y > 667.6) arg0.setY(667.6f);
+
+                    if(y<878.12 && y > 773.565) arg0.setY(773.565f);
+
+                    if(y<980.09 && y > 878.12) arg0.setY(878.12f);
+
+                    if(y<1081.06 && y > 980.09) arg0.setY(980.09f);
+
+                    if(y< 1190 && y>1081.1) arg0.setY(1081.06f);
 
 
 
