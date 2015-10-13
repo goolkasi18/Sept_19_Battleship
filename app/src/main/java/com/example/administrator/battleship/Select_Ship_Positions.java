@@ -13,7 +13,7 @@ import android.widget.ImageView;
 
 public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
 
-    ImageView iv;
+    ImageView ship5, ship4, ship3, ship2, ship1, movingShip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +25,16 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
 
-        iv = (ImageView) findViewById(R.id.Ship5);
-        iv.setOnTouchListener(this);
+        ship5 = (ImageView) findViewById(R.id.Ship5);
+        ship5.setOnTouchListener(this);
+        ship4 = (ImageView) findViewById(R.id.Ship4);
+        ship4.setOnTouchListener(this);
+        ship3 = (ImageView) findViewById(R.id.Ship3);
+        ship3.setOnTouchListener(this);
+        ship2 = (ImageView) findViewById(R.id.Ship2);
+        ship2.setOnTouchListener(this);
+        ship1 = (ImageView) findViewById(R.id.Ship1);
+        ship1.setOnTouchListener(this);
 
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
 
@@ -36,16 +44,17 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     boolean moving=false;
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
+        movingShip = (ImageView) arg0;
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 moving = true;
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (moving) {
-                    x = arg1.getRawX() - iv.getWidth() / 2;
-                    y = arg1.getRawY() - iv.getHeight() * 3 / 2;
-                    iv.setX(x);
-                    iv.setY(y);
+                    x = arg1.getRawX() - movingShip.getWidth() / 2;
+                    y = arg1.getRawY() - movingShip.getHeight() * 3 / 2;
+                    movingShip.setX(x);
+                    movingShip.setY(y);
                 }
                 break;
             case MotionEvent.ACTION_UP:
