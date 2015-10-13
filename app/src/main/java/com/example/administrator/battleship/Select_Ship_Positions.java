@@ -44,17 +44,16 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     boolean moving=false;
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
-        movingShip = (ImageView) arg0;
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 moving = true;
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (moving) {
-                    x = arg1.getRawX() - movingShip.getWidth() / 2;
-                    y = arg1.getRawY() - movingShip.getHeight() * 3 / 2;
-                    movingShip.setX(x);
-                    movingShip.setY(y);
+                    x = arg1.getRawX() - arg0.getWidth() / 2;
+                    y = arg1.getRawY() - arg0.getHeight() * 3 / 2;
+                    arg0.setX(x);
+                    arg0.setY(y);
                 }
                 break;
             case MotionEvent.ACTION_UP:
