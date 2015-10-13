@@ -7,18 +7,21 @@ public class Player {
     protected int[][] squares;
     protected int playerIdentifier;
     protected String playerName;
+    protected LocationInfo[][] shipGrid;
 
     public Player(int playerIdentifier, String playerName)
     {
         this.playerName=playerName;
         this.playerIdentifier=playerIdentifier;
-        squares = new int[100][100];
+        squares = new int[10][10];
+        shipGrid = new LocationInfo[10][10];
+
     }
 
     /*
     *  Empty Constructor if you want to programatically set instance variables
      */
-    public Player(){squares = new int[100][100];}
+    public Player(){squares = new int[10][10];}
 
     /*
     * Sets the players board to its initial state
@@ -27,8 +30,8 @@ public class Player {
     public void initSquares()
     {
         int x, y;
-        for(x=0; x<100; x++)
-            for(y=0; y<100; y++)
+        for(x=0; x<10; x++)
+            for(y=0; y<10; y++)
                 squares[x][y]= 0;
     }
 

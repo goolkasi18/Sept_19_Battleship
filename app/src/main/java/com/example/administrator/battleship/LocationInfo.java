@@ -17,11 +17,11 @@ public class LocationInfo {
 
     public LocationInfo(int x, int y)
     {
-
         status = 0;
         hasBoat = false;
-
-
     }
+
+    public void setBoat(Boolean status){ this.hasBoat = status;}
+    public boolean containsBoat() { return hasBoat; }
 
 }
