@@ -1,20 +1,70 @@
 package com.example.administrator.battleship;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 
 
-public class Select_Ship_Positions extends ActionBarActivity {
+public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
+
+    ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__ship__positions);
+
+
+
+
+        /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
+
+        iv = (ImageView) findViewById(R.id.Ship5);
+        iv.setOnTouchListener(this);
+
+        /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
+
     }
+
+    float x,y=0.0f;
+    boolean moving=false;
+    @Override
+    public boolean onTouch(View arg0, MotionEvent arg1) {
+        switch (arg1.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                moving = true;
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (moving) {
+                    x = arg1.getRawX() - iv.getWidth() / 2;
+                    y = arg1.getRawY() - iv.getHeight() * 3 / 2;
+                    iv.setX(x);
+                    iv.setY(y);
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                moving = false;
+                break;
+        }
+        return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
     /*
     *  Method: switchToMain
     *  Purpose: finishes the current activity and switches back to the start Page

@@ -13,76 +13,16 @@
 
     ]]>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2"
-        android:layout_alignParentTop="true"
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageView18"
+        android:background="@drawable/rotateshipsbg"
+        android:onClick="rotateShips"
+        android:layout_marginBottom="161dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="175dp">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:id="@+id/linearLayout"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:visibility="visible">
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="235dp"
-                android:id="@+id/imageView"
-                android:background="@drawable/vertical5"
-                android:contentDescription="@string/ship"
-                android:layout_marginRight="30dp" />
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="188dp"
-                android:id="@+id/imageView2"
-                android:background="@drawable/vertical4"
-                android:contentDescription="@string/ship"
-                android:layout_marginRight="30dp" />
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="141dp"
-                android:id="@+id/imageView3"
-                android:background="@drawable/vertical3"
-                android:contentDescription="@string/ship"
-                android:layout_marginRight="30dp" />
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="141dp"
-                android:id="@+id/imageView4"
-                android:background="@drawable/vertical3"
-                android:contentDescription="@string/ship"
-                android:layout_marginRight="30dp" />
-
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="94dp"
-                android:id="@+id/imageView5"
-                android:background="@drawable/vertical2"
-                android:contentDescription="@string/ship" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="70dp"
-            android:id="@+id/imageView18"
-            android:background="@drawable/rotateshipsbg"
-            android:layout_marginTop="5dp"
-            android:onClick="rotateShips"/>
-
-    </LinearLayout>
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="135dp"
@@ -90,10 +30,9 @@
         android:id="@+id/imageView19"
         android:background="@drawable/backbg"
         android:onClick="switchToMain"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignLeft="@+id/linearLayout2"
-        android:layout_alignStart="@+id/linearLayout2"
-        android:layout_marginTop="30dp" />
+        android:layout_alignTop="@+id/imageView20"
+        android:layout_alignLeft="@+id/imageView18"
+        android:layout_alignStart="@+id/imageView18" />
 
     <ImageView
         android:layout_width="135dp"
@@ -101,8 +40,62 @@
         android:id="@+id/imageView20"
         android:background="@drawable/playbg"
         android:onClick="startGame"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_alignRight="@+id/linearLayout2"
-        android:layout_alignEnd="@+id/linearLayout2"
-        android:layout_marginTop="30dp" />
+        android:layout_below="@+id/Ship3"
+        android:layout_alignRight="@+id/Ship1"
+        android:layout_alignEnd="@+id/Ship1"
+        android:layout_marginTop="82dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="235dp"
+        android:id="@+id/Ship5"
+        android:background="@drawable/vertical5"
+        android:contentDescription="@string/ship"
+        android:layout_above="@+id/imageView18"
+        android:layout_toLeftOf="@+id/Ship4"
+        android:layout_toStartOf="@+id/Ship4"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="188dp"
+        android:id="@+id/Ship4"
+        android:background="@drawable/vertical4"
+        android:contentDescription="@string/ship"
+        android:layout_above="@+id/imageView18"
+        android:layout_toLeftOf="@+id/Ship3"
+        android:layout_toStartOf="@+id/Ship3"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="141dp"
+        android:id="@+id/Ship3"
+        android:background="@drawable/vertical3"
+        android:contentDescription="@string/ship"
+        android:layout_above="@+id/imageView18"
+        android:layout_toLeftOf="@+id/Ship2"
+        android:layout_toStartOf="@+id/Ship2"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="141dp"
+        android:id="@+id/Ship2"
+        android:background="@drawable/vertical3"
+        android:contentDescription="@string/ship"
+        android:layout_above="@+id/imageView18"
+        android:layout_toLeftOf="@+id/Ship1"
+        android:layout_toStartOf="@+id/Ship1"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="94dp"
+        android:id="@+id/Ship1"
+        android:background="@drawable/vertical2"
+        android:contentDescription="@string/ship"
+        android:layout_above="@+id/imageView18"
+        android:layout_alignRight="@+id/imageView18"
+        android:layout_alignEnd="@+id/imageView18" />
 </RelativeLayout>
