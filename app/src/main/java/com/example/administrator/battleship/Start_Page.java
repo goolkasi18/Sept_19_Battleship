@@ -1,6 +1,8 @@
 package com.example.administrator.battleship;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -8,28 +10,37 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 
 public class Start_Page extends ActionBarActivity {
 
-    int i = 0; //used to switch background for a test
+    int muteToggle, vibroToggle = 0;
+    Button helpBtn, settingsBtn, vsAIBtn, vsPlayerBtn, muteBtn, vibroBtn;
+    LinearLayout vsLayout, helperBtns;
+    FrameLayout helpFrame, settingsFrame;
+    Vibrator vibrate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start__page);
+        helpBtn = (Button) findViewById(R.id.helpBtn);
+        settingsBtn = (Button) findViewById(R.id.settingsButton);
+        vsAIBtn = (Button) findViewById(R.id.vsAIButton);
+        vsPlayerBtn = (Button) findViewById(R.id.vsPlayerButton);
+        muteBtn = (Button) findViewById(R.id.muteButton);
+        vibroBtn = (Button) findViewById(R.id.vibroButton);
+        vsLayout = (LinearLayout) findViewById(R.id.vsLayout);
+        helperBtns = (LinearLayout) findViewById(R.id.helperButtons);
+        helpFrame = (FrameLayout) findViewById(R.id.helpFrame);
+        settingsFrame = (FrameLayout) findViewById(R.id.settingsFrame);
+        vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_start__page, menu);
-        return true;
-    }
-
-    public void switchToSelectShips(View view)
-    {
+    public void switchToSelectShips(View view) {
 
         Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
         startActivity(switchToSelect);
@@ -37,9 +48,75 @@ public class Start_Page extends ActionBarActivity {
 
     }
 
+    public void showHelp(View view) {
+        vibrate.vibrate(2000);
+        helpBtn.setEnabled(false);
+        vsAIBtn.setEnabled(false);
+        vsPlayerBtn.setEnabled(false);
+        settingsBtn.setEnabled(false);
+        helpFrame.setVisibility(View.VISIBLE);
+    }
+
+    public void closeHelp(View view) {
+        helpBtn.setEnabled(true);
+        vsAIBtn.setEnabled(true);
+        vsPlayerBtn.setEnabled(true);
+        settingsBtn.setEnabled(true);
+        helpFrame.setVisibility(View.GONE);
+    }
+
+    public void showSettings(View view) {
+        helpBtn.setEnabled(false);
+        vsAIBtn.setEnabled(false);
+        vsPlayerBtn.setEnabled(false);
+        settingsBtn.setEnabled(false);
+        settingsFrame.setVisibility(View.VISIBLE);
+    }
+
+    public void closeSettings(View view) {
+        helpBtn.setEnabled(true);
+        vsAIBtn.setEnabled(true);
+        vsPlayerBtn.setEnabled(true);
+        settingsBtn.setEnabled(true);
+        settingsFrame.setVisibility(View.GONE);
+    }
+
+    public void toggleVolume(View view)
+    {
+        if(muteToggle == 0)
+        {
+            muteBtn.setBackgroundResource(R.drawable.sound_offbg);
+            muteToggle = 1;
+            //mute sounds
+        }
+        else
+        {
+            muteBtn.setBackgroundResource(R.drawable.sound_onbg);
+            muteToggle = 0;
+            //turn sounds back on
+        }
+    }
+
+    public void toggleVibro(View view)
+    {
+        if(vibroToggle == 0)
+        {
+            vibroBtn.setBackgroundResource(R.drawable.vibro_offbg);
+            vibroToggle = 1;
+            //mute vibration
+        }
+        else
+        {
+            vibroBtn.setBackgroundResource(R.drawable.vibro_onbg);
+            vibroToggle = 0;
+            //turn vibration back on
+        }
+    }
+
     public void changeTheme(View view)
     {
 
+        /*
         if (i == 0)
         {
             i = 1;
@@ -57,22 +134,8 @@ public class Start_Page extends ActionBarActivity {
             Button button = (Button)findViewById(R.id.settingsBtn);
             button.setBackgroundResource(R.drawable.blank_metal);
         }
+        */
 
 
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

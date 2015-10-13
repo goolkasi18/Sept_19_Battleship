@@ -42,6 +42,11 @@ public class Select_Ship_Positions extends ActionBarActivity {
 
     }
 
+    public void rotateShips(View view)
+    {
+
+    }
+
 
 
     @Override
