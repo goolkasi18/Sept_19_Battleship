@@ -44,7 +44,7 @@ public class Player {
 
 
     /*
-    * Setter methods for current instance variables
+    * Setter methods fo current instance variables
      */
     public void setPlayerIdentifier(int identifier)
     {
