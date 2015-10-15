@@ -1,6 +1,7 @@
 package com.example.administrator.battleship;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -47,6 +48,36 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     boolean moving=false;
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
+        //Declare the values needed to set the locations of the ships within the grid
+        int xPos = 0, yPos = 0, shipID = 0, shipLength = 0;
+        //Need Logic to determine whoes turn it is
+        Player player = p1;
+        //Need Logic to determine whether a ship is horizontal
+        Boolean isH = true;
+        if(arg0 == ship1){
+            shipLength = 2;
+            shipID = 1;
+        }
+        if(arg0 == ship2){
+            shipLength = 3;
+            shipID = 2;
+        }
+        if(arg0 == ship3){
+            shipLength = 3;
+            shipID = 3;
+        }
+        if(arg0 == ship4){
+            shipLength = 4;
+            shipID = 4;
+        }
+        if(arg0 == ship5){
+            shipLength = 5;
+            shipID = 5;
+        }
+        //Log.i("ID :  Length", shipID + " " + shipLength);
+        player.deleteShip(shipID);
+
+
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 diffX = arg0.getX()-arg1.getRawX();
@@ -81,28 +112,28 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
                     if(x<1165 && x >1080) arg0.setX(1085.07f);
 
+                    if(x<1165) {
+                        if (y < 250) arg0.setY(152.266f);
 
-                    if(y<250) arg0.setY(152.266f);
+                        if (y < 359.699 && y > 250) arg0.setY(253.233f);
 
-                    if(y<359.699 && y > 250) arg0.setY(253.233f);
+                        if (y < 463.165 && y > 359.7) arg0.setY(359.699f);
 
-                    if(y<463.165 && y >359.7) arg0.setY(359.699f);
+                        if (y < 569.13 && y > 463.165) arg0.setY(463.165f);
 
-                    if(y<569.13 && y > 463.165) arg0.setY(463.165f);
+                        if (y < 667.6 && y > 569.13) arg0.setY(569.13f);
 
-                    if(y<667.6 && y > 569.13) arg0.setY(569.13f);
+                        if (y < 773.565 && y > 667.6) arg0.setY(667.6f);
 
-                    if(y<773.565 && y > 667.6) arg0.setY(667.6f);
+                        if (y < 878.12 && y > 773.565) arg0.setY(773.565f);
 
-                    if(y<878.12 && y > 773.565) arg0.setY(773.565f);
+                        if (y < 980.09 && y > 878.12) arg0.setY(878.12f);
 
-                    if(y<980.09 && y > 878.12) arg0.setY(878.12f);
+                        if (y < 1081.06 && y > 980.09) arg0.setY(980.09f);
 
-                    if(y<1081.06 && y > 980.09) arg0.setY(980.09f);
+                        if (y < 1190 && y > 1081.1) arg0.setY(1081.06f);
 
-                    if(y< 1190 && y>1081.1) arg0.setY(1081.06f);
-
-
+                    }
 
 
 
@@ -110,12 +141,75 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                 }
                 break;
             case MotionEvent.ACTION_UP:
+                xPos = setColumn(x);
+                yPos= setRow(y);
+                Log.i("X : Y", xPos + " " + yPos);
+                player.addShipToGrid(xPos, yPos, shipID, shipLength, isH, (ImageView)arg0);
+
+
+
+                for(int i = 0; i<9; i++) {
+                    for (int j = 0; j < 9; j++) {
+                        //Log.i(" Hello ", player.squares[i][j]+ "");
+                    }
+                   // Log.i("\n", "");
+                }
                 moving = false;
                 break;
         }
         return true;
     }
 
+    public int setColumn(float x)
+    {
+        int c = -1;
+        if(x<250)    c=0;
+
+        if(x<350 && x >250) c=1;
+
+        if(x<460 && x >350) c=2;
+
+        if(x<560 && x >460) c=3;
+
+        if(x<669 && x >560) c=4;
+
+        if(x<772 && x >669) c=5;
+
+        if(x<877 && x >772) c=6;
+
+        if(x<980 && x >877) c=7;
+
+        if(x<1080 && x>980) c=8;
+
+        if(x<1165 && x >1080) c=9;
+
+        return c;
+    }
+
+    public int setRow(float y){
+        int r = -1;
+        if(y<250) r = 0;
+
+        if(y<359.699 && y > 250) r = 1;
+
+        if(y<463.165 && y >359.7) r = 2;
+
+        if(y<569.13 && y > 463.165) r = 3;
+
+        if(y<667.6 && y > 569.13) r = 4;
+
+        if(y<773.565 && y > 667.6) r = 5;
+
+        if(y<878.12 && y > 773.565)r = 6;
+
+        if(y<980.09 && y > 878.12) r = 7;
+
+        if(y<1081.06 && y > 980.09) r = 8;
+
+        if(y< 1190 && y>1081.1) r = 9;
+
+        return r;
+    }
 
 
 
