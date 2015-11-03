@@ -42,7 +42,7 @@ public class Start_Page extends ActionBarActivity {
 
     public void switchToSelectShips(View view) {
 
-        Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
+        Intent switchToSelect = new Intent(this, select_configs_TwoPlayer.class);
         startActivity(switchToSelect);
         finish();
 
