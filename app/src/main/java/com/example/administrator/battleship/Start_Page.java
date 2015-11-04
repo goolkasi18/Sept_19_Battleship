@@ -42,9 +42,10 @@ public class Start_Page extends ActionBarActivity {
 
     public void switchToSelectShips(View view) {
 
-        Intent switchToSelect = new Intent(this, select_configs_TwoPlayer.class);
-        startActivity(switchToSelect);
-        finish();
+
+        Intent switchToCustom = new Intent(this, select_configs_TwoPlayer.class);
+        startActivity(switchToCustom);
+        // finish(); this will close the game literally every time you finish the above intent^ because there are no intents "below" this
 
     }
 

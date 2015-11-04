@@ -226,11 +226,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
      */
     public void switchToMain(View view)
     {
+        //********* THIS WILL MAKE A NEW MAIN MENU ON TOP OF EVERYTHIGN ALREADY ***************
+        //Intent main = new Intent(this, Start_Page.class);
+        //startActivity(main);
 
-        Intent switchToMain = new Intent(this, Start_Page.class);
-        startActivity(switchToMain);
-        finish();
-
+        finish(); //this will finish the current intent and go back to the other code where it left off
     }
 
     /*
@@ -240,11 +240,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
     public void startGame(View view)
     {
-
+        finish();
+        //these add an intent "on top" of the main activity"
         Intent startGame = new Intent(this, MainActivity.class);
         startActivity(startGame);
-        finish();
-
+        //below this will be called after the above intent is "finished" and pulled off
     }
 
     public void rotateShips(View view)

@@ -18,10 +18,10 @@ public class MainActivity extends ActionBarActivity {
     //Global 2 dimensional array
     private Player player1;
     private Player player2;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        createMap();
         player1 = new Player();
         player2 = new Player();
         player1.initSquares();
@@ -38,22 +38,19 @@ public class MainActivity extends ActionBarActivity {
     {
         //how to declare a button, this can be used to create a hashmap of all 200 buttons
         String button = "left_"+ 8 + "_" + 1;
-        int resId= getResources().getIdentifier(button, "drawable", MainActivity.this.getPackageName());
-        Button one = (Button)this.findViewById(resId);
+       // int resId= getResources().getIdentifier(button, "drawable", MainActivity.this.getPackageName());
+        //Button one = (Button)this.findViewById(resId);
 
 
     }
 
     public void exitToStart(View view)
     {
+        //********* THIS WILL MAKE A NEW MAIN MENU ON TOP OF EVERYTHIGN ALREADY ***************
+        //Intent main = new Intent(this, Start_Page.class);
+        //startActivity(main);
 
-        Intent exitGame = new Intent(this, Start_Page.class);
-        startActivity(exitGame);
-        finish();
-
-
-
-
+        finish(); //this will finish the current intent and go back to the other code where it left off
     }
 
     public void checkHit(View view)

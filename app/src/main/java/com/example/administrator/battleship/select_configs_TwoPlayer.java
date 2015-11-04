@@ -35,9 +35,9 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
      */
     public void switchToSelectShips(View view) {
         if(readyPlayer1&&readyPlayer2) {
+            finish();
             Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
             startActivity(switchToSelect);
-            finish();
         }
 
     }
@@ -60,7 +60,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
 
 
         if(readyPlayer1&&readyPlayer2){
-            startB = (Button) this.findViewById(R.id.select_ships);
             startB.setAlpha(1);
 
 
@@ -86,7 +85,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
 
 
         if(readyPlayer1&&readyPlayer2){
-            startB = (Button) this.findViewById(R.id.select_ships);
             startB.setAlpha(1);
 
 
@@ -103,8 +101,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
      * @param view
      */
     public void back(View view) {
-        Intent switchToSelect = new Intent(this, Start_Page.class);
-        startActivity(switchToSelect);
         finish();
     }
 
