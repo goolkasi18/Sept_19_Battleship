@@ -74,7 +74,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
             shipLength = 5;
             shipID = 5;
         }
-        //Log.i("ID :  Length", shipID + " " + shipLength);
+        Log.i("ID :  Length", shipID + " " + shipLength);
         player.deleteShip(shipID);
 
 
@@ -226,9 +226,9 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
      */
     public void switchToMain(View view)
     {
-        //********* THIS WILL MAKE A NEW MAIN MENU ON TOP OF EVERYTHIGN ALREADY ***************
-        //Intent main = new Intent(this, Start_Page.class);
-        //startActivity(main);
+
+        Intent main = new Intent(this, Start_Page.class);
+        startActivity(main);
 
         finish(); //this will finish the current intent and go back to the other code where it left off
     }

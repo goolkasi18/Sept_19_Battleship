@@ -20,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
     private Player player2;
 
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("Jello0", "Jello1");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         player1 = new Player();
@@ -46,11 +47,11 @@ public class MainActivity extends ActionBarActivity {
 
     public void exitToStart(View view)
     {
-        //********* THIS WILL MAKE A NEW MAIN MENU ON TOP OF EVERYTHIGN ALREADY ***************
-        //Intent main = new Intent(this, Start_Page.class);
-        //startActivity(main);
 
-        finish(); //this will finish the current intent and go back to the other code where it left off
+        Intent main = new Intent(this, Start_Page.class);
+        startActivity(main);
+
+        finish();
     }
 
     public void checkHit(View view)

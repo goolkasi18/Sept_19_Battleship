@@ -71,7 +71,7 @@ public class Player {
     /**
      * Method will check the locations where a ship will be added, and add the corresponding integer ID to those spots if
      * the locations are clear
-     * @param col          The Location in the 10X10 grid where the player dropped the boat
+     * @param col        The X Location in the 10X10 grid where the player dropped the boat
      * @param row        The Y Location in the grid
      * @param shipID     The ID of the ship to add
      * @param shipLength The Length of the ship
@@ -85,6 +85,8 @@ public class Player {
             ship.setBackgroundColor(Color.RED);
             return false;
         }
+        else
+            ship.setBackgroundColor(Color.TRANSPARENT);
 
         if(isH){
 
