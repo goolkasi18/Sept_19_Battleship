@@ -9,17 +9,16 @@ import android.widget.ImageView;
  */
 public class Player {
     protected int[][] squares;
-    protected int playerIdentifier;
+    protected boolean turn;
     protected String playerName;
     protected LocationInfo[][] shipGrid;
 
-    public Player(int playerIdentifier, String playerName)
+    public Player(String playerName)
     {
         this.playerName=playerName;
-        this.playerIdentifier=playerIdentifier;
         squares = new int[10][10];
         shipGrid = new LocationInfo[10][10];
-
+        turn = false;
     }
 
     /*
@@ -39,26 +38,16 @@ public class Player {
                 squares[x][y]= 0;
     }
 
+    public void endTurn() {turn = false;}
 
-    /*
-    * Getter Methods for current instance variables
-     */
-    public int getPlayerIdentifier(){return playerIdentifier;}
+    public void startTurn() {turn = true;}
+
+    public boolean getTurn() {return turn;}
+
+    public void setPlayerName(String name) {playerName = name;}
+
     public String getPlayerName(){return  playerName;}
 
-
-    /*
-    * Setter methods fo current instance variables
-     */
-    public void setPlayerIdentifier(int identifier)
-    {
-        playerIdentifier=identifier;
-    }
-
-    public void setPlayerName(String name)
-    {
-        playerName = name;
-    }
 
     public void deleteShip(int shipID)
     {

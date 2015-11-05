@@ -16,8 +16,8 @@ import android.widget.ImageView;
 public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
 
     ImageView ship5, ship4, ship3, ship2, ship1, movingShip;
-    Player p1 = new Player(1, "Will");
-    Player p2 = new Player(2, "Dan");
+    Player p1 = new Player("Will");
+    Player p2 = new Player("Dan");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
