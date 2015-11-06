@@ -2,6 +2,7 @@ package com.example.administrator.battleship;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,6 +19,15 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     ImageView ship5, ship4, ship3, ship2, ship1, movingShip;
     Player p1 = new Player("Will");
     Player p2 = new Player("Dan");
+    static int playerSelecting = 0;
+    Boolean isH = false;
+    public static Point[] initPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
+    //These are the orginal positions to draw the ships at
+    public static Point[] p1nitPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
+    public Point[] p2initPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,30 +40,70 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
 
         ship5 = (ImageView) findViewById(R.id.Ship5);
+
         ship5.setOnTouchListener(this);
         ship4 = (ImageView) findViewById(R.id.Ship4);
+
         ship4.setOnTouchListener(this);
         ship3 = (ImageView) findViewById(R.id.Ship3);
+
         ship3.setOnTouchListener(this);
         ship2 = (ImageView) findViewById(R.id.Ship2);
+
         ship2.setOnTouchListener(this);
         ship1 = (ImageView) findViewById(R.id.Ship1);
+
         ship1.setOnTouchListener(this);
+
+
+
 
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
 
     }
 
-    float x,y, diffX, diffY =0.0f;
+    public void setp2(View view){
+
+
+            ship5.setX((float)p2initPoints[4].x);
+            ship5.setY((float)p2initPoints[4].y);
+
+
+
+
+            ship4.setX((float)p2initPoints[3].x);
+            ship4.setY((float)p2initPoints[3].y);
+
+            ship3.setX((float)p2initPoints[2].x);
+            ship3.setY((float)p2initPoints[2].y);
+
+            ship2.setX((float)p2initPoints[1].x);
+            ship2.setY((float)p2initPoints[1].y);
+
+            ship1.setX((float)p2initPoints[0].x);
+            ship1.setY((float)p2initPoints[0].y);
+
+    }
+
+    float x,y, diffX, diffY = 0.0f;
     boolean moving=false;
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
+
+
+
+
         //Declare the values needed to set the locations of the ships within the grid
         int xPos = 0, yPos = 0, shipID = 0, shipLength = 0;
         //Need Logic to determine whoes turn it is
-        Player player = p1;
+        Player player;
+        if(playerSelecting ==0) {
+            player = p1;
+        }
+        else
+            player = p2;
         //Need Logic to determine whether a ship is horizontal
-        Boolean isH = true;
+
         if(arg0 == ship1){
             shipLength = 2;
             shipID = 1;
@@ -74,7 +124,8 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
             shipLength = 5;
             shipID = 5;
         }
-        Log.i("ID :  Length", shipID + " " + shipLength);
+        //Log.i("ID :  Length", shipID + " " + shipLength);
+        Log.i("SHIP: "+ shipID + "", arg0.getX()+ " " + arg0.getY());
         player.deleteShip(shipID);
 
 
@@ -141,8 +192,13 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                 }
                 break;
             case MotionEvent.ACTION_UP:
+                if(playerSelecting == 0)
+                    p1nitPoints[shipID-1] = new Point(xPos, yPos);
+                else
+                    p2initPoints[shipID-1] = new Point(xPos, yPos);
+
                 xPos = setColumn(x);
-                yPos= setRow(y);
+                yPos = setRow(y);
                 Log.i("X : Y", xPos + " " + yPos);
                 player.addShipToGrid(xPos, yPos, shipID, shipLength, isH, (ImageView)arg0);
 
@@ -238,16 +294,33 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     *  Purpose: finishes the current activity and switches to the game
      */
 
-    public void startGame(View view)
+    public void selectShips(View view)
     {
+
+        if(playerSelecting == 0) {
+            playerSelecting = 1;
+            Intent selectShip = new Intent(this, Select_Ship_Positions.class);
+            startActivity(selectShip);
+        }
+
+        else {
+            //The game is started, and if they go back to select, it will restart the selection process
+            playerSelecting = 0;
+            Intent startGame = new Intent(this, MainActivity.class);
+            startActivity(startGame);
+        }
         finish();
-        //these add an intent "on top" of the main activity"
-        Intent startGame = new Intent(this, MainActivity.class);
-        startActivity(startGame);
-        //below this will be called after the above intent is "finished" and pulled off
+
+
+
     }
 
     public void rotateShips(View view)
+    {
+        isH = !isH;
+    }
+
+    public void convertShips()
     {
 
     }

@@ -39,7 +39,7 @@
         android:layout_height="55dp"
         android:id="@+id/imageView20"
         android:background="@drawable/playbg"
-        android:onClick="startGame"
+        android:onClick="selectShips"
         android:layout_below="@+id/Ship3"
         android:layout_alignRight="@+id/Ship1"
         android:layout_alignEnd="@+id/Ship1"

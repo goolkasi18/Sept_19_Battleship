@@ -71,22 +71,24 @@ public class Player {
     {
         if(row == -1 || col == -1 || row>9 || col>9) {
             Log.i("HERE", "");
-            ship.setBackgroundColor(Color.RED);
+            ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+            ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
             return false;
         }
-        else
-            ship.setBackgroundColor(Color.TRANSPARENT);
+
 
         if(isH){
 
             for(int i = col; i<col+shipLength; i++){
                 //check the spots where you shouldnt add a boat
                 if(i>9) {
-                    ship.setBackgroundColor(Color.RED);
+                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
                 if(squares[row][i]>0){
-                    ship.setBackgroundColor(Color.RED);
+                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
 
@@ -104,11 +106,13 @@ public class Player {
             for(int i = row; i<row+shipLength; i++){
                 //check the spots where you shouldnt add a boat
                 if(i>9) {
-                    ship.setBackgroundColor(Color.RED);
+                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
                 if(squares[i][col]>0){
-                    ship.setBackgroundColor(Color.RED);
+                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
 

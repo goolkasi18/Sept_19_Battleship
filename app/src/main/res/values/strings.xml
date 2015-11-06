@@ -16,4 +16,5 @@
     <string name="title_activity_select_configs__two_player">select_configs_TwoPlayer</string>
     <string name="title_activity_ai__player_configs">AI_Player_configs</string>
     <string name="title_activity_test">Test</string>
+    <string name="title_activity_player2_select_ships">Player2SelectShips</string>
 </resources>
