@@ -128,4 +128,16 @@ public class Player {
     }
 
 
+
+    public boolean attack(int x, int y)
+    {
+        squares[x][y]++;
+        if (squares[x][y] == 1)
+            return false;
+        if (squares[x][y] == 2)
+            return true;
+
+        return false;
+    }
+
 }

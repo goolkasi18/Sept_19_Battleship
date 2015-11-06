@@ -41,12 +41,9 @@ public class Start_Page extends ActionBarActivity {
     }
 
     public void switchToSelectShips(View view) {
-
-
+        finish();
         Intent switchToCustom = new Intent(this, select_configs_TwoPlayer.class);
         startActivity(switchToCustom);
-        finish();
-
 
     }
 

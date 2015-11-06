@@ -37,10 +37,6 @@
             android:name=".AI_Player_configs"
             android:label="@string/title_activity_ai__player_configs" >
         </activity>
-        <activity
-            android:name=".Test"
-            android:label="@string/title_activity_test" >
-        </activity>
     </application>
 
 </manifest>

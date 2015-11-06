@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -47,61 +48,33 @@ public class MainActivity extends ActionBarActivity {
 
     public void exitToStart(View view)
     {
-
         Intent main = new Intent(this, Start_Page.class);
         startActivity(main);
-
         finish();
     }
 
     public void checkHit(View view)
     {
-        Log.i("X POSITION: ", "" + view.getLeft() / 80);
-        Log.i("Y POSITION: ", "" +  view.getTop()/80);
+        view.setEnabled(false);
         int x = view.getLeft()/80;
         int y = view.getTop()/80;
-        player1.squares[0][0]=2;
-        if(player1.squares[x][y]==0)
-        {
-            player1.squares[x][y]++;
+        boolean hit = player1.attack(x, y);
+        if(!hit)
             view.setBackgroundResource(R.drawable.miss);
-        }
-
-
-
-        if(player1.squares[x][y]==2)
-        {
-            player1.squares[x][y]++;
+        if(hit)
             view.setBackgroundResource(R.drawable.hit);
-        }
-
-
-        Log.i("POSITION VAL: ", ""+player1.squares[x][y]);
     }
 
     public void checkHitPlayer2(View view)
     {
-        Log.i("X POSITION: ", ""+view.getLeft()/80);
-        Log.i("Y POSITION: ", ""+view.getTop()/80);
-
+        view.setEnabled(false);
         int x = view.getLeft()/80;
         int y = view.getTop()/80;
-        player2.squares[5][5]=2;
-        if(player2.squares[x][y]==0)
-        {
+        boolean hit = player2.attack(x, y);
+        if(!hit)
             view.setBackgroundResource(R.drawable.miss);
-            player2.squares[x][y]++;
-        }
-
-        if(player2.squares[x][y]==2)
-        {
+        if(hit)
             view.setBackgroundResource(R.drawable.hit);
-            player2.squares[x][y]++;
-        }
-
-
-
-        Log.i("POSITION VAL: ", ""+player2.squares[x][y]);
     }
 
 
