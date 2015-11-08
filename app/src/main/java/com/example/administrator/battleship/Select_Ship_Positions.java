@@ -34,32 +34,18 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select__ship__positions);
 
-
-
-
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
-
         ship5 = (ImageView) findViewById(R.id.Ship5);
-
         ship5.setOnTouchListener(this);
         ship4 = (ImageView) findViewById(R.id.Ship4);
-
         ship4.setOnTouchListener(this);
         ship3 = (ImageView) findViewById(R.id.Ship3);
-
         ship3.setOnTouchListener(this);
         ship2 = (ImageView) findViewById(R.id.Ship2);
-
         ship2.setOnTouchListener(this);
         ship1 = (ImageView) findViewById(R.id.Ship1);
-
         ship1.setOnTouchListener(this);
-
-
-
-
         /////////////////////////////////////////////////////////////////DRAGGING////////////////////////////////////////
-
     }
 
     public void setp2(View view){
@@ -183,12 +169,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                         if (y < 1081.06 && y > 980.09) arg0.setY(980.09f);
 
                         if (y < 1190 && y > 1081.1) arg0.setY(1081.06f);
-
                     }
-
-
-
-
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -282,18 +263,17 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
      */
     public void switchToMain(View view)
     {
-
         Intent main = new Intent(this, Start_Page.class);
         startActivity(main);
 
-        finish(); //this will finish the current intent and go back to the other code where it left off
+        finish();
     }
+
 
     /*
     *  Method: startGame
     *  Purpose: finishes the current activity and switches to the game
      */
-
     public void selectShips(View view)
     {
 
@@ -320,12 +300,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         isH = !isH;
     }
 
-    public void convertShips()
-    {
-
-    }
-
-
+    
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

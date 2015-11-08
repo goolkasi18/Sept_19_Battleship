@@ -5,26 +5,31 @@ import android.util.Log;
 import android.widget.ImageView;
 
 /**
- * Created by rothschi18 on 9/23/2015.
+ * Created by goolkasi18 on 9/23/2015.
  */
 public class Player {
-    protected int[][] squares;
-    protected boolean turn;
-    protected String playerName;
-    protected LocationInfo[][] shipGrid;
+    int[][] squares;
+    boolean turn;
+    String playerName;
 
     public Player(String playerName)
     {
-        this.playerName=playerName;
         squares = new int[10][10];
-        shipGrid = new LocationInfo[10][10];
+        initSquares();
         turn = false;
+        this.playerName=playerName;
     }
 
     /*
     *  Empty Constructor if you want to programatically set instance variables
      */
-    public Player(){squares = new int[10][10];}
+    public Player(){
+        squares = new int[10][10];
+        initSquares();
+        turn = false;
+        playerName = "default";
+
+    }
 
     /*
     * Sets the players board to its initial state

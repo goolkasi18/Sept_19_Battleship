@@ -1,21 +1,33 @@
 package com.example.administrator.battleship;
 
-import android.widget.ImageView;
+import junit.framework.TestCase;
 
-import org.junit.*;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
- * Created by rothschi18 on 11/5/2015.
+ * Created by goolkasi18 on 11/8/2015.
  */
-public class PlayerTest {
-
+public class PlayerTest extends TestCase {
     Player test1 = new Player("test1");
     Player test2 = new Player("test2");
 
-    @org.junit.Test
+    @Test
+    public void testPlayer() throws  Exception {
+        Player t1 = new Player();
+        Player t2 = new Player("jim");
+        int x, y;
+        for(x=0; x<10; x++)
+            for(y=0; y<10; y++) {
+                assertEquals(t1.squares[x][y], 0);
+                assertEquals(t2.squares[x][y], 0);
+            }
+        assertEquals(t1.playerName, "default");
+        assertEquals(t2.playerName, "jim");
+        assertEquals(t1.turn, false);
+        assertEquals(t2.turn, false);
+    }
+
+    @Test
     public void testInitSquares() throws Exception {
         test1.initSquares();
         test2.initSquares();
@@ -35,7 +47,6 @@ public class PlayerTest {
 
         test2.endTurn();
         assertEquals(test2.turn, false);
-
     }
 
     @Test
@@ -80,15 +91,13 @@ public class PlayerTest {
 
     @Test
     public void testAddShipToGrid() throws Exception {
-        test1.addShipToGrid(5,5,1,2,true);
+
     }
 
     @Test
     public void testDeleteShip() throws Exception {
-
+        //test1.addShipToGrid(5,5,1,2,true);
     }
-
-
 
     @Test
     public void testAttack() throws Exception {
