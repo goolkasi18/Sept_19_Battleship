@@ -186,9 +186,6 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
                     }
 
-
-
-
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -200,7 +197,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                 xPos = setColumn(x);
                 yPos = setRow(y);
                 Log.i("X : Y", xPos + " " + yPos);
-                player.addShipToGrid(xPos, yPos, shipID, shipLength, isH, (ImageView)arg0);
+                if(!(player.addShipToGrid(xPos, yPos, shipID, shipLength, isH)))
+                    {
+                        arg0.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
+                        arg0.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
+                    }
 
 
 
