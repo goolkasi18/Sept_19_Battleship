@@ -13,6 +13,9 @@ public class Player implements Serializable{
     int[][] squares;
     boolean turn;
     String playerName;
+    int profilePicID;
+    int colorChoiceID;
+
 
     public Player(String playerName)
     {
@@ -46,15 +49,17 @@ public class Player implements Serializable{
     }
 
     public void endTurn() {turn = false;}
-
     public void startTurn() {turn = true;}
-
     public boolean getTurn() {return turn;}
 
     public void setPlayerName(String name) {playerName = name;}
-
     public String getPlayerName(){return  playerName;}
 
+    public void setProfilePicID(int initID){profilePicID = initID;}
+    public int getProfilePicID(){return profilePicID;}
+
+    public void setColorChoiceID(int initID){colorChoiceID = initID;}
+    public int getColorChoiceID(){return  colorChoiceID;}
 
     public void deleteShip(Ship ship)
     {
@@ -76,6 +81,7 @@ public class Player implements Serializable{
      *
      *
      * (Jared) Removing ImageView parameter. Have caller move ship to initial position if method returns false.
+     * Will rewrote
      */
     public boolean addShipToGrid(int col, int row, Ship ship)
     {
@@ -121,8 +127,6 @@ public class Player implements Serializable{
         return true;
     }
 
-
-
     public boolean attack(int x, int y)
     {
         squares[x][y]++;
@@ -133,5 +137,4 @@ public class Player implements Serializable{
 
         return false;
     }
-
 }

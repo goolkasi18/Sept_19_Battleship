@@ -103,4 +103,24 @@ public class PlayerTest extends TestCase {
     public void testAttack() throws Exception {
 
     }
+
+    @Test
+    public void testSetProfilePicID() throws Exception {
+
+    }
+
+    @Test
+    public void testGetProfilePicID() throws Exception {
+
+    }
+
+    @Test
+    public void testSetColorChoiceID() throws Exception {
+
+    }
+
+    @Test
+    public void testGetColorChoiceID() throws Exception {
+
+    }
 }
