@@ -19,13 +19,6 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
     ImageView Vship5,Vship4,Vship3,Vship2,Vship1,Hship5,Hship4,Hship3,Hship2,Hship1;
     Player p1 = new Player("Will");
-    Player p2 = new Player("Dan");
-    //static int playerSelecting = 0;
-   // Boolean isH = false;
-    //public static Point[] initPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
-    //These are the orginal positions to draw the ships at
-    //public static Point[] p1nitPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
-    //public Point[] p2initPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
     Ship s1,s2,s3,s4,s5,s6,s7,s8,s9,s10;
     Ship[] ships = new Ship[10];
 
@@ -87,24 +80,6 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         findViewById(R.id.privacy).setVisibility(View.GONE);
     }
 
-    /*public void setp2(View view){
-            ship5.setX((float)p2initPoints[4].x);
-            ship5.setY((float)p2initPoints[4].y);
-
-            ship4.setX((float)p2initPoints[3].x);
-            ship4.setY((float)p2initPoints[3].y);
-
-            ship3.setX((float)p2initPoints[2].x);
-            ship3.setY((float)p2initPoints[2].y);
-
-            ship2.setX((float)p2initPoints[1].x);
-            ship2.setY((float)p2initPoints[1].y);
-
-            ship1.setX((float)p2initPoints[0].x);
-            ship1.setY((float)p2initPoints[0].y);
-
-    } */
-
     float x,y, diffX, diffY = 0.0f;
     boolean moving=false;
     int column,row,index;
@@ -158,6 +133,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) ships[index].image.setBackgroundColor(Color.RED);
+                    else if(p1.testShip(column, row, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
                     else ships[index].image.setBackgroundResource(ships[index].imageID);
                 }
                 break;
@@ -213,8 +189,30 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
     public void reset(Ship ship)
     {
-        ship.image.setX(ship.originx);
-        ship.image.setY(ship.originy);
+        for(index = 0; index<=ships.length; index++)
+            if(ship == ships[index])
+                break;
+        //run an if statement to test if the user is in horizontal mode and make sure the image that is pulled off is in horizontal mode.
+        if(index<5 && horizontal) {
+            ship.image.setBackgroundResource(ship.imageID);
+            ship.image.setX(ship.originx);
+            ship.image.setY(ship.originy);
+            ship.poof();
+            ships[index+5].tada();
+        }
+        else if(index > 4 && !horizontal) {
+            ship.image.setBackgroundResource(ship.imageID);
+            ship.image.setX(ship.originx);
+            ship.image.setY(ship.originy);
+            ship.poof();
+            ships[index-5].tada();
+        }
+        else
+        {
+            ship.image.setBackgroundResource(ship.imageID);
+            ship.image.setX(ship.originx);
+            ship.image.setY(ship.originy);
+        }
     }
 
     boolean horizontal = false;

@@ -84,31 +84,39 @@ public class Player {
         //check bounds
         if(col+ship.length < 11 && row+ship.height < 11)
         {
-            //check the length for other ships
-            for(int i = col; i<col+ship.length; i++)
-            {
-                if(squares[row][i] != 0)
-                    return false;
-            }
-            //check the height for other ships
-            for(int i = row; i<row+ship.height; i++)
-            {
-                if(squares[i][col] != 0)
-                    return false;
-            }
-            //no ships are in the way, so set the ship
-            for(int i = col; i<col+ship.length; i++)
-            {
-                squares[row][i]=ship.shipID;
-            }
-            for(int i = row; i<row+ship.height; i++)
-            {
-                squares[i][col]=ship.shipID;
-            }
-            //if you got this far, then you added the ships correctly and there were no conflicts.
-            return true;
+           if(testShip(col,row,ship)) { //if it doesnt overlap other ships (need another method for selectship dynamic class
+               //no ships are in the way, so set the ship
+               for (int i = col; i < col + ship.length; i++) {
+                   squares[row][i] = ship.shipID;
+               }
+               for (int i = row; i < row + ship.height; i++) {
+                   squares[i][col] = ship.shipID;
+               }
+               //if you got this far, then you added the ships correctly and there were no conflicts.
+               return true;
+           }
         }
         return false;
+    }
+
+    public boolean testShip(int col, int row, Ship ship)
+    {
+        if(row == -1 || col == -1) {
+            return true;
+        }
+        //check the length for other ships
+        for(int i = col; i<col+ship.length; i++)
+        {
+            if(squares[row][i] != 0)
+                return false;
+        }
+        //check the height for other ships
+        for(int i = row; i<row+ship.height; i++)
+        {
+            if(squares[i][col] != 0)
+                return false;
+        }
+        return true;
     }
 
 
