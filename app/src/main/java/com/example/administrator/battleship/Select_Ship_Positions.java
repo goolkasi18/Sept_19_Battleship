@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
@@ -27,6 +28,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     //public Point[] p2initPoints = {new Point(1844, 583), new Point(1708, 486), new Point(1572, 486), new Point(1436, 392), new Point(1300, 298)};
     Ship s1,s2,s3,s4,s5,s6,s7,s8,s9,s10;
     Ship[] ships = new Ship[10];
+
 
 
 
@@ -64,18 +66,25 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
 
        //Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage)
-        s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, Vship1);
-        s2 = new Ship(Vship1.getX(), Vship1.getY(), 0, 3, 2, Vship2);
-        s3 = new Ship(Vship1.getX(), Vship1.getY(), 0, 3, 3, Vship3);
-        s4 = new Ship(Vship1.getX(), Vship1.getY(), 0, 4, 4, Vship4);
-        s5 = new Ship(Vship1.getX(), Vship1.getY(), 0, 5, 5, Vship5);
 
-        s6 = new Ship(Hship1.getX(), Hship1.getY(), 2, 0, 1, Hship1);
-        s7 = new Ship(Hship2.getX(), Hship2.getY(), 3, 0, 2, Hship2);
-        s8 = new Ship(Hship3.getX(), Hship3.getY(), 3, 0, 3, Hship3);
-        s9 = new Ship(Hship4.getX(), Hship4.getY(), 4, 0, 4, Hship4);
-        s10 = new Ship(Hship5.getX(), Hship5.getY(), 5, 0, 5, Hship5);
+
+    }
+
+    public void ready(View view){
+        s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, Vship1, R.drawable.vertical2);
+        s2 = new Ship(Vship2.getX(), Vship2.getY(), 0, 3, 2, Vship2, R.drawable.vertical3);
+        s3 = new Ship(Vship3.getX(), Vship3.getY(), 0, 3, 3, Vship3, R.drawable.vertical3);
+        s4 = new Ship(Vship4.getX(), Vship4.getY(), 0, 4, 4, Vship4, R.drawable.vertical4);
+        s5 = new Ship(Vship5.getX(), Vship5.getY(), 0, 5, 5, Vship5, R.drawable.vertical5);
+
+        s6 = new Ship(Hship1.getX(), Hship1.getY(), 2, 0, 1, Hship1, R.drawable.horizontal2);
+        s7 = new Ship(Hship2.getX(), Hship2.getY(), 3, 0, 2, Hship2, R.drawable.horizontal3);
+        s8 = new Ship(Hship3.getX(), Hship3.getY(), 3, 0, 3, Hship3, R.drawable.horizontal3);
+        s9 = new Ship(Hship4.getX(), Hship4.getY(), 4, 0, 4, Hship4, R.drawable.horizontal4);
+        s10 = new Ship(Hship5.getX(), Hship5.getY(), 5, 0, 5, Hship5, R.drawable.horizontal5);
         ships[0] = s1; ships[1] = s2; ships[2] = s3; ships[3] = s4; ships[4] = s5; ships[5] = s6; ships[6] = s7; ships[7] = s8; ships[8] = s9; ships[9] = s10;
+
+        findViewById(R.id.privacy).setVisibility(View.GONE);
     }
 
     /*public void setp2(View view){
@@ -149,6 +158,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) ships[index].image.setBackgroundColor(Color.RED);
+                    else ships[index].image.setBackgroundResource(ships[index].imageID);
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -171,32 +181,32 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     public int setColumn(float x)
     {
         int c = -1;
-        if(x<250)    c=1;
-        else if(x<350 && x >250) c=2;
-        else if(x<460 && x >350) c=3;
-        else if(x<560 && x >460) c=4;
-        else if(x<669 && x >560) c=5;
-        else if(x<772 && x >669) c=6;
-        else if(x<877 && x >772) c=7;
-        else if(x<980 && x >877) c=8;
-        else if(x<1080 && x>980) c=9;
-        else if(x<1165 && x >1080) c=10;
+        if(x<250)    c=0;
+        else if(x<350 && x >250) c=1;
+        else if(x<460 && x >350) c=2;
+        else if(x<560 && x >460) c=3;
+        else if(x<669 && x >560) c=4;
+        else if(x<772 && x >669) c=5;
+        else if(x<877 && x >772) c=6;
+        else if(x<980 && x >877) c=7;
+        else if(x<1080 && x>980) c=8;
+        else if(x<1165 && x >1080) c=9;
 
         return c;
     }
 
     public int setRow(float y){
         int r = -1;
-        if(y<250) r = 1;
-        else if(y<359.699 && y > 250) r = 2;
-        else if(y<463.165 && y >359.7) r = 3;
-        else if(y<569.13 && y > 463.165) r = 4;
-        else if(y<667.6 && y > 569.13) r = 5;
-        else if(y<773.565 && y > 667.6) r = 6;
-        else if(y<878.12 && y > 773.565)r = 7;
-        else if(y<980.09 && y > 878.12) r = 8;
-        else if(y<1081.06 && y > 980.09) r = 9;
-        else if(y< 1190 && y>1081.1) r = 10;
+        if(y<250) r = 0;
+        else if(y<359.699 && y > 250) r = 1;
+        else if(y<463.165 && y >359.7) r = 2;
+        else if(y<569.13 && y > 463.165) r = 3;
+        else if(y<667.6 && y > 569.13) r = 4;
+        else if(y<773.565 && y > 667.6) r = 5;
+        else if(y<878.12 && y > 773.565)r = 6;
+        else if(y<980.09 && y > 878.12) r = 7;
+        else if(y<1081.06 && y > 980.09) r = 8;
+        else if(y< 1190 && y>1081.1) r = 9;
 
         return r;
     }
@@ -207,16 +217,28 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         ship.image.setY(ship.originy);
     }
 
+    boolean horizontal = false;
     public void rotateShips(View view)
     {
-        for(int i=0; i<=ships.length; i++) { //for each ship in ships array
-            if(ships[i].placed == false) //if that ship is not placed
-            {
-                ships[i].poof(); //make it disappear
-                if(i < 5)
-                    ships[i+5].tada(); //make the opposite of it appear
-                else if(i >= 5)
-                    ships[i-5].tada(); //make the opposite of it appear
+        if(!horizontal) {
+            horizontal = !horizontal;
+            for (int i = 0; i < 5; i++) { //for each ship in ships array
+                if (ships[i].placed == false) //if that ship is not placed
+                {
+                    ships[i].poof(); //make it disappear
+                    ships[i + 5].tada(); //make the opposite of it appear
+                }
+            }
+        }
+        else
+        {
+            horizontal = !horizontal;
+            for (int i = 5; i < ships.length; i++) { //for each ship in ships array
+                if (ships[i].placed == false) //if that ship is not placed
+                {
+                    ships[i].poof(); //make it disappear
+                    ships[i - 5].tada(); //make the opposite of it appear
+                }
             }
         }
     }

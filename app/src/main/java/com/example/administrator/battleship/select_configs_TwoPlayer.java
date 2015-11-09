@@ -35,9 +35,9 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
      */
     public void switchToSelectShips(View view) {
         if(readyPlayer1&&readyPlayer2) {
-            finish();
             Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
             startActivity(switchToSelect);
+            finish();
         }
 
     }

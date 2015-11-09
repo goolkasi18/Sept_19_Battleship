@@ -8,10 +8,10 @@ import android.widget.ImageView;
  */
 public class Ship {
     boolean placed;
-    int length,height,shipID;
+    int length,height,shipID,imageID;
     float originx,originy;
     ImageView image;
-    public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage){
+    public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID){
         originx = initx;
         originy = inity;
         length = initLength;
@@ -19,6 +19,7 @@ public class Ship {
         placed = false;
         shipID = initShipID;
         image = initImage;
+        imageID = initImageID;
     }
 
     public void togglePlaced()

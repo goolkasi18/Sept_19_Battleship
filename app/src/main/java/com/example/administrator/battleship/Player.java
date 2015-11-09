@@ -82,7 +82,7 @@ public class Player {
             return false;
         }
         //check bounds
-        if(col+ship.length <= 10 || row+ship.height <= 10)
+        if(col+ship.length < 11 && row+ship.height < 11)
         {
             //check the length for other ships
             for(int i = col; i<col+ship.length; i++)
@@ -99,13 +99,11 @@ public class Player {
             //no ships are in the way, so set the ship
             for(int i = col; i<col+ship.length; i++)
             {
-                if(squares[row][i] != 0)
-                    squares[row][i]=ship.shipID;
+                squares[row][i]=ship.shipID;
             }
             for(int i = row; i<row+ship.height; i++)
             {
-                if(squares[i][col] != 0)
-                    squares[i][col]=ship.shipID;
+                squares[i][col]=ship.shipID;
             }
             //if you got this far, then you added the ships correctly and there were no conflicts.
             return true;

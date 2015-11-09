@@ -21,7 +21,8 @@
         android:onClick="rotateShips"
         android:layout_above="@+id/imageView20"
         android:layout_alignRight="@+id/imageView20"
-        android:layout_alignEnd="@+id/imageView20" />
+        android:layout_alignEnd="@+id/imageView20"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="135dp"
@@ -31,7 +32,8 @@
         android:onClick="switchToMain"
         android:layout_below="@+id/Rotate"
         android:layout_alignLeft="@+id/Rotate"
-        android:layout_alignStart="@+id/Rotate" />
+        android:layout_alignStart="@+id/Rotate"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="135dp"
@@ -42,7 +44,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="115dp" />
+        android:layout_marginBottom="115dp"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="38dp"
@@ -156,5 +159,25 @@
         android:background="@drawable/horizontal2"
         android:layout_marginBottom="10dp"
         android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/privacy"
+        android:background="#ff000000"
+        android:visibility="visible"
+        android:clickable="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 1 ready?"
+            android:id="@+id/button"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="ready"/>
+    </RelativeLayout>
 
 </RelativeLayout>
