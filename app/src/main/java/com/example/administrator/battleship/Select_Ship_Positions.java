@@ -181,7 +181,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                 xPos = setColumn(x);
                 yPos = setRow(y);
                 Log.i("X : Y", xPos + " " + yPos);
-                player.addShipToGrid(xPos, yPos, shipID, shipLength, isH, (ImageView)arg0);
+                player.addShipToGrid(xPos, yPos, shipID, shipLength, isH);
 
 
 
