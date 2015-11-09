@@ -54,12 +54,15 @@ public class Player {
     public String getPlayerName(){return  playerName;}
 
 
-    public void deleteShip(int shipID)
+    public void deleteShip(Ship ship)
     {
         for(int i = 0; i<10; i++)
             for(int j = 0; j<10; j++)
-                if(squares[i][j]==shipID)
+                if(squares[i][j]==ship.shipID)
                     squares[i][j] = 0;
+        //if they are tapping a ship on a grid that needs to be removed
+        if(ship.placed == true)
+            ship.togglePlaced();
     }
 
     /**
@@ -67,63 +70,47 @@ public class Player {
      * the locations are clear
      * @param col        The X Location in the 10X10 grid where the player dropped the boat
      * @param row        The Y Location in the grid
-     * @param shipID     The ID of the ship to add
-     * @param shipLength The Length of the ship
-     * @param isH        Boolean to determine whether the ship is horizontal or not
      * @return
      *
      *
      * (Jared) Removing ImageView parameter. Have caller move ship to initial position if method returns false.
      */
-    public boolean addShipToGrid(int col, int row, int shipID, int shipLength, Boolean isH)
+    public boolean addShipToGrid(int col, int row, Ship ship)
     {
-        if(row == -1 || col == -1 || row>9 || col>9) {
+        if(row == -1 || col == -1) {
             Log.i("HERE", "");
             return false;
         }
-
-        if(isH){
-
-            for(int i = col; i<col+shipLength; i++){
-                //check the spots where you shouldnt add a boat
-                if(i>9) {
+        //check bounds
+        if(col+ship.length <= 10 || row+ship.height <= 10)
+        {
+            //check the length for other ships
+            for(int i = col; i<col+ship.length; i++)
+            {
+                if(squares[row][i] != 0)
                     return false;
-                }
-                if(squares[row][i]>0){
+            }
+            //check the height for other ships
+            for(int i = row; i<row+ship.height; i++)
+            {
+                if(squares[i][col] != 0)
                     return false;
-                }
             }
-
-            //check the above conditions before adding the boat, otherwise, a partially added boat could get messy...
-            for(int i = col; i<col+shipLength; i++){
-               squares[row][i]=shipID;
+            //no ships are in the way, so set the ship
+            for(int i = col; i<col+ship.length; i++)
+            {
+                if(squares[row][i] != 0)
+                    squares[row][i]=ship.shipID;
             }
-
+            for(int i = row; i<row+ship.height; i++)
+            {
+                if(squares[i][col] != 0)
+                    squares[i][col]=ship.shipID;
+            }
+            //if you got this far, then you added the ships correctly and there were no conflicts.
+            return true;
         }
-
-        if(!isH){
-            for(int i = row; i<row+shipLength; i++){
-                //check the spots where you shouldnt add a boat
-                if(i>9) {
-                    return false;
-                }
-                if(squares[i][col]>0){
-                    return false;
-                }
-
-            }
-
-            //check the above conditions before adding the boat, otherwise, a partially added boat could get messy...
-            for(int i = row; i<row+shipLength; i++){
-
-                squares[i][col]=shipID;
-            }
-
-        }
-        for(int m = 0; m<10; m++)
-            Log.i("", squares[m][0]+" "+squares[m][1]+" "+squares[m][2]+" "+squares[m][3]+" "+squares[m][4]+" "+squares[m][5]+" "+squares[m][6]+" "+squares[m][7]+" "+squares[m][8]+" "+squares[m][9]);
-
-        return true;
+        return false;
     }
 
 
