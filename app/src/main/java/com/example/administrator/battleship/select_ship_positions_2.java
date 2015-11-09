@@ -2,8 +2,6 @@ package com.example.administrator.battleship;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Point;
-import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,10 +10,9 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 
-public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
+public class select_ship_positions_2 extends ActionBarActivity implements View.OnTouchListener{
 
     ImageView Vship5,Vship4,Vship3,Vship2,Vship1,Hship5,Hship4,Hship3,Hship2,Hship1;
     Player p1,p2;
@@ -80,6 +77,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     float x,y, diffX, diffY = 0.0f;
     boolean moving=false;
     int column,row,index;
+
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
 
@@ -87,8 +85,8 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
             if(arg0 == ships[index].image)
                 break;
 
-        Log.i("SHIP: "+ ships[index].shipID + "", arg0.getX()+ " " + arg0.getY());
-        p1.deleteShip(ships[index]);
+        Log.i("SHIP: " + ships[index].shipID + "", arg0.getX() + " " + arg0.getY());
+        p2.deleteShip(ships[index]);
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 diffX = arg0.getX()-arg1.getRawX();
@@ -130,13 +128,13 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) ships[index].image.setBackgroundColor(Color.RED);
-                    else if(p1.testShip(column, row, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
+                    else if(p2.testShip(column, row, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
                     else ships[index].image.setBackgroundResource(ships[index].imageID);
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 Log.i("X : Y", column + " " + row);
-                Boolean worked = p1.addShipToGrid(column, row, ships[index]);
+                Boolean worked = p2.addShipToGrid(column, row, ships[index]);
                 if(worked)
                 {
                     ships[index].togglePlaced();
@@ -252,16 +250,16 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     *  Method: startGame
     *  Purpose: finishes the current activity and switches to the game
      */
-    public void selectShips(View view)
+    public void startGame(View view)
     {
-        Intent selectShip2 = new Intent(this, MainActivity.class);
-        selectShip2.putExtra("Player1",p1);
-        selectShip2.putExtra("Player2", p2);
-        startActivity(selectShip2);
+        Intent startGame = new Intent(this, MainActivity.class);
+        startGame.putExtra("Player1",p1);
+        startGame.putExtra("Player2", p2);
+        startActivity(startGame);
         finish();
     }
 
-    
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

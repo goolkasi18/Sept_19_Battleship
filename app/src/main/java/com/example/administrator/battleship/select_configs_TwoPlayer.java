@@ -11,14 +11,16 @@ import android.widget.Button;
 
 public class select_configs_TwoPlayer extends ActionBarActivity {
 
-    public boolean readyPlayer1 = false;
-    public boolean readyPlayer2 = false;
+    Player p1,p2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_configs__two_player);
         Button startB = (Button) this.findViewById(R.id.select_ships);
-        startB.setAlpha(0);
+        startB.setVisibility(View.GONE);
+        p1 = new Player();
+        p2 = new Player();
     }
 
     @Override
@@ -36,64 +38,54 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
     public void switchToSelectShips(View view) {
         if(readyPlayer1&&readyPlayer2) {
             Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
+            switchToSelect.putExtra("Player1", p1);
+            switchToSelect.putExtra("Player2", p2);
             startActivity(switchToSelect);
             finish();
         }
 
     }
 
+    boolean readyPlayer1 = false;
     public void readyPlayer1(View view){
         //If the other player is ready, and player 2 has shown they are ready, make the start game button visible
         Button startB = (Button) this.findViewById(R.id.select_ships);
         Button readyB = (Button) this.findViewById(R.id.ready_1);
-        if(!readyPlayer1) {
-            //change button to say ready
+        if(!readyPlayer1) {//change button to say ready
             readyPlayer1 = true;
             readyB.setText("Ready");
         }
-        else
+        else//change button to say not ready
         {
-            //change button to say not ready
             readyPlayer1 = false;
             readyB.setText("Not Ready");
         }
 
-
-        if(readyPlayer1&&readyPlayer2){
-            startB.setAlpha(1);
-
-
-        }
+        if(readyPlayer1&&readyPlayer2)
+            startB.setVisibility(View.VISIBLE);
         else
-            startB.setAlpha(0);
+            startB.setVisibility(View.GONE);
     }
 
+    boolean readyPlayer2 = false;
     public void readyPlayer2(View view){
         Button startB = (Button) this.findViewById(R.id.select_ships);
         Button readyB = (Button) this.findViewById(R.id.ready_2);
-        if(!readyPlayer2) {
-            //change button to say ready
+        if(!readyPlayer2) {//change button to say ready
             readyPlayer2 = true;
             readyB.setText("Ready");
         }
-        else
+        else //change button to say not ready
         {
-            //change button to say not ready
             readyPlayer2 = false;
             readyB.setText("Not Ready");
         }
 
 
-        if(readyPlayer1&&readyPlayer2){
-            startB.setAlpha(1);
-
-
-        }
+        if(readyPlayer1&&readyPlayer2)
+            startB.setVisibility(View.VISIBLE);
         else
-            startB.setAlpha(0);
-
-
-
+            startB.setVisibility(View.GONE);
     }
 
     /**

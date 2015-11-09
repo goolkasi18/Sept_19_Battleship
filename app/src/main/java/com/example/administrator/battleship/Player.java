@@ -4,10 +4,12 @@ import android.graphics.Color;
 import android.util.Log;
 import android.widget.ImageView;
 
+import java.io.Serializable;
+
 /**
  * Created by goolkasi18 on 9/23/2015.
  */
-public class Player {
+public class Player implements Serializable{
     int[][] squares;
     boolean turn;
     String playerName;
