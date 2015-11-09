@@ -10,6 +10,7 @@ import org.junit.Test;
 public class PlayerTest extends TestCase {
     Player test1 = new Player("test1");
     Player test2 = new Player("test2");
+    Ship ship = new Ship(); //default ship which is the 5 long ship horizontal
 
     @Test
     public void testPlayer() throws  Exception {
@@ -91,17 +92,36 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testAddShipToGrid() throws Exception {
+        test1.addShipToGrid(0,0,ship);
+
+        //do tests
+
 
     }
 
     @Test
     public void testDeleteShip() throws Exception {
-        //test1.addShipToGrid(5,5,1,2,true);
+        test1.addShipToGrid(0,0,ship);
+        test1.deleteShip(ship);
+
+        //do tests
+
+
     }
 
     @Test
     public void testAttack() throws Exception {
+        test1.attack(0,0);
 
+        //do tests
+
+        test1.attack(5,5);
+
+        //do tests
+
+        test1.attack(10,10);
+
+        //do tests assertEquals(test1.attack(10,10), false);
     }
 
     @Test

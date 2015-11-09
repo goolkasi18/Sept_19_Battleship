@@ -22,6 +22,18 @@ public class Ship {
         imageID = initImageID;
     }
 
+    public Ship() //empty for testing
+    {
+        originx = 0;
+        originy = 0;
+        length = 5;
+        height = 0;
+        placed = false;
+        shipID = 5;
+        image = null;
+        imageID = R.id.HShip5;
+    }
+
     public void togglePlaced()
     {
         placed = !placed;
