@@ -111,6 +111,9 @@ public class PlayerTest extends TestCase {
 
         //do tests
 
+        //be weary, the ships added above will still be added on the board so trying to add a ship if it overlapps the ships added above
+        //you will run into some form of error(probably)
+
         //make sure to test trying to delete ships that dont exist (should still run fine just doesnt actually do much.
         //delete the ship then use a double dor loop to test each spot and make sure no spot is saved as the shipID anymore.
 
@@ -119,7 +122,7 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testAttack() throws Exception {
-        test1.attack(0,0);
+        test1.attack(0, 0);
 
         //do tests
 
@@ -130,6 +133,13 @@ public class PlayerTest extends TestCase {
         test1.attack(10,10); //out of bounds, technically not possible how we made the game so might need to take out. but if possible good to test i guess
 
         //do tests assertEquals(test1.attack(10,10), false);
+    }
+
+    @Test
+    public void testShip() throws Exception {
+        //this is also a bit complicated. should be easy as a copy from addship (also might not be needed as its called in addship anyway
+        //it checks to see if the new ship trying to be placed overlapps any existing ships. if youre going to do needs a second
+        //ship for testing. also check for out of bounds. (still think may not be necessary)
     }
 
     @Test
