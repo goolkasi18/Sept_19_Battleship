@@ -71,33 +71,27 @@ public class Player {
      * @param shipLength The Length of the ship
      * @param isH        Boolean to determine whether the ship is horizontal or not
      * @return
+     *
+     *
+     * (Jared) Removing ImageView parameter. Have caller move ship to initial position if method returns false.
      */
-    public boolean addShipToGrid(int col, int row, int shipID, int shipLength, Boolean isH, ImageView ship)
+    public boolean addShipToGrid(int col, int row, int shipID, int shipLength, Boolean isH)
     {
         if(row == -1 || col == -1 || row>9 || col>9) {
             Log.i("HERE", "");
-            ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
-            ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
             return false;
         }
-
 
         if(isH){
 
             for(int i = col; i<col+shipLength; i++){
                 //check the spots where you shouldnt add a boat
                 if(i>9) {
-                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
-                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
                 if(squares[row][i]>0){
-                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
-                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
-
-
             }
 
             //check the above conditions before adding the boat, otherwise, a partially added boat could get messy...
@@ -111,13 +105,9 @@ public class Player {
             for(int i = row; i<row+shipLength; i++){
                 //check the spots where you shouldnt add a boat
                 if(i>9) {
-                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
-                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
                 if(squares[i][col]>0){
-                    ship.setX(Select_Ship_Positions.initPoints[shipID - 1].x);
-                    ship.setY(Select_Ship_Positions.initPoints[shipID - 1].y);
                     return false;
                 }
 
