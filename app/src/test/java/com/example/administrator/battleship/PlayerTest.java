@@ -96,6 +96,11 @@ public class PlayerTest extends TestCase {
 
         //do tests
 
+        //have to make sure tests cover a good range of where they can place the ship and if the ship is our of bounds
+        //not  just positive tests
+
+        //this is really our largest and most complicated test by far so make sure to try your best to cover all aspects of it
+
 
     }
 
@@ -105,6 +110,9 @@ public class PlayerTest extends TestCase {
         test1.deleteShip(ship);
 
         //do tests
+
+        //make sure to test trying to delete ships that dont exist (should still run fine just doesnt actually do much.
+        //delete the ship then use a double dor loop to test each spot and make sure no spot is saved as the shipID anymore.
 
 
     }
@@ -119,28 +127,28 @@ public class PlayerTest extends TestCase {
 
         //do tests
 
-        test1.attack(10,10);
+        test1.attack(10,10); //out of bounds, technically not possible how we made the game so might need to take out. but if possible good to test i guess
 
         //do tests assertEquals(test1.attack(10,10), false);
     }
 
     @Test
     public void testSetProfilePicID() throws Exception {
-
+        //this should be easy
     }
 
     @Test
     public void testGetProfilePicID() throws Exception {
-
+        //this should be easy
     }
 
     @Test
     public void testSetColorChoiceID() throws Exception {
-
+        //this should be easy
     }
 
     @Test
     public void testGetColorChoiceID() throws Exception {
-
+        //this should be easy
     }
 }
