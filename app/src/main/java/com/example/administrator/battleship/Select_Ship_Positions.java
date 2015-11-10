@@ -73,7 +73,8 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         s9 = new Ship(Hship4.getX(), Hship4.getY(), 4, 0, 4, Hship4, R.drawable.horizontal4);
         s10 = new Ship(Hship5.getX(), Hship5.getY(), 5, 0, 5, Hship5, R.drawable.horizontal5);
         ships[0] = s1; ships[1] = s2; ships[2] = s3; ships[3] = s4; ships[4] = s5; ships[5] = s6; ships[6] = s7; ships[7] = s8; ships[8] = s9; ships[9] = s10;
-
+        p1.ships = ships;
+        p2.ships = ships;
         findViewById(R.id.privacy).setVisibility(View.GONE);
     }
 
