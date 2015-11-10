@@ -3,6 +3,7 @@ package com.example.administrator.battleship;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
     //Global 2 dimensional array
     private Player player1;
     private Player player2;
+    private AI AIPlayer;
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("Jello0", "Jello1");
@@ -51,6 +53,16 @@ public class MainActivity extends ActionBarActivity {
         Intent main = new Intent(this, Start_Page.class);
         startActivity(main);
         finish();
+    }
+
+    public void callAIPlayerTakeTurn(){
+        Point attackPoint = AIPlayer.takeTurn();
+
+        boolean hit = player1.attack(attackPoint.x, attackPoint.y);
+        if(!hit)
+            view.setBackgroundResource(R.drawable.miss);
+        if(hit)
+            view.setBackgroundResource(R.drawable.hit);
     }
 
     public void checkHit(View view)
