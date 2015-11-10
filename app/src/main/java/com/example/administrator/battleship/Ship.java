@@ -11,6 +11,9 @@ public class Ship {
     int length,height,shipID,imageID;
     float originx,originy;
     ImageView image;
+    int hits;
+    boolean sunk;
+
     public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID){
         originx = initx;
         originy = inity;
@@ -20,6 +23,8 @@ public class Ship {
         shipID = initShipID;
         image = initImage;
         imageID = initImageID;
+        hits = 0;
+        sunk = false;
     }
 
     public Ship() //empty for testing
@@ -32,6 +37,8 @@ public class Ship {
         shipID = 5;
         image = null;
         imageID = R.id.HShip5;
+        hits = 0;
+        sunk = false;
     }
 
     public void togglePlaced()
@@ -44,4 +51,8 @@ public class Ship {
     public void tada(){image.setVisibility(View.VISIBLE);}
 
     public int getID(){return shipID;}
+
+    public void upHits(){hits++;}
+
+    public void sink(){sunk = true;}
 }
