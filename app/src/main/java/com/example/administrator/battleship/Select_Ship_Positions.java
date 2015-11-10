@@ -130,13 +130,13 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) ships[index].image.setBackgroundColor(Color.RED);
-                    else if(p1.testShip(column, row, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
+                    else if(p1.testShip(row,column,ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
                     else ships[index].image.setBackgroundResource(ships[index].imageID);
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 Log.i("X : Y", column + " " + row);
-                Boolean worked = p1.addShipToGrid(column, row, ships[index]);
+                Boolean worked = p1.addShipToGrid(row,column, ships[index]);
                 if(worked)
                 {
                     ships[index].togglePlaced();

@@ -128,13 +128,13 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) ships[index].image.setBackgroundColor(Color.RED);
-                    else if(p2.testShip(column, row, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
+                    else if(p2.testShip(row, column, ships[index]) == false) ships[index].image.setBackgroundColor(Color.RED);
                     else ships[index].image.setBackgroundResource(ships[index].imageID);
                 }
                 break;
             case MotionEvent.ACTION_UP:
                 Log.i("X : Y", column + " " + row);
-                Boolean worked = p2.addShipToGrid(column, row, ships[index]);
+                Boolean worked = p2.addShipToGrid(row, column, ships[index]);
                 if(worked)
                 {
                     ships[index].togglePlaced();

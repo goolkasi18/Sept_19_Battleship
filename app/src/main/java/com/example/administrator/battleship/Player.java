@@ -17,12 +17,14 @@ public class Player implements Serializable{
     int colorChoiceID;
 
 
-    public Player(String playerName)
+    public Player(String initPlayerName)
     {
         squares = new int[10][10];
         initSquares();
         turn = false;
-        this.playerName=playerName;
+        playerName=initPlayerName;
+        profilePicID = -1;
+        colorChoiceID = -1;
     }
 
     /*
@@ -33,7 +35,8 @@ public class Player implements Serializable{
         initSquares();
         turn = false;
         playerName = "default";
-
+        profilePicID = -1;
+        colorChoiceID = -1;
     }
 
     /*
@@ -83,16 +86,16 @@ public class Player implements Serializable{
      * (Jared) Removing ImageView parameter. Have caller move ship to initial position if method returns false.
      * Will rewrote
      */
-    public boolean addShipToGrid(int col, int row, Ship ship)
+    public boolean addShipToGrid(int row, int col, Ship ship)
     {
         if(row == -1 || col == -1) {
             Log.i("HERE", "");
             return false;
         }
         //check bounds
-        if(col+ship.length < 11 && row+ship.height < 11)
+        if(row+ship.height < 11 && col+ship.length < 11)
         {
-           if(testShip(col,row,ship)) { //if it doesnt overlap other ships (need another method for selectship dynamic class
+           if(testShip(row,col,ship)) { //if it doesnt overlap other ships (need another method for selectship dynamic class
                //no ships are in the way, so set the ship
                for (int i = col; i < col + ship.length; i++) {
                    squares[row][i] = ship.shipID;
@@ -107,16 +110,10 @@ public class Player implements Serializable{
         return false;
     }
 
-    public boolean testShip(int col, int row, Ship ship)
+    public boolean testShip(int row, int col, Ship ship)
     {
         if(row == -1 || col == -1) {
-            return true;
-        }
-        //check the length for other ships
-        for(int i = col; i<col+ship.length; i++)
-        {
-            if(squares[row][i] != 0)
-                return false;
+            return true; //its out of bounds so technically.. it isnt overlapping any ships
         }
         //check the height for other ships
         for(int i = row; i<row+ship.height; i++)
@@ -124,19 +121,57 @@ public class Player implements Serializable{
             if(squares[i][col] != 0)
                 return false;
         }
+        //check the length for other ships
+        for(int i = col; i<col+ship.length; i++)
+        {
+            if(squares[row][i] != 0)
+                return false;
+        }
         return true;
     }
 
-    public boolean attack(int col, int row)
+    public boolean attack(int row, int col)
     {
         // If the row and col are valid.
         if(col >= 0 && col <= 9 && row >= 0 && row <= 9)
         {
+            if(squares[row][col] == -1 || squares[row][col] == 2) //check to make sure they have not already guessed this spot
+                    return false;
+
             // Check to see if it's a hit.
-            if(squares[row][col] != 0)
-            {
+            if(squares[row][col] == 1) {
+                squares[row][col] = 2;
                 return true;
             }
+            squares[row][col] = -1; //they missed, so change the value to a miss value
+        }
+        return false;
+    }
+
+    //will only be called when the player hits the "next" or "play" button to show that he has chosen his decision.
+    public boolean lockIn()
+    {
+        int shipCount = 0;
+        for(int i = 0; i<10; i++) //count all the spots that have a ship. should be 5+4+3+3+2=17
+            for(int j = 0; j<10; j++) {
+                if (squares[i][j] == 1)
+                    shipCount++;
+                if (squares[i][j] == 2)
+                    shipCount++;
+                if (squares[i][j] == 3)
+                    shipCount++;
+                if (squares[i][j] == 4)
+                    shipCount++;
+                if (squares[i][j] == 5)
+                    shipCount++;
+            }
+
+        if(shipCount == 17) { //if they placed all the ships on the grid(its ready)
+            for (int i = 0; i < 10; i++)
+                for (int j = 0; j < 10; j++)
+                    if (squares[i][j] > 0)
+                        squares[i][j] = 1; //the spot has a ship and is saved with a default value
+            return true;
         }
         return false;
     }
