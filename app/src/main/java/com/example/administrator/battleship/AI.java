@@ -36,6 +36,8 @@ public class AI extends Player{
     }
 
     public void aiAddShipsToGrid(){
+        Ship ship = new Ship();
+
         int shipLength;
         int xCoord;
         int yCoord;
@@ -70,6 +72,9 @@ public class AI extends Player{
                 shipLength = 5;
             }
 
+            ship.length = shipLength;
+            ship.shipID = shipId;
+
             do
             {
                 if(Math.random() <= 0.5)
@@ -84,7 +89,7 @@ public class AI extends Player{
                 yCoord = (int)Math.random()*10;
 
             }       // Calls addShipToGrid until the ship can be added
-            while(!(addShipToGrid(xCoord, yCoord, shipId, shipLength, isH)));
+            while(!(addShipToGrid(xCoord, yCoord, ship)));
         }
 
     }

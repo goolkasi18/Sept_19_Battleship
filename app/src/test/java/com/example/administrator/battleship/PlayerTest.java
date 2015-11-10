@@ -8,10 +8,6 @@ import org.junit.Test;
  * Created by goolkasi18 on 11/8/2015.
  */
 public class PlayerTest extends TestCase {
-    Player test1 = new Player("test1");
-    Player test2 = new Player("test2");
-    Ship ship = new Ship(); //default ship which is the 5 long ship horizontal
-
     @Test
     public void testPlayer() throws  Exception {
         Player t1 = new Player();
@@ -30,6 +26,8 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testInitSquares() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
         test1.initSquares();
         test2.initSquares();
 
@@ -43,6 +41,8 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testEndTurn() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
         test1.endTurn();
         assertEquals(test1.turn, false);
 
@@ -52,6 +52,8 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testStartTurn() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
         test1.startTurn();
         assertEquals(test1.turn, true);
 
@@ -61,6 +63,9 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testGetTurn() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+
         test1.turn = true;
         assertEquals(test1.getTurn(), true);
         test1.turn = false;
@@ -74,6 +79,9 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testSetPlayerName() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+
         test1.setPlayerName("newtest1");
         assertEquals(test1.playerName, "newtest1");
 
@@ -83,6 +91,9 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testGetPlayerName() throws Exception {
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+
         test1.playerName = "getnametest1";
         assertEquals(test1.getPlayerName(), "getnametest1");
 
@@ -92,7 +103,53 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testAddShipToGrid() throws Exception {
-        test1.addShipToGrid(0,0,ship);
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+
+        Ship testShip1 = new Ship(0, 0, 3, 1, 1, null, 1);
+        Ship testShip2 = new Ship(0, 0, 3, 1, 2, null, 1);
+        // float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID
+
+        assertEquals(test1.addShipToGrid(0, 0, testShip1), true);
+        assertEquals(test1.squares[0][0], 1);
+        assertEquals(test1.squares[0][1], 1);
+        assertEquals(test1.squares[0][2], 1);
+
+        // Delete the shipId from its location in the grid.
+        for(int col = 0; col < testShip1.length; col++)
+        {
+            test1.squares[0][col] = 0;
+        }
+
+        // Test to see if the ship was not added in a wrong position.
+        for(int row = 0; row < 10; row++)
+        {
+            for(int col = 0; col < 10; col++)
+            {
+                assertEquals(test1.squares[row][col], 0);
+            }
+        }
+
+        // Add a ship to an invalid location.
+        assertEquals(test1.addShipToGrid(11,11,testShip1), false);
+        // Ship should go out of bounds
+        assertEquals(test1.addShipToGrid(9,1,testShip1), false);
+
+        // Test to see if the ship was not added in a wrong position.
+        for(int row = 0; row < 10; row++)
+        {
+            for (int col = 0; col < 10; col++)
+            {
+                assertEquals(test1.squares[row][col], 0);
+            }
+        }
+
+        // Add a ship on top of another ship
+        assertEquals(test1.addShipToGrid(3, 1, testShip2), true);
+        assertEquals(test1.addShipToGrid(1, 1, testShip2), false);
+
+
+        // Should not work
 
         //do tests
 
@@ -101,13 +158,40 @@ public class PlayerTest extends TestCase {
 
         //this is really our largest and most complicated test by far so make sure to try your best to cover all aspects of it
 
-
     }
 
     @Test
     public void testDeleteShip() throws Exception {
-        test1.addShipToGrid(0,0,ship);
-        test1.deleteShip(ship);
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+        Ship testShip1 = new Ship(0, 0, 3, 1, 1, null, 1);
+        Ship testShip2 = new Ship(0, 0, 3, 1, 2, null, 1);
+
+        test1.addShipToGrid(0,0,testShip1);
+        test1.deleteShip(testShip1);
+        assertEquals(test1.squares[0][0], 0);
+        assertEquals(test1.squares[0][1], 0);
+        assertEquals(test1.squares[0][2], 0);
+
+        // Test to see if ships were not deleted
+        for(int row = 0; row < 10; row++)
+        {
+            for (int col = 0; col < 10; col++)
+            {
+                assertEquals(test1.squares[row][col], 0);
+            }
+        }
+
+        // Delete a ship that doesn't exist.
+        test1.deleteShip(testShip2);
+        // Test to see if ships were not deleted
+        for(int row = 0; row < 10; row++)
+        {
+            for (int col = 0; col < 10; col++)
+            {
+                assertEquals(test1.squares[row][col], 0);
+            }
+        }
 
         //do tests
 
@@ -122,43 +206,50 @@ public class PlayerTest extends TestCase {
 
     @Test
     public void testAttack() throws Exception {
-        test1.attack(0, 0);
+        Player test1 = new Player("test1");
+        Player test2 = new Player("test2");
+        Ship testShip1 = new Ship(0, 0, 3, 1, 1, null, 1);
+        Ship testShip2 = new Ship(0, 0, 3, 1, 2, null, 1);
+        Ship testShip3 = new Ship(0, 0, 3, 1, 2, null, 1);
+        test1.addShipToGrid(0,0, testShip1);
+        test1.addShipToGrid(2,2, testShip2);
 
-        //do tests
+        // Attack testShip1
+        assertEquals(test1.attack(0, 0), true);
 
-        test1.attack(5,5);
+        // Attack miss
+        assertEquals(test1.attack(5,5), false);
 
-        //do tests
+        // Attack invalid location
+        assertEquals(test1.attack(5, 10), false);
 
-        test1.attack(10,10); //out of bounds, technically not possible how we made the game so might need to take out. but if possible good to test i guess
-
-        //do tests assertEquals(test1.attack(10,10), false);
-    }
-
-    @Test
-    public void testShip() throws Exception {
-        //this is also a bit complicated. should be easy as a copy from addship (also might not be needed as its called in addship anyway
-        //it checks to see if the new ship trying to be placed overlapps any existing ships. if youre going to do needs a second
-        //ship for testing. also check for out of bounds. (still think may not be necessary)
     }
 
     @Test
     public void testSetProfilePicID() throws Exception {
-        //this should be easy
+        Player test1 = new Player("test1");
+        test1.setProfilePicID(1);
+        assertEquals(test1.profilePicID, 1);
     }
 
     @Test
     public void testGetProfilePicID() throws Exception {
-        //this should be easy
+        Player test1 = new Player("test1");
+        test1.setProfilePicID(1);
+        assertEquals(test1.getProfilePicID(), 1);
     }
 
     @Test
     public void testSetColorChoiceID() throws Exception {
-        //this should be easy
+        Player test1 = new Player("test1");
+        test1.setColorChoiceID(1);
+        assertEquals(test1.colorChoiceID, 1);
     }
 
     @Test
     public void testGetColorChoiceID() throws Exception {
-        //this should be easy
+        Player test1 = new Player("test1");
+        test1.setColorChoiceID(1);
+        assertEquals(test1.getColorChoiceID(), 1);
     }
 }

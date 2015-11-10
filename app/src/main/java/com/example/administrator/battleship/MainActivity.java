@@ -59,10 +59,10 @@ public class MainActivity extends ActionBarActivity {
         Point attackPoint = AIPlayer.takeTurn();
 
         boolean hit = player1.attack(attackPoint.x, attackPoint.y);
-        if(!hit)
-            view.setBackgroundResource(R.drawable.miss);
-        if(hit)
-            view.setBackgroundResource(R.drawable.hit);
+        //if(!hit)
+           //view.setBackgroundResource(R.drawable.miss);
+        //if(hit)
+            //view.setBackgroundResource(R.drawable.hit);
     }
 
     public void checkHit(View view)

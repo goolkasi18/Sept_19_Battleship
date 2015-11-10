@@ -127,14 +127,19 @@ public class Player implements Serializable{
         return true;
     }
 
-    public boolean attack(int x, int y)
+    public boolean attack(int col, int row)
     {
-        squares[x][y]++;
-        if (squares[x][y] == 1)
-            return false;
-        if (squares[x][y] == 2)
-            return true;
-
+        // If the row and col are valid.
+        if(col >= 0 && col <= 9 && row >= 0 && row <= 9)
+        {
+            // Check to see if it's a hit.
+            if(squares[row][col] != 0)
+            {
+                return true;
+            }
+        }
         return false;
     }
+
+
 }
