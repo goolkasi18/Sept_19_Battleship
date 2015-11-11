@@ -15,6 +15,7 @@ public class Player implements Serializable{
     String playerName;
     int profilePicID;
     int colorChoiceID;
+    Ship[] ships;
 
 
     public Player(String initPlayerName)
@@ -25,6 +26,7 @@ public class Player implements Serializable{
         playerName=initPlayerName;
         profilePicID = -1;
         colorChoiceID = -1;
+        ships = new Ship[10];
     }
 
     /*
@@ -37,6 +39,7 @@ public class Player implements Serializable{
         playerName = "default";
         profilePicID = -1;
         colorChoiceID = -1;
+        ships = new Ship[10];
     }
 
     /*
@@ -135,15 +138,10 @@ public class Player implements Serializable{
         // If the row and col are valid.
         if(col >= 0 && col <= 9 && row >= 0 && row <= 9)
         {
-            if(squares[row][col] == -1 || squares[row][col] == 2) //check to make sure they have not already guessed this spot
-                    return false;
-
-            // Check to see if it's a hit.
-            if(squares[row][col] == 1) {
-                squares[row][col] = 2;
+            if(squares[row][col] > 0) {
+                ships[squares[row][col]].upHits();
                 return true;
             }
-            squares[row][col] = -1; //they missed, so change the value to a miss value
         }
         return false;
     }

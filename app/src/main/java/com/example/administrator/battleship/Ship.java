@@ -1,10 +1,7 @@
 package com.example.administrator.battleship;
 
-import android.graphics.Point;
 import android.view.View;
 import android.widget.ImageView;
-
-import java.util.HashMap;
 
 /**
  * Created by goolkasi18 on 11/8/2015.
@@ -14,9 +11,8 @@ public class Ship {
     int length,height,shipID,imageID;
     float originx,originy;
     ImageView image;
-
-
-    HashMap<Point, Boolean> shipMap = new HashMap<Point, Boolean>();
+    int hits;
+    boolean sunk;
 
     public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID){
         originx = initx;
@@ -27,6 +23,8 @@ public class Ship {
         shipID = initShipID;
         image = initImage;
         imageID = initImageID;
+        hits = 0;
+        sunk = false;
     }
 
     public Ship() //empty for testing
@@ -39,6 +37,8 @@ public class Ship {
         shipID = 5;
         image = null;
         imageID = R.id.HShip5;
+        hits = 0;
+        sunk = false;
     }
 
     public void togglePlaced()
@@ -51,4 +51,8 @@ public class Ship {
     public void tada(){image.setVisibility(View.VISIBLE);}
 
     public int getID(){return shipID;}
+
+    public void upHits(){hits++;}
+
+    public void sink(){sunk = true;}
 }

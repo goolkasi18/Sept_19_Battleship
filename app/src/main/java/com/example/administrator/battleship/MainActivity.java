@@ -68,14 +68,26 @@ public class MainActivity extends ActionBarActivity {
 
     public void checkHit(View view)
     {
+
+        //this only works for player1 right now so we need an "active player" variable so the two players must be an array with an active index
         view.setEnabled(false);
         int x = view.getLeft()/80;
         int y = view.getTop()/80;
         boolean hit = p1.attack(x, y);
         if(!hit)
             view.setBackgroundResource(R.drawable.miss);
-        if(hit)
+            view.setEnabled(false);
+        }
+        if(hit) {
             view.setBackgroundResource(R.drawable.hit);
+            view.setEnabled(false);
+            if(player1.ships[player1.squares[x][y]-1].hits == player1.ships[player1.squares[x][y]-1].length || player1.ships[player1.squares[x][y]-1].hits == player1.ships[player1.squares[x][y]-1].height)
+            {
+                //then you sunk a ship.
+                player1.ships[player1.squares[x][y]-1].sink();
+                //redwar whatever image is on screen for that ship
+            }
+        }
     }
 
     public void checkHitPlayer2(View view)
