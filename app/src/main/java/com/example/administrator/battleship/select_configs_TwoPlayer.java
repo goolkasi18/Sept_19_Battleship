@@ -7,12 +7,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class select_configs_TwoPlayer extends ActionBarActivity {
 
-    Player p1,p2;
+    //Both players are human, need to declare two Player objects upon start of this class
+    public Player p1,p2;
 
+    //Both players are defaulted to not ready, because they both need to choose configurations
+    public boolean readyPlayer1 = false;
+    public boolean readyPlayer2 = false;
+
+    //Text fields that hold the players name
+    public EditText p1Name;
+    public EditText p2Name;
+    /*
+    *start the activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +33,9 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
         startB.setVisibility(View.GONE);
         p1 = new Player();
         p2 = new Player();
+
+        p1Name = (EditText) this.findViewById(R.id.Player1_Name);
+        p2Name = (EditText) this.findViewById(R.id.Player2_Name);
     }
 
     @Override
@@ -36,6 +51,15 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
      * @param view
      */
     public void switchToSelectShips(View view) {
+
+        /*
+        * Upon switching views, find the two player names, and set the respective players
+         */
+
+
+        p1.setPlayerName(p1Name.getText().toString());
+        p2.setPlayerName(p2Name.getText().toString());
+
         if(readyPlayer1&&readyPlayer2) {
             Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
             switchToSelect.putExtra("Player1", p1);
@@ -46,7 +70,7 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
 
     }
 
-    boolean readyPlayer1 = false;
+
     public void readyPlayer1(View view){
         //If the other player is ready, and player 2 has shown they are ready, make the start game button visible
         Button startB = (Button) this.findViewById(R.id.select_ships);
@@ -67,7 +91,7 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
             startB.setVisibility(View.GONE);
     }
 
-    boolean readyPlayer2 = false;
+
     public void readyPlayer2(View view){
         Button startB = (Button) this.findViewById(R.id.select_ships);
         Button readyB = (Button) this.findViewById(R.id.ready_2);

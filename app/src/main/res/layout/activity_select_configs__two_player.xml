@@ -27,7 +27,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2" />
+            android:id="@+id/Player1_Name"
+            android:text="Player 1 " />
 
         <Space
             android:layout_width="match_parent"
@@ -47,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ColorSpinner"
-            android:layout_gravity="center_horizontal"
             android:spinnerMode="dropdown" />
 
         <Space
@@ -112,7 +112,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Player2_Name"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="Player 2" />
 
         <Space
             android:layout_width="match_parent"

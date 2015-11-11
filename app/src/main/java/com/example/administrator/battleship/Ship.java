@@ -1,7 +1,10 @@
 package com.example.administrator.battleship;
 
+import android.graphics.Point;
 import android.view.View;
 import android.widget.ImageView;
+
+import java.util.HashMap;
 
 /**
  * Created by goolkasi18 on 11/8/2015.
@@ -11,6 +14,10 @@ public class Ship {
     int length,height,shipID,imageID;
     float originx,originy;
     ImageView image;
+
+
+    HashMap<Point, Boolean> shipMap = new HashMap<Point, Boolean>();
+
     public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID){
         originx = initx;
         originy = inity;

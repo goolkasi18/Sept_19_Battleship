@@ -18,18 +18,19 @@ public class MainActivity extends ActionBarActivity {
 
 
     //Global 2 dimensional array
-    private Player player1;
-    private Player player2;
+    private Player p1;
+    private Player p2;
     private AI AIPlayer;
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("Jello0", "Jello1");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        player1 = new Player();
-        player2 = new Player();
-        player1.initSquares();
-        player2.initSquares();
+
+
+        p1 = (Player)getIntent().getSerializableExtra("Player1");
+        p2 = (Player)getIntent().getSerializableExtra("Player2");
+
 
 
     }
@@ -58,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
     public void callAIPlayerTakeTurn(){
         Point attackPoint = AIPlayer.takeTurn();
 
-        boolean hit = player1.attack(attackPoint.x, attackPoint.y);
+        boolean hit = p1.attack(attackPoint.x, attackPoint.y);
         //if(!hit)
            //view.setBackgroundResource(R.drawable.miss);
         //if(hit)
@@ -70,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
         view.setEnabled(false);
         int x = view.getLeft()/80;
         int y = view.getTop()/80;
-        boolean hit = player1.attack(x, y);
+        boolean hit = p1.attack(x, y);
         if(!hit)
             view.setBackgroundResource(R.drawable.miss);
         if(hit)
@@ -82,7 +83,7 @@ public class MainActivity extends ActionBarActivity {
         view.setEnabled(false);
         int x = view.getLeft()/80;
         int y = view.getTop()/80;
-        boolean hit = player2.attack(x, y);
+        boolean hit = p2.attack(x, y);
         if(!hit)
             view.setBackgroundResource(R.drawable.miss);
         if(hit)

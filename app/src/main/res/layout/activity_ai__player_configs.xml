@@ -27,7 +27,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText2" />
+            android:id="@+id/Player2_Name"
+            android:text="Player 1" />
 
         <Space
             android:layout_width="match_parent"
@@ -111,7 +112,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Player2_Name"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="Robot" />
 
         <Space
             android:layout_width="match_parent"
@@ -167,13 +169,6 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ready Player 2"
-            android:id="@+id/ready_2"
-            android:layout_gravity="right"
-            android:onClick="readyPlayer2" />
     </LinearLayout>
 
     <Button

@@ -45,6 +45,11 @@ public class Start_Page extends ActionBarActivity {
         startActivity(switchToCustom);
     }
 
+    public void switchToAIConfig(View view){
+        Intent switchToAIConfig = new Intent(this, AI_Player_configs.class);
+        startActivity(switchToAIConfig);
+    }
+
     public void showHelp(View view) {
         vibrate.vibrate(2000);
         helpBtn.setEnabled(false);

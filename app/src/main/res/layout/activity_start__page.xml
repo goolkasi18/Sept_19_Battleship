@@ -26,7 +26,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="0.20"
             android:visibility="visible"
-            android:onClick="switchToSelectShips"
+            android:onClick="switchToAIConfig"
             android:background="@drawable/vs_aibg" />
 
         <Button
