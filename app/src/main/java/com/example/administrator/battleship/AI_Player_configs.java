@@ -72,7 +72,7 @@ public class AI_Player_configs extends ActionBarActivity {
     }
 
     public void startGame(View view){
-        Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
+        Intent switchToSelect = new Intent(this, select_ship_positions_ai.class);
         switchToSelect.putExtra("Player1", p1);
         switchToSelect.putExtra("AI2", p2);
         startActivity(switchToSelect);
@@ -99,7 +99,7 @@ public class AI_Player_configs extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_select_configs__two_player, menu);
+        getMenuInflater().inflate(R.menu.menu_select_ship_positions_ai, menu);
         return true;
     }
     @Override

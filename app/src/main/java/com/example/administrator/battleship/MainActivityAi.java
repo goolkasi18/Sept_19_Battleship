@@ -14,27 +14,40 @@ import android.view.View;
 import android.widget.ImageView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivityAi extends ActionBarActivity {
 
 
     //Global 2 dimensional array
     private Player p1;
-    private Player p2;
-    private AI AIPlayer;
+    private AI p2;
     Player[] players = new Player[2];
     int activePlayer = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_activity_ai);
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
-        p2 = (Player)getIntent().getSerializableExtra("Player2");
+        p2 = (AI)getIntent().getSerializableExtra("AI2");
         players[0] = p1;
         players[1] = p2;
 
         ImageView background = (ImageView)findViewById(R.id.Background);
         background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
+    }
+
+
+
+
+
+    public void createMap()
+    {
+        //how to declare a button, this can be used to create a hashmap of all 200 buttons
+        String button = "left_"+ 8 + "_" + 1;
+        // int resId= getResources().getIdentifier(button, "drawable", MainActivity.this.getPackageName());
+        //Button one = (Button)this.findViewById(resId);
+
+
     }
 
     public void exitToStart(View view)
@@ -44,13 +57,23 @@ public class MainActivity extends ActionBarActivity {
         finish();
     }
 
+    public void callAIPlayerTakeTurn(){
+        Point attackPoint = p2.takeTurn();
+
+        boolean hit = p1.attack(attackPoint.x, attackPoint.y);
+        //if(!hit)
+        //view.setBackgroundResource(R.drawable.miss);
+        //if(hit)
+        //view.setBackgroundResource(R.drawable.hit);
+    }
+
     public void checkHit(View view)
     {
         if((view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1) || (view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)) {
             view.setEnabled(false);
             int col = view.getLeft() / 80;
             int row = view.getTop() / 80;
-            Log.i("Jello0", "Row: " + row + "Col: " +col);
+            Log.i("Jello0", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
                 view.setBackgroundResource(R.drawable.hit);

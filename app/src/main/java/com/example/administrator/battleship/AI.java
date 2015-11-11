@@ -17,7 +17,6 @@ public class AI extends Player{
     public AI(String initPlayerName){
         shots = new int[10][10];
         initShots();
-
         squares = new int[10][10];
         initSquares();
         turn = false;
@@ -41,12 +40,12 @@ public class AI extends Player{
 
     public boolean addShipToGrid()
     {
-        double i = Math.random()*10;
         int done = 0;
         while (done < 5){
-            int x = (int)Math.random()*10-1;
-            int y = (int)Math.random()*10-1;
-            if(addShipToGrid(x, y,ships[(int)i-1]))
+            int i = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
+            int x = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
+            int y = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
+            if(addShipToGrid(x, y,ships[i]))
                 done++;
         }
         return true;

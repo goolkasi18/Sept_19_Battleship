@@ -48,6 +48,10 @@
             android:name=".select_ship_positions_ai"
             android:label="@string/title_activity_select_ship_positions_ai" >
         </activity>
+        <activity
+            android:name=".MainActivityAi"
+            android:label="@string/title_activity_main_activity_ai" >
+        </activity>
     </application>
 
 </manifest>

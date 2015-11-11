@@ -1,0 +1,2037 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityAI">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Background"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/left_button_grid"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="66dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_0_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_0"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_1_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_0"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_2_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_0"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_3_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_0"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_1"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_2"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_3"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_4"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_5"
+            android:layout_row="4"
+            android:layout_column="5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_6"
+            android:layout_row="4"
+            android:layout_column="6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_7"
+            android:layout_row="4"
+            android:layout_column="7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_8"
+            android:layout_row="4"
+            android:layout_column="8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_4_9"
+            android:layout_row="4"
+            android:layout_column="9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_0"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_5_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_0"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_6_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_0"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_7_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_0"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_8_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_0"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/left_9_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_button_grid"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="44dp"
+        android:visibility="visible"
+        android:layout_marginRight="61dp">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_0_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_0"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_1_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_0"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_2_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_0"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_3_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_0"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_1"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_2"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_3"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_4"
+            android:layout_row="4"
+            android:layout_column="4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_5"
+            android:layout_row="4"
+            android:layout_column="5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_6"
+            android:layout_row="4"
+            android:layout_column="6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_7"
+            android:layout_row="4"
+            android:layout_column="7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_8"
+            android:layout_row="4"
+            android:layout_column="8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_4_9"
+            android:layout_row="4"
+            android:layout_column="9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_0"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_5_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_0"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_6_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_0"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_7_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_0"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_8_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_0"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_1"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_2"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_3"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_4"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_5"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_6"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_7"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_8"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/right_9_9"
+            android:visibility="visible"
+            android:background="@drawable/transparent"
+            android:contentDescription="@string/title_activity_test_grid_layout"
+            android:onClick="checkHit"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/left_pieces_remaining"
+        android:layout_below="@+id/left_button_grid"
+        android:layout_alignLeft="@+id/left_button_grid"
+        android:layout_alignStart="@+id/left_button_grid"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView6"
+            android:background="@drawable/vertical2"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView7"
+            android:background="@drawable/vertical3"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView8"
+            android:background="@drawable/vertical3"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView9"
+            android:background="@drawable/vertical4"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView10"
+            android:background="@drawable/vertical5"
+            android:layout_marginLeft="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:id="@+id/right_pieces_remaining"
+        android:layout_above="@+id/right_button_grid"
+        android:layout_alignRight="@+id/right_button_grid"
+        android:layout_alignEnd="@+id/right_button_grid"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView11"
+            android:background="@drawable/vertical5"
+            android:layout_marginRight="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView13"
+            android:background="@drawable/vertical4"
+            android:layout_marginRight="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView14"
+            android:background="@drawable/vertical3"
+            android:layout_marginRight="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView15"
+            android:background="@drawable/vertical3"
+            android:layout_marginRight="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView12"
+            android:background="@drawable/vertical2"
+            android:layout_marginRight="15dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit To Start Page"
+        android:id="@+id/exitGame"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/right_pieces_remaining"
+        android:layout_alignEnd="@+id/right_pieces_remaining"
+        android:onClick="exitToStart"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/imageView16"
+        android:layout_below="@+id/left_button_grid"
+        android:layout_toRightOf="@+id/left_pieces_remaining"
+        android:layout_toEndOf="@+id/left_pieces_remaining"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="46dp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/imageView17"
+        android:layout_above="@+id/right_button_grid"
+        android:layout_toLeftOf="@+id/right_pieces_remaining"
+        android:layout_toStartOf="@+id/right_pieces_remaining"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="17dp" />
+
+
+</RelativeLayout>
