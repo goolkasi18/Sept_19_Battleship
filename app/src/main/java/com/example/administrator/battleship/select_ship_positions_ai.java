@@ -5,8 +5,6 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Point;
-import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,21 +13,20 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 
-public class Select_Ship_Positions extends ActionBarActivity implements View.OnTouchListener {
+public class select_ship_positions_ai  extends ActionBarActivity implements View.OnTouchListener {
 
     ImageView Vship5,Vship4,Vship3,Vship2,Vship1,Hship5,Hship4,Hship3,Hship2,Hship1;
-    Player p1,p2;
+    Player p1;
+    AI p2;
     Ship s1,s2,s3,s4,s5,s6,s7,s8,s9,s10;
     Ship[] ships = new Ship[10];
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select__ship__positions);
+        setContentView(R.layout.activity_select_ship_positions_ai);
 
         //set on touch listeners for the ships visible and invisible on startup
         Vship5 = (ImageView) findViewById(R.id.Ship5);
@@ -57,7 +54,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         Hship1.setOnTouchListener(this);
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
-        p2 = (Player)getIntent().getSerializableExtra("Player2");
+        p2 = (AI)getIntent().getSerializableExtra("AI2");
 
         ImageView background = (ImageView)findViewById(R.id.Background);
         background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
@@ -91,7 +88,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
             if(arg0 == findViewById(ships[index].viewID))
                 break;
 
-        Log.i("SHIP: "+ ships[index].shipID + "", arg0.getX()+ " " + arg0.getY());
+        Log.i("SHIP: " + ships[index].shipID + "", arg0.getX() + " " + arg0.getY());
         p1.deleteShip(ships[index]);
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -253,19 +250,22 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
 
     /*
-    *  Method: startGame
-    *  Purpose: finishes the current activity and switches to the game
-     */
-    public void selectShips(View view)
+   *  Method: startGame
+   *  Purpose: finishes the current activity and switches to the game
+    */
+    public void startGame(View view)
     {
-        Intent selectShip2 = new Intent(this, select_ship_positions_2.class);
-        selectShip2.putExtra("Player1",p1);
-        selectShip2.putExtra("Player2", p2);
-        startActivity(selectShip2);
-        finish();
+        if(p2.setUpAi()) {
+            //Intent startGame = new Intent(this, MainActivity.class); needs to be a new AI class
+            //startGame.putExtra("Player1", p1);
+            //startGame.putExtra("Player2", p2);
+            //startActivity(startGame);
+            //finish();
+            Log.i("hi", "hi");
+        }
     }
 
-    
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

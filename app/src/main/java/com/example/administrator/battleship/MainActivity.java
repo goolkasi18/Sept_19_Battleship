@@ -1,6 +1,9 @@
 package com.example.administrator.battleship;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -21,7 +25,6 @@ public class MainActivity extends ActionBarActivity {
     int activePlayer = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i("Jello0", "Jello1");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,6 +32,9 @@ public class MainActivity extends ActionBarActivity {
         p2 = (Player)getIntent().getSerializableExtra("Player2");
         players[0] = p1;
         players[1] = p2;
+
+        ImageView background = (ImageView)findViewById(R.id.Background);
+        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
     }
 
 
@@ -66,21 +72,26 @@ public class MainActivity extends ActionBarActivity {
     {
         if((view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1) || (view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)) {
             view.setEnabled(false);
-            int x = view.getLeft() / 80;
-            int y = view.getTop() / 80;
-            boolean hit = players[activePlayer].attack(x, y);
-            if (!hit) {
-                view.setBackgroundResource(R.drawable.miss);
-                view.setEnabled(false);
-            }
-            if (hit) {
+            int col = view.getLeft() / 80;
+            int row = view.getTop() / 80;
+            Log.i("Jello0", "Row: " + row + "Col: " +col);
+
+            if(players[activePlayer].attack(row,col)) {
                 view.setBackgroundResource(R.drawable.hit);
-                view.setEnabled(false);
-                if (players[activePlayer].ships[(players[activePlayer].squares[x][y]-1)].hits == players[activePlayer].ships[(p1.squares[x][y]-1)].length || players[activePlayer].ships[(p1.squares[x][y]-1)].hits == players[activePlayer].ships[(p1.squares[x][y]-1)].height) {
-                    //then you sunk a ship.
-                    players[activePlayer].ships[players[activePlayer].squares[x][y] - 1].sink();
-                    //redwar whatever image is on screen for that ship
+                if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
+                {
+                    Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                    //draw the new ship on the screen as sunk
                 }
+                if (players[activePlayer].checkWin())
+                {
+                    Log.i("Win:", "Player " + activePlayer);
+                    //do whatever we want to end game and show win screen
+                }
+            }
+            else
+            {
+                view.setBackgroundResource(R.drawable.miss);
             }
             endTurn();
         }
@@ -128,5 +139,44 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) > reqHeight
+                    && (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
     }
 }

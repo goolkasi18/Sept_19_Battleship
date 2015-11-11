@@ -44,6 +44,10 @@
             android:label="@string/title_activity_select_ship_positions_2"
             android:screenOrientation="landscape" >
         </activity>
+        <activity
+            android:name=".select_ship_positions_ai"
+            android:label="@string/title_activity_select_ship_positions_ai" >
+        </activity>
     </application>
 
 </manifest>

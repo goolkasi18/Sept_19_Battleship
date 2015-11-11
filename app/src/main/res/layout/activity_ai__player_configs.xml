@@ -6,6 +6,13 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.administrator.battleship.Select_Configs_2Player">
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Background"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="475dp"
@@ -191,6 +198,7 @@
         android:layout_alignRight="@+id/back_Button"
         android:layout_alignEnd="@+id/back_Button"
         android:layout_centerVertical="true"
-        android:onClick="switchToSelectShips" />
+        android:onClick="startGame"
+        android:visibility="gone" />
 
 </RelativeLayout>

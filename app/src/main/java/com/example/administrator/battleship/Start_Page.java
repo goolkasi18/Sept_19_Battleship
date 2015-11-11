@@ -45,7 +45,7 @@ public class Start_Page extends ActionBarActivity {
 
 
         ImageView background = (ImageView)findViewById(R.id.Background);
-        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 100, 100));
+        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
     public void switchToSelectShips(View view) {

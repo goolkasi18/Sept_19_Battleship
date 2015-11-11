@@ -92,7 +92,6 @@ public class Player implements Serializable{
     public boolean addShipToGrid(int row, int col, Ship ship)
     {
         if(row == -1 || col == -1) {
-            Log.i("HERE", "");
             return false;
         }
         //check bounds
@@ -153,6 +152,25 @@ public class Player implements Serializable{
         return false;
     }
 
+    public boolean checkWin()
+    {
+        int count = 0;
+        for(int i = 0; i<ships.length; i++)
+            if(ships[i].getSunk())
+                count++;
+        if(count == 5)
+            return true;
+        return false;
+    }
+
+    public boolean checkSink(Ship ship)
+    {
+        if ((ship.hits == ship.length || ship.hits == ship.height) && !ship.getSunk()) {
+            ship.sink();
+            return true;
+        }
+        return false;
+    }
 
 
 }

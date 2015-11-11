@@ -53,4 +53,6 @@ public class Ship implements Serializable{
     public void upHits(){hits++;}
 
     public void sink(){sunk = true;}
+
+    public boolean getSunk(){return sunk;}
 }

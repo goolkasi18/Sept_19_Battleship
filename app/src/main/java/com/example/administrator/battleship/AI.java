@@ -14,13 +14,32 @@ public class AI extends Player{
     private Player player;
     private int[][] shots;
 
-    public AI(String playerName){
-        super(playerName);
+    public AI(String initPlayerName){
         shots = new int[10][10];
         initShots();
+
+        squares = new int[10][10];
+        initSquares();
+        turn = false;
+        playerName=initPlayerName;
+        profilePicID = -1;
+        colorChoiceID = -1;
+        ships = new Ship[10];
     }
 
-    public void addShipToGrid()
+    public AI(){
+        playerName = "Default AI";
+        shots = new int[10][10];
+        initShots();
+        squares = new int[10][10];
+        initSquares();
+        turn = false;
+        profilePicID = -1;
+        colorChoiceID = -1;
+        ships = new Ship[10];
+    }
+
+    public boolean addShipToGrid()
     {
         double i = Math.random()*10;
         int done = 0;
@@ -30,6 +49,7 @@ public class AI extends Player{
             if(addShipToGrid(x, y,ships[(int)i-1]))
                 done++;
         }
+        return true;
     }
 
     public Point takeTurn(){
@@ -57,6 +77,12 @@ public class AI extends Player{
 
     public void addShot(){
 
+    }
+
+    public boolean setUpAi(){
+        if(addShipToGrid())
+            return true;
+        return false;
     }
 
 }

@@ -13,15 +13,22 @@
     ]]>
 
     <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/Background"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:id="@+id/Rotate"
         android:background="@drawable/rotateshipsbg"
         android:onClick="rotateShips"
+        android:visibility="visible"
         android:layout_above="@+id/Play"
         android:layout_alignRight="@+id/Play"
-        android:layout_alignEnd="@+id/Play"
-        android:visibility="visible" />
+        android:layout_alignEnd="@+id/Play" />
 
     <ImageView
         android:layout_width="135dp"
@@ -40,11 +47,12 @@
         android:id="@+id/Play"
         android:background="@drawable/playbg"
         android:onClick="selectShips"
+        android:visibility="visible"
+        android:layout_marginBottom="150dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="115dp"
-        android:visibility="visible" />
+        android:layout_marginRight="75dp" />
 
     <ImageView
         android:layout_width="38dp"
@@ -100,10 +108,10 @@
         android:id="@+id/Ship1"
         android:background="@drawable/vertical2"
         android:contentDescription="@string/ship"
+        android:visibility="visible"
         android:layout_above="@+id/Rotate"
         android:layout_alignRight="@+id/Rotate"
-        android:layout_alignEnd="@+id/Rotate"
-        android:visibility="visible" />
+        android:layout_alignEnd="@+id/Rotate" />
 
     <ImageView
         android:layout_width="235dp"

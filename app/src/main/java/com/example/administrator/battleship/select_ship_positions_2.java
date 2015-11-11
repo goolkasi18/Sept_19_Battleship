@@ -1,6 +1,9 @@
 package com.example.administrator.battleship;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,9 +21,6 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
     Player p1,p2;
     Ship s1,s2,s3,s4,s5,s6,s7,s8,s9,s10;
     Ship[] ships = new Ship[10];
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,9 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (Player)getIntent().getSerializableExtra("Player2");
+
+        ImageView background = (ImageView)findViewById(R.id.Background);
+        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player2positionspage, 1000, 600));
     }
 
     public void ready(View view){
@@ -192,14 +195,14 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
             findViewById(ship.viewID).setBackgroundResource(ship.imageID);
             findViewById(ship.viewID).setX(ship.originx);
             findViewById(ship.viewID).setY(ship.originy);
-            findViewById(ship.viewID).setVisibility(View.GONE);
+            findViewById(ship.viewID).setVisibility(View.INVISIBLE);
             findViewById(ships[index+5].viewID).setVisibility(View.VISIBLE);
         }
         else if(index > 4 && !horizontal) {
             findViewById(ship.viewID).setBackgroundResource(ship.imageID);
             findViewById(ship.viewID).setX(ship.originx);
             findViewById(ship.viewID).setY(ship.originy);
-            findViewById(ship.viewID).setVisibility(View.GONE);
+            findViewById(ship.viewID).setVisibility(View.INVISIBLE);
             findViewById(ships[index-5].viewID).setVisibility(View.VISIBLE);
         }
         else
@@ -218,7 +221,7 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
             for (int i = 0; i < 5; i++) { //for each ship in ships array
                 if (ships[i].placed == false) //if that ship is not placed
                 {
-                    findViewById(ships[i].viewID).setVisibility(View.GONE); //make it disappear
+                    findViewById(ships[i].viewID).setVisibility(View.INVISIBLE); //make it disappear
                     findViewById(ships[i+5].viewID).setVisibility(View.VISIBLE); //make the opposite of it appear
                 }
             }
@@ -229,7 +232,7 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
             for (int i = 5; i < ships.length; i++) { //for each ship in ships array
                 if (ships[i].placed == false) //if that ship is not placed
                 {
-                    findViewById(ships[i].viewID).setVisibility(View.GONE); //make it disappear
+                    findViewById(ships[i].viewID).setVisibility(View.INVISIBLE); //make it disappear
                     findViewById(ships[i-5].viewID).setVisibility(View.VISIBLE); //make the opposite of it appear
                 }
             }
@@ -281,5 +284,44 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) > reqHeight
+                    && (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
+    }
+
+    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+                                                         int reqWidth, int reqHeight) {
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, resId, options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeResource(res, resId, options);
     }
 }

@@ -18,4 +18,5 @@
     <string name="title_activity_test">Test</string>
     <string name="title_activity_player2_select_ships">Player2SelectShips</string>
     <string name="title_activity_select_ship_positions_2">select_ship_positions_2</string>
+    <string name="title_activity_select_ship_positions_ai">select_ship_positions_ai</string>
 </resources>
