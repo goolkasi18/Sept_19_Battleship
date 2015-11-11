@@ -113,8 +113,8 @@ public class PlayerTest extends TestCase {
         Player test1 = new Player("test1");
         Player test2 = new Player("test2");
 
-        Ship testShip1 = new Ship(0, 0, 3, 0, 1, null, 1); //a ship that is 3 long, horizontal
-        Ship testShip2 = new Ship(0, 0, 3, 0, 2, null, 1); //a ship that is 3 long, horizontal
+        Ship testShip1 = new Ship(0, 0, 3, 0, 1, 1, 0); //a ship that is 3 long, horizontal
+        Ship testShip2 = new Ship(0, 0, 3, 0, 2, 1, 0); //a ship that is 3 long, horizontal
         // float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID
 
         assertEquals(test1.addShipToGrid(0, 0, testShip1), true); //test to see if it returns true (so it says it worked)
@@ -157,8 +157,8 @@ public class PlayerTest extends TestCase {
     public void testDeleteShip() throws Exception {
         Player test1 = new Player("test1");
         Player test2 = new Player("test2");
-        Ship testShip1 = new Ship(0, 0, 3, 0, 1, null, 1); //a ship that is 3 long, horizontal
-        Ship testShip2 = new Ship(0, 0, 3, 0, 2, null, 1); //a ship that is 3 long, horizontal
+        Ship testShip1 = new Ship(0, 0, 3, 0, 1, 1, 0); //a ship that is 3 long, horizontal
+        Ship testShip2 = new Ship(0, 0, 3, 0, 2, 1, 0); //a ship that is 3 long, horizontal
 
         test1.addShipToGrid(0, 0, testShip1);
         //dont need to test if its there because we tested that earlier
@@ -205,30 +205,24 @@ public class PlayerTest extends TestCase {
     @Test
     public void testLockIn() throws Exception{
         Player test1 = new Player("test1");
-        Ship testShip1 = new Ship(0, 0, 2, 0, 1, null, 1);
-        Ship testShip2 = new Ship(0, 0, 3, 0, 2, null, 1);
-        Ship testShip3 = new Ship(0, 0, 3, 0, 3, null, 1);
-        Ship testShip4 = new Ship(0, 0, 4, 0, 4, null, 1);
-        Ship testShip5 = new Ship(0, 0, 5, 0, 5, null, 1);
+        Ship testShip1 = new Ship(0, 0, 2, 0, 1, 1, 0);
+        Ship testShip2 = new Ship(0, 0, 3, 0, 2, 1, 0);
+        Ship testShip3 = new Ship(0, 0, 3, 0, 3, 1, 0);
+        Ship testShip4 = new Ship(0, 0, 4, 0, 4, 1, 0);
+        Ship testShip5 = new Ship(0, 0, 5, 0, 5, 1, 0);
         test1.addShipToGrid(0,0,testShip1);
         test1.addShipToGrid(1,1,testShip2);
         test1.addShipToGrid(2, 2, testShip3);
-
-        assertEquals(test1.lockIn(), false); //tries to lock in without all ships
-
         test1.addShipToGrid(3,3,testShip4);
         test1.addShipToGrid(4, 4, testShip5);
-
-        assertEquals(test1.lockIn(),true); //locks in after all ships are on the grid
 
         int shipCount = 0;
         for(int row = 0; row < 10; row++)
         {
             for(int col = 0; col < 10; col++)
             {
-                if(test1.squares[row][col] == 1)
+                if(test1.squares[row][col] > 0)
                     shipCount++;
-                assertTrue(test1.squares[row][col] < 2); //check to see that all ships added have been converted to a 1 integer
             }
         }
         assertEquals(shipCount, 17); //and check to see if there are still 17 spots of ships
@@ -237,17 +231,16 @@ public class PlayerTest extends TestCase {
     @Test
     public void testAttack() throws Exception {
         Player test1 = new Player("test1");
-        Ship testShip1 = new Ship(0, 0, 2, 0, 1, null, 1);
-        Ship testShip2 = new Ship(0, 0, 3, 0, 2, null, 1);
-        Ship testShip3 = new Ship(0, 0, 3, 0, 3, null, 1);
-        Ship testShip4 = new Ship(0, 0, 4, 0, 4, null, 1);
-        Ship testShip5 = new Ship(0, 0, 5, 0, 5, null, 1);
+        Ship testShip1 = new Ship(0, 0, 2, 0, 1, 1, 0);
+        Ship testShip2 = new Ship(0, 0, 3, 0, 2, 1, 0);
+        Ship testShip3 = new Ship(0, 0, 3, 0, 3, 1, 0);
+        Ship testShip4 = new Ship(0, 0, 4, 0, 4, 1, 0);
+        Ship testShip5 = new Ship(0, 0, 5, 0, 5, 1, 0);
         test1.addShipToGrid(0,0,testShip1);
         test1.addShipToGrid(1,1,testShip2);
         test1.addShipToGrid(2,2,testShip3);
         test1.addShipToGrid(3,3,testShip4);
         test1.addShipToGrid(4, 4, testShip5);
-        test1.lockIn();
 
         // Attack testShip1
         assertEquals(test1.attack(0, 0), true);

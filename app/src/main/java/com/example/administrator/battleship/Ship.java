@@ -3,28 +3,30 @@ package com.example.administrator.battleship;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.io.Serializable;
+
 /**
  * Created by goolkasi18 on 11/8/2015.
  */
-public class Ship {
+public class Ship implements Serializable{
     boolean placed;
     int length,height,shipID,imageID;
     float originx,originy;
-    ImageView image;
     int hits;
     boolean sunk;
+    int viewID;
 
-    public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, ImageView initImage, int initImageID){
+    public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, int initImageID, int initViewID){
         originx = initx;
         originy = inity;
         length = initLength;
         height = initHeight;
         placed = false;
         shipID = initShipID;
-        image = initImage;
         imageID = initImageID;
         hits = 0;
         sunk = false;
+        viewID = initViewID;
     }
 
     public Ship() //empty for testing
@@ -35,20 +37,16 @@ public class Ship {
         height = 0;
         placed = false;
         shipID = 5;
-        image = null;
-        imageID = R.id.HShip5;
+        imageID = 0;
         hits = 0;
         sunk = false;
+        viewID = 0;
     }
 
     public void togglePlaced()
     {
         placed = !placed;
     }
-
-    public void poof(){image.setVisibility(View.INVISIBLE);}
-
-    public void tada(){image.setVisibility(View.VISIBLE);}
 
     public int getID(){return shipID;}
 

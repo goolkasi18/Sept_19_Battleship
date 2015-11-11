@@ -1,8 +1,6 @@
 package com.example.administrator.battleship;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,8 +8,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -21,18 +17,18 @@ public class MainActivity extends ActionBarActivity {
     private Player p1;
     private Player p2;
     private AI AIPlayer;
+    Player[] players = new Player[2];
+    int activePlayer = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("Jello0", "Jello1");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (Player)getIntent().getSerializableExtra("Player2");
-
-
-
+        players[0] = p1;
+        players[1] = p2;
     }
 
 
@@ -68,29 +64,29 @@ public class MainActivity extends ActionBarActivity {
 
     public void checkHit(View view)
     {
-
-        //this only works for player1 right now so we need an "active player" variable so the two players must be an array with an active index
-        view.setEnabled(false);
-        int x = view.getLeft()/80;
-        int y = view.getTop()/80;
-        boolean hit = p1.attack(x, y);
-        if(!hit)
-            view.setBackgroundResource(R.drawable.miss);
+        if((view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1) || (view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)) {
             view.setEnabled(false);
-        }
-        if(hit) {
-            view.setBackgroundResource(R.drawable.hit);
-            view.setEnabled(false);
-            if(player1.ships[player1.squares[x][y]-1].hits == player1.ships[player1.squares[x][y]-1].length || player1.ships[player1.squares[x][y]-1].hits == player1.ships[player1.squares[x][y]-1].height)
-            {
-                //then you sunk a ship.
-                player1.ships[player1.squares[x][y]-1].sink();
-                //redwar whatever image is on screen for that ship
+            int x = view.getLeft() / 80;
+            int y = view.getTop() / 80;
+            boolean hit = players[activePlayer].attack(x, y);
+            if (!hit) {
+                view.setBackgroundResource(R.drawable.miss);
+                view.setEnabled(false);
             }
+            if (hit) {
+                view.setBackgroundResource(R.drawable.hit);
+                view.setEnabled(false);
+                if (players[activePlayer].ships[(players[activePlayer].squares[x][y]-1)].hits == players[activePlayer].ships[(p1.squares[x][y]-1)].length || players[activePlayer].ships[(p1.squares[x][y]-1)].hits == players[activePlayer].ships[(p1.squares[x][y]-1)].height) {
+                    //then you sunk a ship.
+                    players[activePlayer].ships[players[activePlayer].squares[x][y] - 1].sink();
+                    //redwar whatever image is on screen for that ship
+                }
+            }
+            endTurn();
         }
     }
 
-    public void checkHitPlayer2(View view)
+    /*public void checkHitPlayer2(View view)
     {
         view.setEnabled(false);
         int x = view.getLeft()/80;
@@ -100,6 +96,13 @@ public class MainActivity extends ActionBarActivity {
             view.setBackgroundResource(R.drawable.miss);
         if(hit)
             view.setBackgroundResource(R.drawable.hit);
+    }*/
+
+    public void endTurn(){
+        if(activePlayer == 0)
+            activePlayer = 1;
+        else
+            activePlayer = 0;
     }
 
 

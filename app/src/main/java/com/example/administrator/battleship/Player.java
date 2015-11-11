@@ -130,6 +130,13 @@ public class Player implements Serializable{
             if(squares[row][i] != 0)
                 return false;
         }
+
+        //check the grid for the same ship or the same ship in the other orientation
+        for (int i = 0; i < 10; i++)
+            for (int j = 0; j < 10; j++)
+                if (squares[i][j] == ship.shipID)
+                    return false;
+
         return true;
     }
 
@@ -139,40 +146,13 @@ public class Player implements Serializable{
         if(col >= 0 && col <= 9 && row >= 0 && row <= 9)
         {
             if(squares[row][col] > 0) {
-                ships[squares[row][col]].upHits();
+                ships[squares[row][col]-1].upHits();
                 return true;
             }
         }
         return false;
     }
 
-    //will only be called when the player hits the "next" or "play" button to show that he has chosen his decision.
-    public boolean lockIn()
-    {
-        int shipCount = 0;
-        for(int i = 0; i<10; i++) //count all the spots that have a ship. should be 5+4+3+3+2=17
-            for(int j = 0; j<10; j++) {
-                if (squares[i][j] == 1)
-                    shipCount++;
-                if (squares[i][j] == 2)
-                    shipCount++;
-                if (squares[i][j] == 3)
-                    shipCount++;
-                if (squares[i][j] == 4)
-                    shipCount++;
-                if (squares[i][j] == 5)
-                    shipCount++;
-            }
-
-        if(shipCount == 17) { //if they placed all the ships on the grid(its ready)
-            for (int i = 0; i < 10; i++)
-                for (int j = 0; j < 10; j++)
-                    if (squares[i][j] > 0)
-                        squares[i][j] = 1; //the spot has a ship and is saved with a default value
-            return true;
-        }
-        return false;
-    }
 
 
 }
