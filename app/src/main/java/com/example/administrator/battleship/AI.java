@@ -7,29 +7,45 @@ import android.widget.ImageView;
 import java.util.Random;
 
 /**
- * Created by Jared on 11/4/2015.
+ * Created by Jared, Daniel, Will
+ *
+ * Class AI is a descendant of Player. However it is distinct in the fact that it will choose random positions for the ships,
+ * and will attack on its own
  */
 public class AI extends Player{
 
-    private Player player;
-    private int[][] shots;
 
+
+    private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
+
+    /*
+    * Method: Constructor for AI class
+    *
+    * Purpose: Instantiates an AI object with the givin name
+    *
+    * Returns: creates an AI
+    *
+    * @param: initPlayerName, the initial player name
+     */
     public AI(String initPlayerName){
-        shots = new int[10][10];
-        initShots();
+
+
         squares = new int[10][10];
         initSquares();
         turn = false;
-        playerName=initPlayerName;
+        playerName = initPlayerName;
+        //Both of these are set in the configurations activity
         profilePicID = -1;
         colorChoiceID = -1;
         ships = new Ship[10];
     }
 
+    /*
+    *   Empty Constructor
+     */
     public AI(){
         playerName = "Default AI";
-        shots = new int[10][10];
-        initShots();
+
         squares = new int[10][10];
         initSquares();
         turn = false;
@@ -38,8 +54,17 @@ public class AI extends Player{
         ships = new Ship[10];
     }
 
+    /*
+    *   Method: addShipToGrid()
+    *
+    *   Purpose: will add 5 ships to random locations on the grid till one of each size (two of the three size according to the rules of battleship)
+    *   is placed on the grid
+    *
+    *   Return: True, when the while loop is done adding ships (theoretically could cause infinite loop, infinitely low chance of this occuring)
+     */
     public boolean addShipToGrid()
     {
+        //until there are 5 ships added to the grid, continue to try and add ships
         int done = 0;
         while (done < 5){
             int i = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
@@ -50,7 +75,24 @@ public class AI extends Player{
         }
         return true;
     }
-
+    /*
+    *   Method: setDifficultyLevel
+    *
+    *   Parameters: diffLevel, represents the difficulty level the user chooses
+    *
+    *   @return: void
+    *
+    *   @param: diffLevel, the difficulty level of the AI
+     */
+    public void setDifficultyLevel(int diffLevel)
+    {
+        difficultyLevel = diffLevel;
+    }
+    /*
+    *   Method: takeTurn
+    *
+    *   @return: Point, returns a random point to be chosen by the Ai for attacking
+     */
     public Point takeTurn(){
 
         Point p = new Point();      //Declare a new point
@@ -66,21 +108,17 @@ public class AI extends Player{
 
     }
 
-    public void initShots()
-    {
-        int x, y;
-        for(x=0; x<10; x++)
-            for(y=0; y<10; y++)
-                shots[x][y]= 0;
-    }
 
-    public void addShot(){
-
-    }
-
+    /*
+    *   Method: setUPAi
+    *
+    *   @return: boolean, whether adding ships to the grid was successfull
+     */
     public boolean setUpAi(){
+
         if(addShipToGrid())
             return true;
+
         return false;
     }
 

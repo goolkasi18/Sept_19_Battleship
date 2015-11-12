@@ -7,19 +7,39 @@ import android.widget.ImageView;
 import java.io.Serializable;
 
 /**
- * Created by goolkasi18 on 9/23/2015.
+ * Created by Jared, Daniel, Will
+ *
+ * Class: Player, represents the game state, and the human player,
+ *
+ * Functionality:
+ *
+ * --Adds ships to grid
+ *
+ * --Deletes ships from grid
+ *
+ * --checks winning, and sink conditions
  */
 public class Player implements Serializable{
-    int[][] squares;
-    boolean turn;
-    String playerName;
-    int profilePicID;
-    int colorChoiceID;
-    Ship[] ships;
 
+    public int[][] squares;    //Represents the game board for a player where they can place ships
+    public boolean turn;       //Represents whether it is this players turn
+    public String playerName;  //Represents the name of the player
+    public int profilePicID;   //the profile picture for a player (address of resource)
+    public int colorChoiceID;  //the color of the player, (to be implemented) (address of resource)
+    public Ship[] ships;       //the array of possible ships to place on squares[][]
 
+    /*
+    *   Constructor for a Player object
+    *
+    *   Parameter is the name of the player
+    *
+    *   @return: creates a Player
+    *
+    *   @param: initPlayerName, the initial name for the player
+     */
     public Player(String initPlayerName)
     {
+        //Initialize all instace variables associated with a player object
         squares = new int[10][10];
         initSquares();
         turn = false;
@@ -54,10 +74,19 @@ public class Player implements Serializable{
                 squares[x][y]= 0;
     }
 
+    /*
+        Takes care of turn boolean logic for turn
+     */
+
+    //******************************************
+
     public void endTurn() {turn = false;}
     public void startTurn() {turn = true;}
     public boolean getTurn() {return turn;}
 
+    //*******************************************
+
+    //Setters and getters for the instance variables
     public void setPlayerName(String name) {playerName = name;}
     public String getPlayerName(){return  playerName;}
 
@@ -67,6 +96,14 @@ public class Player implements Serializable{
     public void setColorChoiceID(int initID){colorChoiceID = initID;}
     public int getColorChoiceID(){return  colorChoiceID;}
 
+    /*
+    * Method: deleteShip
+    *
+    * Purpose: deletes a ship with the associated shipID from the grid, is used when the
+    *           player is choosing where there ships will be
+    *
+    * @param: ship, the ship to be deleted from the grid
+     */
     public void deleteShip(Ship ship)
     {
         for(int i = 0; i<10; i++)
@@ -112,6 +149,20 @@ public class Player implements Serializable{
         return false;
     }
 
+    /*
+    * Method: testShip
+    *
+    * parameters, int row, int col, Ship ship
+    *
+    * @param: row is the row on the board where the user placed the ship
+    * @param: col is the col on the board where the user placed the ship\
+    *
+    * @param: Ship is the ship that the user wants to place
+    *
+    * Purpose: Checks whether the ship is placed in a valid position on the board
+    *
+    * @return: A Boolean for whether the method found an invalid placement
+     */
     public boolean testShip(int row, int col, Ship ship)
     {
         if(row == -1 || col == -1) {
@@ -139,6 +190,16 @@ public class Player implements Serializable{
         return true;
     }
 
+    /*
+    *   method: attack
+    *
+    *   purpose: attacks a certain row and col on the board
+    *
+    *   @param: row, the row to be attacked
+    *   @param: col, the column to be attacked
+    *
+    *   @return: boolean for whether that attack was successfull
+     */
     public boolean attack(int row, int col)
     {
         // If the row and col are valid.
@@ -152,6 +213,13 @@ public class Player implements Serializable{
         return false;
     }
 
+    /*
+    * method: checkWin
+    *
+    * purpose: checks if a player has won by iterating through the ships array and checking if all of them are sunk
+    *
+    * @return: boolean for whether the player has Lost
+     */
     public boolean checkWin()
     {
         int count = 0;
@@ -163,6 +231,13 @@ public class Player implements Serializable{
         return false;
     }
 
+    /*
+    * method: checkSink
+    *
+    * @param: ship, the ship that was hit
+    *
+    * @return: boolean for whether that ship is destroyed
+     */
     public boolean checkSink(Ship ship)
     {
         if ((ship.hits == ship.length || ship.hits == ship.height) && !ship.getSunk()) {

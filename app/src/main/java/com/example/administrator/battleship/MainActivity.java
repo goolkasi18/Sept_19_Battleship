@@ -13,17 +13,45 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+/*
+* @authors: Jared, Daniel, Will
+* @version: November 10th, 2015
+*
+* This class represents the Local Game and Main Activity of our Game.
+*
+* Class handles the following:
+*
+* --Checking hits in game
+*
+* --Resizing images to lower resolutions
+*
+* --Changes the turn upon one player attacking
+*
+*
+ */
 
 public class MainActivity extends ActionBarActivity {
 
 
-    //Global 2 dimensional array
+    //the Players to play the game, passed up from configs activity
     private Player p1;
     private Player p2;
-    private AI AIPlayer;
-    Player[] players = new Player[2];
-    int activePlayer = 0;
 
+    //to be implemented
+    private AI AIPlayer;
+
+    //an array to determine the active player
+    private Player[] players = new Player[2];
+    private int activePlayer = 0;
+
+    /*
+    * method: onCreate
+    *
+    * purpose: starts the activity
+    *
+    * @param: savedInstanceState - a Bundle of info about the activity that will be started
+    *
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -37,6 +65,13 @@ public class MainActivity extends ActionBarActivity {
         background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
     }
 
+    /*
+    *method: exitToStart
+    *
+    * Purpose: switches intents to the main activity
+    *
+    * @param: view - the Button that was pressed
+     */
     public void exitToStart(View view)
     {
         Intent main = new Intent(this, Start_Page.class);
@@ -44,6 +79,13 @@ public class MainActivity extends ActionBarActivity {
         finish();
     }
 
+    /*
+    * Method: checkHit
+    *
+    * Purpose: Checks the hit upon selection of a square on the grid
+    *
+    * @param: view - the button that was pressed
+     */
     public void checkHit(View view)
     {
         if((view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1) || (view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)) {
@@ -85,6 +127,15 @@ public class MainActivity extends ActionBarActivity {
             view.setBackgroundResource(R.drawable.hit);
     }*/
 
+    /*
+    *
+    * method: endTurn
+    *
+    * purpose: switches the turn of the player
+    *
+    * @return: void
+     */
+
     public void endTurn(){
         if(activePlayer == 0)
             activePlayer = 1;
@@ -94,29 +145,14 @@ public class MainActivity extends ActionBarActivity {
 
 
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
+    /*
+    *Method: calculateInSampleSize
+    *
+    *purpose: changes the size of an image so our game doesnt run out of memory,
+    *            essentially lowers the resolution of images
+    *
+    * @return: int
+     */
     public static int calculateInSampleSize(
             BitmapFactory.Options options, int reqWidth, int reqHeight) {
         // Raw height and width of image
@@ -140,6 +176,14 @@ public class MainActivity extends ActionBarActivity {
         return inSampleSize;
     }
 
+    /*
+    *   see above comment, helps to change the resolution of images
+    *
+    *   @param: res
+    *   @param: resID
+    *   @param: reqWidth
+    *   @param: reqHeight
+     */
     public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
                                                          int reqWidth, int reqHeight) {
 
