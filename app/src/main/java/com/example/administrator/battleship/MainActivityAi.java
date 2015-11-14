@@ -58,7 +58,7 @@ public class MainActivityAi extends ActionBarActivity {
     }
 
     public void callAIPlayerTakeTurn(){
-        Point attackPoint = p2.takeTurn();
+        Point attackPoint = p2.randPoint();
 
         boolean hit = p1.attack(attackPoint.x, attackPoint.y);
         //if(!hit)

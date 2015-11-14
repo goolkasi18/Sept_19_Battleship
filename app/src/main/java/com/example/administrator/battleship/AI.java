@@ -17,7 +17,9 @@ public class AI extends Player{
 
 
     private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
-
+    private Point[] attackPoints = new Point[4];
+    private boolean hasHit;
+    private boolean[][] spotsChecked = new boolean[10][10];
     /*
     * Method: Constructor for AI class
     *
@@ -38,6 +40,11 @@ public class AI extends Player{
         profilePicID = -1;
         colorChoiceID = -1;
         ships = new Ship[10];
+
+        for(int i = 0; i<10; i++)
+            for(int j = 0; j<10; j++) {
+                spotsChecked[i][j] = false;
+            }
     }
 
     /*
@@ -93,7 +100,7 @@ public class AI extends Player{
     *
     *   @return: Point, returns a random point to be chosen by the Ai for attacking
      */
-    public Point takeTurn(){
+    public Point randPoint(){
 
         Point p = new Point();      //Declare a new point
         Random rn = new Random();   //Declare a random generator
@@ -105,6 +112,103 @@ public class AI extends Player{
         p.y = y;
 
         return p;                   //Return the random point made
+
+    }
+
+    public boolean AIAttack(){
+
+        if(hasHit){
+
+
+
+
+        }
+
+        else{
+            //Find a spot that has not been attacked
+            Point bombPoint = randPoint();
+            int x = bombPoint.x;
+            int y = bombPoint.y;
+            //while it sees that that spot has been attacked, find a new spot
+            while (spotsChecked[x][y]) {
+                bombPoint = randPoint();
+                x = bombPoint.x;
+                y = bombPoint.y;
+            }
+
+
+            //attack that point
+
+            if (attack(bombPoint.x, bombPoint.y)) {
+                hasHit = true;
+
+            }
+            //Mark that the point has been attacked
+            spotsChecked[bombPoint.x][bombPoint.y] = true;
+        }
+
+        return true;
+    }
+
+    //Return the index to attack
+    public int getIndex(){
+        Random rn = new Random();   //Declare a random generator
+        int index = rn.nextInt(4);
+        return index;
+    }
+
+    public Point[] findSpotsAroundHit(int row, int col)
+    {
+        //Declare an array of points for all 4 spots around the point if there was a hit
+        Point[] pointsToTry = new Point[4];
+
+        Point above = new Point(-1, -1);
+        Point below = new Point(-1, -1);
+        Point right = new Point(-1, -1);
+        Point left = new Point(-1, -1);
+
+        //check the bounds of all points that are directly above below.. etc to make sure we should try them
+
+        //And check to see if AI has already attacked that spot
+
+        if(row-1>=0){
+            if(!spotsChecked[row-1][col]) {
+                above.x = row - 1;
+                above.y = col;
+            }
+        }
+
+        if(row+1<=9){
+            if(!spotsChecked[row+1][col]) {
+                above.x = row+1;
+                above.y = col;
+            }
+
+        }
+
+        if(col-1>=0){
+            if(!spotsChecked[row][col-1]) {
+                above.y = col-1;
+                above.x = row;
+            }
+
+
+        }
+
+        if(col+1<=9){
+            if(!spotsChecked[row][col+1]) {
+                above.y = col+1;
+                above.x = row;
+            }
+
+        }
+
+        pointsToTry[0] = above;
+        pointsToTry[1] = below;
+        pointsToTry[2] = right;
+        pointsToTry[3] = left;
+
+        return pointsToTry;
 
     }
 
