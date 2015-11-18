@@ -20,6 +20,10 @@ public class AI extends Player{
     private Point[] attackPoints = new Point[4];
     private boolean hasHit;
     private boolean[][] spotsChecked = new boolean[10][10];
+    private int lastRowHit;
+    private int lastColHit;
+
+    private int attackIndex = 0;
     /*
     * Method: Constructor for AI class
     *
@@ -30,7 +34,6 @@ public class AI extends Player{
     * @param: initPlayerName, the initial player name
      */
     public AI(String initPlayerName){
-
 
         squares = new int[10][10];
         initSquares();
@@ -115,13 +118,37 @@ public class AI extends Player{
 
     }
 
+
+
     public boolean AIAttack(){
 
+        //Logic to run when the AI has hit a ship on the last turn
         if(hasHit){
+            //Set it to only try to find a spot around it 4 times, there are only 4 possible spots
 
 
+            //Find an index within the array of points around the spot hit
 
+            //While it finds an invalid point, attempt to find a valid point by increasing the index that they attack in the array
+            while(attackPoints[attackIndex].x == -1 && attackIndex<4){
+                getIndex();
+            }
+            //If there is no valid spot in the array, try and find a new spot to attack, then return
+            if(attackIndex>=4)
+            {
+                hasHit = false;
+                AIAttack();
+                attackIndex =  0;
+                return true;
+            }
 
+            if(attack(attackPoints[attackIndex].x, attackPoints[attackIndex].y)){
+
+            }
+
+            //Mark the spot in the array as invalid
+            attackPoints[attackIndex].x = -1;
+            attackPoints[attackIndex].y = -1;
         }
 
         else{
@@ -140,7 +167,13 @@ public class AI extends Player{
             //attack that point
 
             if (attack(bombPoint.x, bombPoint.y)) {
+                //To remember the last row and col hit
+                lastColHit = bombPoint.y;
+                lastRowHit = bombPoint.x;
+
                 hasHit = true;
+                //find all spots around the hit that could be used
+                attackPoints = findSpotsAroundHit(bombPoint.x, bombPoint.y);
 
             }
             //Mark that the point has been attacked
@@ -151,11 +184,7 @@ public class AI extends Player{
     }
 
     //Return the index to attack
-    public int getIndex(){
-        Random rn = new Random();   //Declare a random generator
-        int index = rn.nextInt(4);
-        return index;
-    }
+    public void getIndex(){  attackIndex++;  }
 
     public Point[] findSpotsAroundHit(int row, int col)
     {
@@ -180,16 +209,16 @@ public class AI extends Player{
 
         if(row+1<=9){
             if(!spotsChecked[row+1][col]) {
-                above.x = row+1;
-                above.y = col;
+                below.x = row+1;
+                below.y = col;
             }
 
         }
 
         if(col-1>=0){
             if(!spotsChecked[row][col-1]) {
-                above.y = col-1;
-                above.x = row;
+                left.y = col-1;
+                left.x = row;
             }
 
 
@@ -197,8 +226,8 @@ public class AI extends Player{
 
         if(col+1<=9){
             if(!spotsChecked[row][col+1]) {
-                above.y = col+1;
-                above.x = row;
+                right.y = col+1;
+                right.x = row;
             }
 
         }
