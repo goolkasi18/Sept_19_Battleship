@@ -35,7 +35,6 @@ public class AI extends Player{
      */
     public AI(String initPlayerName){
 
-
         squares = new int[10][10];
         initSquares();
         turn = false;
