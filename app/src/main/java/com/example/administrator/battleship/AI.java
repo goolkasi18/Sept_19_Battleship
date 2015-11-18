@@ -80,7 +80,7 @@ public class AI extends Player{
             int i = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
             int x = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
             int y = (int)(Math.random()*10); //from 0 inclusive to 10 exclusive(9.9) so when cast to an int its 0-9
-            if(addShipToGrid(x, y,ships[i]))
+            if(addShipToGrid(x, y, ships[i]))
                 done++;
         }
         return true;
