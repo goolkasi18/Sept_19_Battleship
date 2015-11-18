@@ -134,12 +134,13 @@ public class AI extends Player{
             while(attackPoints[attackIndex].x == -1 && attackIndex<4){
                 getIndex();
             }
-
+            //If there is no valid spot in the array, try and find a new spot to attack, then return
             if(attackIndex>=4)
             {
                 hasHit = false;
                 AIAttack();
                 attackIndex =  0;
+                return true;
             }
 
             if(attack(attackPoints[attackIndex].x, attackPoints[attackIndex].y)){
@@ -209,16 +210,16 @@ public class AI extends Player{
 
         if(row+1<=9){
             if(!spotsChecked[row+1][col]) {
-                above.x = row+1;
-                above.y = col;
+                below.x = row+1;
+                below.y = col;
             }
 
         }
 
         if(col-1>=0){
             if(!spotsChecked[row][col-1]) {
-                above.y = col-1;
-                above.x = row;
+                left.y = col-1;
+                left.x = row;
             }
 
 
@@ -226,8 +227,8 @@ public class AI extends Player{
 
         if(col+1<=9){
             if(!spotsChecked[row][col+1]) {
-                above.y = col+1;
-                above.x = row;
+                right.y = col+1;
+                right.x = row;
             }
 
         }
