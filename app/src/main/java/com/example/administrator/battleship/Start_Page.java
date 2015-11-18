@@ -42,10 +42,6 @@ public class Start_Page extends ActionBarActivity {
         helpFrame = (FrameLayout) findViewById(R.id.helpFrame);
         settingsFrame = (FrameLayout) findViewById(R.id.settingsFrame);
         vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-
-        ImageView background = (ImageView)findViewById(R.id.Background);
-        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
     public void switchToSelectShips(View view) {

@@ -96,7 +96,7 @@
                 android:background="@drawable/how_to_play"
                 android:adjustViewBounds="false"
                 android:maxHeight="1300dp"
-                android:minHeight="1300dp" />
+                android:minHeight="800dp" />
         </ScrollView>
 
         <ImageButton
