@@ -35,7 +35,6 @@ public class AI extends Player{
      */
     public AI(String initPlayerName){
 
-
         squares = new int[10][10];
         initSquares();
         turn = false;
@@ -209,16 +208,16 @@ public class AI extends Player{
 
         if(row+1<=9){
             if(!spotsChecked[row+1][col]) {
-                above.x = row+1;
-                above.y = col;
+                below.x = row+1;
+                below.y = col;
             }
 
         }
 
         if(col-1>=0){
             if(!spotsChecked[row][col-1]) {
-                above.y = col-1;
-                above.x = row;
+                left.y = col-1;
+                left.x = row;
             }
 
 
@@ -226,8 +225,8 @@ public class AI extends Player{
 
         if(col+1<=9){
             if(!spotsChecked[row][col+1]) {
-                above.y = col+1;
-                above.x = row;
+                right.y = col+1;
+                right.x = row;
             }
 
         }
