@@ -32,8 +32,8 @@ public class MainActivityAi extends ActionBarActivity {
         players[0] = p1;
         players[1] = p2;
 
-        ImageView background = (ImageView)findViewById(R.id.Background);
-        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
+       // ImageView background = (ImageView)findViewById(R.id.Background);
+        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
     }
 
 

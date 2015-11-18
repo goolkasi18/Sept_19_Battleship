@@ -56,8 +56,8 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (AI)getIntent().getSerializableExtra("AI2");
 
-        ImageView background = (ImageView)findViewById(R.id.Background);
-        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
+        //ImageView background = (ImageView)findViewById(R.id.Background);
+        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
     }
 
     public void ready(View view){

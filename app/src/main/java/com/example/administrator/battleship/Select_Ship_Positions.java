@@ -59,8 +59,8 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (Player)getIntent().getSerializableExtra("Player2");
 
-        ImageView background = (ImageView)findViewById(R.id.Background);
-        background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
+        //ImageView background = (ImageView)findViewById(R.id.Background);
+        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
     }
 
     public void ready(View view){

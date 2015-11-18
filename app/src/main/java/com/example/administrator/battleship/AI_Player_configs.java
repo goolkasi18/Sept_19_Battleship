@@ -41,7 +41,7 @@ public class AI_Player_configs extends ActionBarActivity {
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
 
-        ImageView background = (ImageView)findViewById(R.id.Background);
+        //ImageView background = (ImageView)findViewById(R.id.Background);
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
