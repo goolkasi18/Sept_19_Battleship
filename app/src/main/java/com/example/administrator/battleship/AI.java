@@ -16,16 +16,17 @@ import java.util.Random;
 public class AI extends Player{
 
 
-
-    private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
     private Point[] attackPoints = new Point[4];
-    private boolean hasHit, dirKnown;
     private boolean[][] spotsChecked = new boolean[10][10]; //instead of this, we should copy player 1's board. we need it in order to have a percentile hit rate
-    private int lastRowHit;
-    private int lastColHit;
-    private Point focusPoint;
     private int attackIndex = 0;
+
+
+    private int interval;
+    private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
+    private boolean hasHit, dirKnown;
+    private Point focusPoint, lastHit; //where x=row and y=column i.e. board[x][y]
     private ArrayList<Point> surroundingSpots = new ArrayList<>();
+    private int[][] cheater = new int[10][10];
 
     /*
     * Method: Constructor for AI class
@@ -120,22 +121,117 @@ public class AI extends Player{
     }
 
     //after having found the direction from the ArrayList, do it until it finds a sink.
-    public boolean guessToKill(){
-        return false;
+    public Point guessToKill(){
+        Point guessPoint = new Point(-1,-1);
+
+        if (focusPoint.x == lastHit.x) //means the ship is horizontal (same row)
+        {
+            if(!(lastHit.y+(1*interval) < 10 || lastHit.y+(1*interval) > -1)) //if the spot in the direction is not in bounds
+            {
+                lastHit = focusPoint; //go back to the first spot and
+                interval = -1 * interval; //go the opposite direction
+            }
+            guessPoint.x = lastHit.x;
+            guessPoint.y = lastHit.y + 1*interval;
+            if(cheater[guessPoint.x][guessPoint.y] > 0) //if the new spot is a hit
+            {
+                //check sink? might have to be done in main method so assume the sink case is handled already
+                //do nothing special.. should just keep going next time till a miss (important)
+            }
+            else if(cheater[guessPoint.x][guessPoint.y] == 0) //if the new spot missed (should be able to be changed to just else by final release)
+            {
+                lastHit = focusPoint; //go back to the first spot and
+                interval = -1 * interval; //go the opposite direction
+                if(cheater[focusPoint.x][focusPoint.y + 1*interval] == 0 || cheater[focusPoint.x][focusPoint.y + 1*interval] == -1) //if after missing direction and the other is also a miss or guessed.....
+                { //then we either screwed up calling the AI to "forget" or it thought it was a horizontal ship when really was two verticals side by side.
+                    dirKnown = false; //will go through the other directions to re-do this process the opposite direction(assuming later case)
+                }
+            }
+        }
+
+        lastHit = guessPoint;
+        return guessPoint;
     }
 
     //go through the Arraylist until it finds a direction that is a hit
-    public boolean findDir(){
-        return false;
+    public Point findDir(){
+        Point guessPoint = new Point(-1,-1);
+        int guessIndex = (int)(Math.random()*surroundingSpots.size()-1);
+        guessPoint = surroundingSpots.get(guessIndex); //choose a random one of the directional surrounding spots (from 0 to size-1)
+        surroundingSpots.remove(guessIndex); //remove that point saying we have now guessed it
+
+        if(cheater[guessPoint.x][guessPoint.y] > 0) //if that spot is a hit
+        {
+            //check sink? might have to be done in main method so assume the sink case is handled already
+            interval = guessPoint.x-focusPoint.x + guessPoint.y-focusPoint.y; // 2-2 + 2-3 for example(-1) or 6-4 + 7-7 (1) will always be 1 or -1(saves direction)
+            dirKnown = true;
+        }//else you missed and nothing special happens
+
+        cheater[guessPoint.x][guessPoint.y] = -1; //set cheater board to -1 to say that we have guessed this spot now.
+        lastHit = guessPoint;
+        return guessPoint;
     }
 
     //uses the difficulty to decide weather to return a hit spot or a missed
-    public boolean rollTheDice(){
-        return false;
+    public Point rollTheDice(){
+        Point guessPoint = new Point(-1,-1);
+        if( (int)(Math.random()*100) > difficultyLevel ) {//if you beat the percentage (so if difficulty is low, this has a higher chance)
+            do {
+                guessPoint.x = (int) (Math.random() * 10);
+                guessPoint.y = (int) (Math.random() * 10);
+            } while (cheater[guessPoint.x][guessPoint.y] != 0); //keep going until you find a spot that is a zero (a miss)
+        }
+        else {
+            do {
+                guessPoint.x = (int) (Math.random() * 10);
+                guessPoint.y = (int) (Math.random() * 10);
+            }
+            while (cheater[guessPoint.x][guessPoint.y] > 0); //keep going until you find a spot that is greater than zero (a hit)
+            focusPoint = guessPoint; //save where the first hit spot is
+            fillSurroundingSpots();
+            hasHit = true;
+        }
+
+        cheater[guessPoint.x][guessPoint.y] = -1; //set cheater board to -1 to say that we have guessed this spot now.
+        lastHit = guessPoint;
+        return guessPoint;
+    }
+
+    public void copyBoard(int[][] p1Board){
+        for(int r = 0; r<p1Board.length; r++)
+            for(int c = 0; c<p1Board.length; c++)
+                cheater[r][c] = p1Board[r][c];
+    }
+
+    public void fillSurroundingSpots(){
+        //check the bounds of all points that are directly above below.. etc to make sure we should try them
+        //And check to see if AI has already attacked that spot
+
+        if(focusPoint.x-1 >= 0 && cheater[focusPoint.x][focusPoint.y] != -1)
+            surroundingSpots.add(new Point(focusPoint.x-1 , focusPoint.y));
+
+        if(focusPoint.x+1 <= 9 && cheater[focusPoint.x][focusPoint.y] != -1)
+            surroundingSpots.add(new Point(focusPoint.x+1 , focusPoint.y));
+
+        if(focusPoint.y-1 >= 0 && cheater[focusPoint.x][focusPoint.y] != -1)
+            surroundingSpots.add(new Point(focusPoint.x , focusPoint.y-1));
+
+        if(focusPoint.y+1 <= 9 && cheater[focusPoint.x][focusPoint.y] != -1)
+            surroundingSpots.add(new Point(focusPoint.x , focusPoint.y+1));
+    }
+
+    public void forget()
+    {
+        hasHit = false;
+        dirKnown = false;
+        focusPoint.x = -1;
+        focusPoint.y = -1;
+        surroundingSpots.clear();
+        interval = 0;
     }
 
 
-    public boolean AIAttack(){
+    public Point AIAttack(){
 
         //***** Will ******
         if(hasHit)

@@ -42,7 +42,8 @@ public class MainActivity extends ActionBarActivity {
 
     //an array to determine the active player
     private Player[] players = new Player[2];
-    private int activePlayer = 0;
+    private int activePlayer = 1;
+    private boolean isAI;
 
     /*
     * method: onCreate
@@ -57,7 +58,13 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
-        p2 = (Player)getIntent().getSerializableExtra("Player2");
+        isAI = (Boolean)getIntent().getExtras().getBoolean("isAI");
+        //there might not be a difference with what is below
+        if(isAI)
+            p2 = (AI)getIntent().getSerializableExtra("Player2");
+        else
+            p2 = (Player)getIntent().getSerializableExtra("Player2");
+
         players[0] = p1;
         players[1] = p2;
 
@@ -92,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
             view.setEnabled(false);
             int col = view.getLeft() / 80;
             int row = view.getTop() / 80;
-            Log.i("Jello0", "Row: " + row + "Col: " +col);
+            Log.i("Jello0", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
                 view.setBackgroundResource(R.drawable.hit);
@@ -112,20 +119,10 @@ public class MainActivity extends ActionBarActivity {
                 view.setBackgroundResource(R.drawable.miss);
             }
             endTurn();
+            if(isAI)
+                AITurn();
         }
     }
-
-    /*public void checkHitPlayer2(View view)
-    {
-        view.setEnabled(false);
-        int x = view.getLeft()/80;
-        int y = view.getTop()/80;
-        boolean hit = p2.attack(x, y);
-        if(!hit)
-            view.setBackgroundResource(R.drawable.miss);
-        if(hit)
-            view.setBackgroundResource(R.drawable.hit);
-    }*/
 
     /*
     *
@@ -143,6 +140,9 @@ public class MainActivity extends ActionBarActivity {
             activePlayer = 0;
     }
 
+    public void AITurn(){
+
+    }
 
 
     /*

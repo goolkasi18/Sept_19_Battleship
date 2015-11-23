@@ -256,8 +256,9 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
     public void startGame(View view)
     {
         Intent startGame = new Intent(this, MainActivity.class);
-        startGame.putExtra("Player1",p1);
+        startGame.putExtra("Player1", p1);
         startGame.putExtra("Player2", p2);
+        startGame.putExtra("isAI", false);
         startActivity(startGame);
         finish();
     }

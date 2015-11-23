@@ -259,6 +259,7 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
             Intent startGame = new Intent(this, MainActivity.class); //needs to be a new AI class
             startGame.putExtra("Player1", p1);
             startGame.putExtra("Player2", p2);
+            startGame.putExtra("isAI", true);
             startActivity(startGame);
             finish();
         }
