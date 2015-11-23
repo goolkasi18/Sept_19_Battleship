@@ -22,6 +22,7 @@ public class AI extends Player{
     private boolean[][] spotsChecked = new boolean[10][10];
     private int lastRowHit;
     private int lastColHit;
+    private Point focusPoint;
 
     private int attackIndex = 0;
     /*
@@ -131,7 +132,7 @@ public class AI extends Player{
 
             //While it finds an invalid point, attempt to find a valid point by increasing the index that they attack in the array
             while(attackPoints[attackIndex].x == -1 && attackIndex<4){
-                getIndex();
+                attackIndex++;
             }
             //If there is no valid spot in the array, try and find a new spot to attack, then return
             if(attackIndex>=4)
@@ -143,12 +144,20 @@ public class AI extends Player{
             }
 
             if(attack(attackPoints[attackIndex].x, attackPoints[attackIndex].y)){
-
+                //If the point just attacked sunk a ship, then return to randomly trying to hit points
+                if (this.checkSink(this.ships[this.squares[attackPoints[attackIndex].x][attackPoints[attackIndex].y]-1]))
+                {
+                    hasHit = false;
+                }
+                //add that that spot was checked on the boolean board
+                focusPoint = focusPoints(attackPoints[attackIndex].x, attackPoints[attackIndex].y);
             }
 
             //Mark the spot in the array as invalid
             attackPoints[attackIndex].x = -1;
             attackPoints[attackIndex].y = -1;
+
+
         }
 
         else{
@@ -171,7 +180,7 @@ public class AI extends Player{
                 lastColHit = bombPoint.y;
                 lastRowHit = bombPoint.x;
 
-                hasHit = true;
+
                 //find all spots around the hit that could be used
                 attackPoints = findSpotsAroundHit(bombPoint.x, bombPoint.y);
 
@@ -185,6 +194,32 @@ public class AI extends Player{
 
     //Return the index to attack
     public void getIndex(){  attackIndex++;  }
+
+    public Point focusPoints(int row, int col)
+    {
+        Point nextPoint;
+
+        //If the spot is in the same column, then try to find a new row to hit
+        if(lastColHit == col) {
+            //If the row above the spot is out of bounds, then find the spot "Below" the spot that was attacked
+            if (row - 1 < 0 || spotsChecked[row-1][col])
+                nextPoint.x = lastRowHit + 1;
+            else
+                nextPoint.x = row - 1;
+            nextPoint.y = col;
+        }
+
+        if(lastRowHit == row){
+            if(col - 1 < 0)
+                nextPoint.y = lastRowHit + 1;
+            else
+                nextPoint.y = col -1;
+            nextPoint.x = row;
+        }
+
+
+       return new nextPoint;
+    }
 
     public Point[] findSpotsAroundHit(int row, int col)
     {
@@ -236,7 +271,9 @@ public class AI extends Player{
         pointsToTry[1] = below;
         pointsToTry[2] = right;
         pointsToTry[3] = left;
-
+        //If all the points are already hit or checked then dont use this array
+        if(above.x == -1 && below.x == -1 && right.x == -1 && left.x == -1)
+            hasHit = false;
         return pointsToTry;
 
     }
