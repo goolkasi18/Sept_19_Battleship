@@ -4,6 +4,7 @@ import android.graphics.Point;
 import android.util.Log;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -18,20 +19,18 @@ public class AI extends Player{
 
     private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
     private Point[] attackPoints = new Point[4];
-    private boolean hasHit;
-    private boolean[][] spotsChecked = new boolean[10][10];
+    private boolean hasHit, dirKnown;
+    private boolean[][] spotsChecked = new boolean[10][10]; //instead of this, we should copy player 1's board. we need it in order to have a percentile hit rate
     private int lastRowHit;
     private int lastColHit;
     private Point focusPoint;
-
     private int attackIndex = 0;
+    private ArrayList<Point> surroundingSpots = new ArrayList<>();
+
     /*
     * Method: Constructor for AI class
-    *
     * Purpose: Instantiates an AI object with the givin name
-    *
     * Returns: creates an AI
-    *
     * @param: initPlayerName, the initial player name
      */
     public AI(String initPlayerName){
@@ -49,6 +48,9 @@ public class AI extends Player{
             for(int j = 0; j<10; j++) {
                 spotsChecked[i][j] = false;
             }
+
+        hasHit = false;
+        dirKnown = false;
     }
 
     /*
@@ -67,10 +69,8 @@ public class AI extends Player{
 
     /*
     *   Method: addShipToGrid()
-    *
     *   Purpose: will add 5 ships to random locations on the grid till one of each size (two of the three size according to the rules of battleship)
-    *   is placed on the grid
-    *
+    *            is placed on the grid
     *   Return: True, when the while loop is done adding ships (theoretically could cause infinite loop, infinitely low chance of this occuring)
      */
     public boolean addShipToGrid()
@@ -86,23 +86,24 @@ public class AI extends Player{
         }
         return true;
     }
+
     /*
     *   Method: setDifficultyLevel
-    *
     *   Parameters: diffLevel, represents the difficulty level the user chooses
-    *
     *   @return: void
-    *
     *   @param: diffLevel, the difficulty level of the AI
      */
     public void setDifficultyLevel(int diffLevel)
     {
         difficultyLevel = diffLevel;
     }
+
+
     /*
     *   Method: takeTurn
-    *
     *   @return: Point, returns a random point to be chosen by the Ai for attacking
+    *
+    *   again, this needs to have a bit done on it to incorporate difficulty. itll be a random miss or a random hit
      */
     public Point randPoint(){
 
@@ -116,12 +117,36 @@ public class AI extends Player{
         p.y = y;
 
         return p;                   //Return the random point made
+    }
 
+    //after having found the direction from the ArrayList, do it until it finds a sink.
+    public boolean guessToKill(){
+        return false;
+    }
+
+    //go through the Arraylist until it finds a direction that is a hit
+    public boolean findDir(){
+        return false;
+    }
+
+    //uses the difficulty to decide weather to return a hit spot or a missed
+    public boolean rollTheDice(){
+        return false;
     }
 
 
-
     public boolean AIAttack(){
+
+        //***** Will ******
+        if(hasHit)
+            if(dirKnown)
+                return guessToKill();
+            else
+                return findDir();
+        else
+            return rollTheDice();
+        //**********
+
 
         //Logic to run when the AI has hit a ship on the last turn
         if(hasHit){
@@ -134,7 +159,8 @@ public class AI extends Player{
             while(attackPoints[attackIndex].x == -1 && attackIndex<4){
                 attackIndex++;
             }
-            //If there is no valid spot in the array, try and find a new spot to attack, then return
+            //If there is no valid spot in the array, try and find a new spot to attack, then return.
+            // This should never be called and should be able to be removed by final release
             if(attackIndex>=4)
             {
                 hasHit = false;
@@ -161,16 +187,14 @@ public class AI extends Player{
         }
 
         else{
-            //Find a spot that has not been attacked
-            Point bombPoint = randPoint();
-            int x = bombPoint.x;
-            int y = bombPoint.y;
+            Point bombPoint;
+            int x,y;
             //while it sees that that spot has been attacked, find a new spot
-            while (spotsChecked[x][y]) {
+            do {
                 bombPoint = randPoint();
                 x = bombPoint.x;
                 y = bombPoint.y;
-            }
+            } while (spotsChecked[x][y]); //itll keep going till it is false(hasnt guessed it)
 
 
             //attack that point
@@ -189,11 +213,8 @@ public class AI extends Player{
             spotsChecked[bombPoint.x][bombPoint.y] = true;
         }
 
-        return true;
+        return true; //needs to know when false (it missed)
     }
-
-    //Return the index to attack
-    public void getIndex(){  attackIndex++;  }
 
     public Point focusPoints(int row, int col)
     {
@@ -218,7 +239,7 @@ public class AI extends Player{
         }
 
 
-       return new nextPoint;
+       return nextPoint;
     }
 
     public Point[] findSpotsAroundHit(int row, int col)
@@ -275,7 +296,6 @@ public class AI extends Player{
         if(above.x == -1 && below.x == -1 && right.x == -1 && left.x == -1)
             hasHit = false;
         return pointsToTry;
-
     }
 
 

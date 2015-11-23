@@ -8,15 +8,10 @@ import java.io.Serializable;
 
 /**
  * Created by Jared, Daniel, Will
- *
  * Class: Player, represents the game state, and the human player,
- *
  * Functionality:
- *
  * --Adds ships to grid
- *
  * --Deletes ships from grid
- *
  * --checks winning, and sink conditions
  */
 public class Player implements Serializable{
@@ -30,11 +25,8 @@ public class Player implements Serializable{
 
     /*
     *   Constructor for a Player object
-    *
     *   Parameter is the name of the player
-    *
     *   @return: creates a Player
-    *
     *   @param: initPlayerName, the initial name for the player
      */
     public Player(String initPlayerName)
@@ -98,10 +90,8 @@ public class Player implements Serializable{
 
     /*
     * Method: deleteShip
-    *
     * Purpose: deletes a ship with the associated shipID from the grid, is used when the
-    *           player is choosing where there ships will be
-    *
+    *          player is choosing where there ships will be
     * @param: ship, the ship to be deleted from the grid
      */
     public void deleteShip(Ship ship)
@@ -121,10 +111,6 @@ public class Player implements Serializable{
      * @param col        The X Location in the 10X10 grid where the player dropped the boat
      * @param row        The Y Location in the grid
      * @return
-     *
-     *
-     * (Jared) Removing ImageView parameter. Have caller move ship to initial position if method returns false.
-     * Will rewrote
      */
     public boolean addShipToGrid(int row, int col, Ship ship)
     {
@@ -151,16 +137,10 @@ public class Player implements Serializable{
 
     /*
     * Method: testShip
-    *
-    * parameters, int row, int col, Ship ship
-    *
     * @param: row is the row on the board where the user placed the ship
     * @param: col is the col on the board where the user placed the ship\
-    *
     * @param: Ship is the ship that the user wants to place
-    *
     * Purpose: Checks whether the ship is placed in a valid position on the board
-    *
     * @return: A Boolean for whether the method found an invalid placement
      */
     public boolean testShip(int row, int col, Ship ship)
@@ -192,12 +172,8 @@ public class Player implements Serializable{
 
     /*
     *   method: attack
-    *
     *   purpose: attacks a certain row and col on the board
-    *
     *   @param: row, the row to be attacked
-    *   @param: col, the column to be attacked
-    *
     *   @return: boolean for whether that attack was successfull
      */
     public boolean attack(int row, int col)
@@ -215,9 +191,7 @@ public class Player implements Serializable{
 
     /*
     * method: checkWin
-    *
     * purpose: checks if a player has won by iterating through the ships array and checking if all of them are sunk
-    *
     * @return: boolean for whether the player has Lost
      */
     public boolean checkWin()
@@ -233,9 +207,7 @@ public class Player implements Serializable{
 
     /*
     * method: checkSink
-    *
     * @param: ship, the ship that was hit
-    *
     * @return: boolean for whether that ship is destroyed
      */
     public boolean checkSink(Ship ship)
