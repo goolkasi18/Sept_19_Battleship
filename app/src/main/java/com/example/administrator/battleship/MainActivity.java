@@ -147,7 +147,31 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void AITurn(){
-        guessAI = p2.AIAttack();
+        guessAI = a1.AIAttack();
+
+        int col = guessAI.x;
+        int row = guessAI.y;
+        Log.i("Jello0", "Row: " + row + "Col: " + col);
+
+        //needs to impliment below
+        if(players[activePlayer].attack(row,col)) {
+            view.setBackgroundResource(R.drawable.hit);
+            if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
+            {
+                Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                //draw the new ship on the screen as sunk
+            }
+            if (players[activePlayer].checkWin())
+            {
+                Log.i("Win:", "Player " + activePlayer);
+                //do whatever we want to end game and show win screen
+            }
+        }
+        else
+        {
+            view.setBackgroundResource(R.drawable.miss);
+        }
+        endTurn();
     }
 
 
