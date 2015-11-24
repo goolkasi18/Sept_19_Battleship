@@ -155,21 +155,22 @@ public class MainActivity extends ActionBarActivity {
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
-            view.setBackgroundResource(R.drawable.hit);
+            //view.setBackgroundResource(R.drawable.hit); idk how to do this
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
             {
-                Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                a1.forget();
                 //draw the new ship on the screen as sunk
             }
             if (players[activePlayer].checkWin())
             {
-                Log.i("Win:", "Player " + activePlayer);
+                Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
             }
         }
         else
         {
-            view.setBackgroundResource(R.drawable.miss);
+            //view.setBackgroundResource(R.drawable.miss); idk how to do this
         }
         endTurn();
     }
