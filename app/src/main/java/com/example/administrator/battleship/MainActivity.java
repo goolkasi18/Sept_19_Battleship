@@ -36,9 +36,11 @@ public class MainActivity extends ActionBarActivity {
     //the Players to play the game, passed up from configs activity
     private Player p1;
     private Player p2;
+    private AI a1;
 
     //to be implemented
     private AI AIPlayer;
+    private Point guessAI;
 
     //an array to determine the active player
     private Player[] players = new Player[2];
@@ -59,14 +61,18 @@ public class MainActivity extends ActionBarActivity {
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         isAI = (Boolean)getIntent().getExtras().getBoolean("isAI");
-        //there might not be a difference with what is below
-        if(isAI)
-            p2 = (AI)getIntent().getSerializableExtra("Player2");
-        else
-            p2 = (Player)getIntent().getSerializableExtra("Player2");
 
         players[0] = p1;
-        players[1] = p2;
+        //there might not be a difference with what is below
+        if(isAI) {
+            a1 = (AI) getIntent().getSerializableExtra("Player2");
+            players[1] = a1;
+        }
+        else {
+            p2 = (Player) getIntent().getSerializableExtra("Player2");
+            players[1] = p2;
+        }
+
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
        // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
@@ -141,7 +147,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void AITurn(){
-
+        guessAI = p2.AIAttack();
     }
 
 
