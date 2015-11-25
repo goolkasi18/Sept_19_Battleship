@@ -133,22 +133,38 @@ public class AI extends Player{
             }
             guessPoint.x = lastHit.x;
             guessPoint.y = lastHit.y + 1*interval;
+
+
+
+            //Add on for the up and down case, x interval, y interval
             if(cheater[guessPoint.x][guessPoint.y] > 0) //if the new spot is a hit
             {
                 //check sink? might have to be done in main method so assume the sink case is handled already
                 //do nothing special.. should just keep going next time till a miss (important)
+
+
             }
             else if(cheater[guessPoint.x][guessPoint.y] == 0) //if the new spot missed (should be able to be changed to just else by final release)
             {
                 lastHit = focusPoint; //go back to the first spot and
                 interval = -1 * interval; //go the opposite direction
-                if(cheater[focusPoint.x][focusPoint.y + 1*interval] == 0 || cheater[focusPoint.x][focusPoint.y + 1*interval] == -1) //if after missing direction and the other is also a miss or guessed.....
+                if(cheater[focusPoint.x][focusPoint.y + 1*interval] == -1) //if after missing direction and the other is also a miss or guessed.....
                 { //then we either screwed up calling the AI to "forget" or it thought it was a horizontal ship when really was two verticals side by side.
+                    for(int i = 0; i<surroundingSpots.size(); i++)
+                    {
+                        if(guessPoint == surroundingSpots.get(i))
+                        {
+                            surroundingSpots.remove(i);
+                            break;
+                        }
+
+                    }
+
                     dirKnown = false; //will go through the other directions to re-do this process the opposite direction(assuming later case)
                 }
             }
         }
-
+        cheater[guessPoint.x][guessPoint.y] = -1;
         lastHit = guessPoint;
         return guessPoint;
     }
@@ -163,7 +179,7 @@ public class AI extends Player{
         if(cheater[guessPoint.x][guessPoint.y] > 0) //if that spot is a hit
         {
             //check sink? might have to be done in main method so assume the sink case is handled already
-            interval = guessPoint.x-focusPoint.x + guessPoint.y-focusPoint.y; // 2-2 + 2-3 for example(-1) or 6-4 + 7-7 (1) will always be 1 or -1(saves direction)
+            interval = guessPoint.x-focusPoint.x + guessPoint.y-focusPoint.y; // 2-2 + 2-3 for example(-1) or 5-4 + 7-7 (1) will always be 1 or -1(saves direction)
             dirKnown = true;
         }//else you missed and nothing special happens
 

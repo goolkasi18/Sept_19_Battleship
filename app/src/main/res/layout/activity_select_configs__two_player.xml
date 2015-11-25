@@ -47,7 +47,7 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/ColorSpinner"
+            android:id="@+id/ColorSpinnerP1"
             android:spinnerMode="dropdown" />
 
         <Space
@@ -132,7 +132,7 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/Color2_spinner"
+            android:id="@+id/ColorSpinnerP2"
             android:layout_gravity="center_horizontal"
             android:spinnerMode="dropdown"
             android:layout_weight="0.01" />
