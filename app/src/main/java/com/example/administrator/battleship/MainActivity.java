@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 /*
@@ -160,12 +161,14 @@ public class MainActivity extends ActionBarActivity {
 
 
         //dont know if the first gets a whole row or a whole column. need to test
-        ViewGroup gridChild = (ViewGroup) aiBoard.getChildAt(row);
-        ImageView testing = (ImageView) gridChild.getChildAt(col);
+        //ViewGroup gridChild = (ViewGroup) aiBoard.getChildAt(row);
+        //ImageButton testing = (ImageButton) gridChild.getChildAt(col);
+        //Log.i("the view", "name: " + testing.getId());
 
         //this might also work with the children going from 0 to 99 so we use math to find the spot
-        ImageView testing2 = (ImageView) aiBoard.getChildAt(col + row*10);
-
+        ImageButton testing2 = (ImageButton) aiBoard.getChildAt(col + row * 10);
+        Log.i("the view", "name: " + testing2.getId());
+        testing2.setBackgroundResource(R.drawable.hit);
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
