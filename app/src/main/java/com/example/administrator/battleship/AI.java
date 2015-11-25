@@ -247,19 +247,21 @@ public class AI extends Player{
     }
 
 
-    public Point AIAttack(){
+    public Point AIAttack() {
 
         //***** Will ******
-        if(hasHit)
-            if(dirKnown)
+        if (hasHit)
+            if (dirKnown)
                 return guessToKill();
             else
                 return findDir();
         else
             return rollTheDice();
         //**********
+    }
 
 
+/*
         //Logic to run when the AI has hit a ship on the last turn
         if(hasHit){
             //Set it to only try to find a spot around it 4 times, there are only 4 possible spots
@@ -409,7 +411,7 @@ public class AI extends Player{
             hasHit = false;
         return pointsToTry;
     }
-
+*/
 
     /*
     *   Method: setUPAi
