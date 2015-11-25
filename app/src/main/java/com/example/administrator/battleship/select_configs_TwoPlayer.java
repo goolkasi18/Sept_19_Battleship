@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 
-public class select_configs_TwoPlayer extends ActionBarActivity {
+public class select_configs_TwoPlayer extends ActionBarActivity{
 
     //Both players are human, need to declare two Player objects upon start of this class
     public Player p1,p2;
@@ -45,14 +45,42 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
         p1 = new Player();
         p2 = new AI();
 
-       // colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinnerP1);
-       // colorSpinnerP2 = (Spinner) findViewById(R.id.ColorSpinnerP2);
+        colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinnerP1);
+        colorSpinnerP2 = (Spinner) findViewById(R.id.ColorSpinnerP2);
 
-      //  ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
         // Specify the layout to use when the list of choices appears
-      //  colorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        colorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-      //  colorSpinnerP1.setAdapter(colorAdapter);
+        colorSpinnerP1.setAdapter(colorAdapter);
+        colorSpinnerP2.setAdapter(colorAdapter);
+
+        colorSpinnerP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(parent.getItemAtPosition(position).toString() == "Blue")
+                {
+                    // Make player 1's color blue.
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        colorSpinnerP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
@@ -61,10 +89,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity {
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
-    public void onITemSelected(AdapterView<?> parent, View view, int pos, long id) {
-
-
-    }
 
     /**
      * Once the players are done selecting configurations they will be able to move onto selecting ships
