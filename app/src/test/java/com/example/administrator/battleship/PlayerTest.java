@@ -13,10 +13,6 @@ import org.junit.Test;
 public class PlayerTest extends TestCase {
 
     @Test
-    public void testGrid() throws Exception{
-    }
-
-    @Test
     public void testPlayer() throws  Exception {
         Player t1 = new Player();
         Player t2 = new Player("jim");

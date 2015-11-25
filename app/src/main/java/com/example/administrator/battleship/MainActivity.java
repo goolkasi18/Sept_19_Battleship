@@ -163,6 +163,9 @@ public class MainActivity extends ActionBarActivity {
         ViewGroup gridChild = (ViewGroup) aiBoard.getChildAt(row);
         ImageView testing = (ImageView) gridChild.getChildAt(col);
 
+        //this might also work with the children going from 0 to 99 so we use math to find the spot
+        ImageView testing2 = (ImageView) aiBoard.getChildAt(col + row*10);
+
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
