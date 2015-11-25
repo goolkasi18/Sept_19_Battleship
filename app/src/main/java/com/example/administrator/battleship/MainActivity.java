@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 
 /*
@@ -41,6 +43,7 @@ public class MainActivity extends ActionBarActivity {
     //to be implemented
     private AI AIPlayer;
     private Point guessAI;
+    private GridLayout aiBoard;
 
     //an array to determine the active player
     private Player[] players = new Player[2];
@@ -66,6 +69,8 @@ public class MainActivity extends ActionBarActivity {
         //there might not be a difference with what is below
         if(isAI) {
             a1 = (AI) getIntent().getSerializableExtra("Player2");
+            a1.copyBoard(p1.squares);
+            aiBoard = (GridLayout) findViewById(R.id.right_button_grid);
             players[1] = a1;
         }
         else {
@@ -152,6 +157,12 @@ public class MainActivity extends ActionBarActivity {
         int col = guessAI.x;
         int row = guessAI.y;
         Log.i("Jello0", "Row: " + row + "Col: " + col);
+
+
+        //dont know if the first gets a whole row or a whole column. need to test
+        ViewGroup gridChild = (ViewGroup) aiBoard.getChildAt(row);
+        ImageView testing = (ImageView) gridChild.getChildAt(col);
+
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {

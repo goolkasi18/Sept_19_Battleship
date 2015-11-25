@@ -1,6 +1,7 @@
 package com.example.administrator.battleship;
 
 import android.util.Log;
+import android.widget.GridLayout;
 
 import junit.framework.TestCase;
 
@@ -10,6 +11,10 @@ import org.junit.Test;
  * Created by goolkasi18 on 11/8/2015.
  */
 public class PlayerTest extends TestCase {
+
+    @Test
+    public void testGrid() throws Exception{
+    }
 
     @Test
     public void testPlayer() throws  Exception {
