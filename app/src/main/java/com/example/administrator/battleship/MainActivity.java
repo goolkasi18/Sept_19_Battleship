@@ -217,7 +217,7 @@ public class MainActivity extends ActionBarActivity {
             {
                 Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
-                exitToStart(null);
+                exitToStart(null); //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
             }
         }
         else
