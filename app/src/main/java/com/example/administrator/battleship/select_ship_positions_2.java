@@ -61,11 +61,11 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
     }
 
     public void ready(View view){
-        s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, R.drawable.vertical2, R.id.Ship1);
-        s2 = new Ship(Vship2.getX(), Vship2.getY(), 0, 3, 2, R.drawable.vertical3, R.id.Ship2);
-        s3 = new Ship(Vship3.getX(), Vship3.getY(), 0, 3, 3, R.drawable.vertical3, R.id.Ship3);
-        s4 = new Ship(Vship4.getX(), Vship4.getY(), 0, 4, 4, R.drawable.vertical4, R.id.Ship4);
-        s5 = new Ship(Vship5.getX(), Vship5.getY(), 0, 5, 5, R.drawable.vertical5, R.id.Ship5);
+        s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, R.drawable.r_vertical2, R.id.Ship1);
+        s2 = new Ship(Vship2.getX(), Vship2.getY(), 0, 3, 2, R.drawable.r_vertical3, R.id.Ship2);
+        s3 = new Ship(Vship3.getX(), Vship3.getY(), 0, 3, 3, R.drawable.r_vertical3, R.id.Ship3);
+        s4 = new Ship(Vship4.getX(), Vship4.getY(), 0, 4, 4, R.drawable.r_vertical4, R.id.Ship4);
+        s5 = new Ship(Vship5.getX(), Vship5.getY(), 0, 5, 5, R.drawable.r_vertical5, R.id.Ship5);
 
         s6 = new Ship(Hship1.getX(), Hship1.getY(), 2, 0, 1, R.drawable.horizontal2, R.id.HShip1);
         s7 = new Ship(Hship2.getX(), Hship2.getY(), 3, 0, 2, R.drawable.horizontal3, R.id.HShip2);

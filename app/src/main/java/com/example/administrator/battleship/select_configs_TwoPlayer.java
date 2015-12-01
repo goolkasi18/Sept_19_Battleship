@@ -92,7 +92,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
 
     /**
      * Once the players are done selecting configurations they will be able to move onto selecting ships
-     *
      * @param view
      */
     public void switchToSelectShips(View view) {

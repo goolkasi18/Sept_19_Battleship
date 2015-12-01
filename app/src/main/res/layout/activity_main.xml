@@ -1917,36 +1917,36 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="60dp"
-            android:id="@+id/imageView6"
-            android:background="@drawable/vertical2"
+            android:id="@+id/LShip1"
+            android:background="@drawable/l_vertical2"
             android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="90dp"
-            android:id="@+id/imageView7"
-            android:background="@drawable/vertical3"
+            android:id="@+id/LShip2"
+            android:background="@drawable/l_vertical3"
             android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="90dp"
-            android:id="@+id/imageView8"
-            android:background="@drawable/vertical3"
+            android:id="@+id/LShip3"
+            android:background="@drawable/l_vertical3"
             android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="120dp"
-            android:id="@+id/imageView9"
-            android:background="@drawable/vertical4"
+            android:id="@+id/LShip4"
+            android:background="@drawable/l_vertical4"
             android:layout_marginLeft="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="150dp"
-            android:id="@+id/imageView10"
-            android:background="@drawable/vertical5"
+            android:id="@+id/LShip5"
+            android:background="@drawable/l_vertical5"
             android:layout_marginLeft="15dp" />
     </LinearLayout>
 
@@ -1964,48 +1964,58 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="150dp"
-            android:id="@+id/imageView11"
-            android:background="@drawable/vertical5"
+            android:id="@+id/RShip5"
+            android:background="@drawable/r_vertical5"
             android:layout_marginRight="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="120dp"
-            android:id="@+id/imageView13"
-            android:background="@drawable/vertical4"
+            android:id="@+id/RShip4"
+            android:background="@drawable/r_vertical4"
             android:layout_marginRight="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="90dp"
-            android:id="@+id/imageView14"
-            android:background="@drawable/vertical3"
+            android:id="@+id/RShip3"
+            android:background="@drawable/r_vertical3"
             android:layout_marginRight="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="90dp"
-            android:id="@+id/imageView15"
-            android:background="@drawable/vertical3"
+            android:id="@+id/RShip2"
+            android:background="@drawable/r_vertical3"
             android:layout_marginRight="15dp" />
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="60dp"
-            android:id="@+id/imageView12"
-            android:background="@drawable/vertical2"
+            android:id="@+id/RShip1"
+            android:background="@drawable/r_vertical2"
             android:layout_marginRight="15dp" />
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exit To Start Page"
-        android:id="@+id/exitGame"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="X"
+        android:id="@+id/Surrender1"
+        android:onClick="exitToStart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="X"
+        android:id="@+id/Surrender2"
+        android:onClick="exitToStart"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/right_pieces_remaining"
-        android:layout_alignEnd="@+id/right_pieces_remaining"
-        android:onClick="exitToStart"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="140dp"
