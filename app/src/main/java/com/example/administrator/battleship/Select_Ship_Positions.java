@@ -1,5 +1,8 @@
 package com.example.administrator.battleship;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -258,14 +261,39 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
      */
     public void selectShips(View view)
     {
-        Intent selectShip2 = new Intent(this, select_ship_positions_2.class);
-        selectShip2.putExtra("Player1",p1);
-        selectShip2.putExtra("Player2", p2);
-        startActivity(selectShip2);
-        finish();
+        int counter = 0;
+        for(int i = 0; i < ships.length; i++){
+            if(ships[i].getPlaced())
+            {
+                counter++;
+            }
+        }
+        if(counter == 5)
+        {
+            Intent selectShip2 = new Intent(this, select_ship_positions_2.class);
+            selectShip2.putExtra("Player1",p1);
+            selectShip2.putExtra("Player2", p2);
+            startActivity(selectShip2);
+            finish();
+        }
+        else
+        {
+            AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
+            deletePrompt.setMessage("You must place five ships");
+            deletePrompt.setCancelable(false);
+            deletePrompt.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog alert = deletePrompt.create();
+            alert.show();
+        }
+
     }
 
-    
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

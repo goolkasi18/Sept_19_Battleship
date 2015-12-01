@@ -1,5 +1,8 @@
 package com.example.administrator.battleship;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -248,21 +251,45 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
         finish();
     }
 
-
     /*
    *  Method: startGame
    *  Purpose: finishes the current activity and switches to the game
     */
     public void startGame(View view)
     {
-        if(p2.setUpAi()) {
-            Intent startGame = new Intent(this, MainActivity.class); //needs to be a new AI class
-            startGame.putExtra("Player1", p1);
-            startGame.putExtra("Player2", p2);
-            startGame.putExtra("isAI", true);
-            startActivity(startGame);
-            finish();
+        int counter = 0;
+        for(int i = 0; i < ships.length; i++){
+            if(ships[i].getPlaced())
+            {
+                counter++;
+            }
         }
+        if(counter == 5)
+        {
+            if(p2.setUpAi()) {
+                Intent startGame = new Intent(this, MainActivity.class); //needs to be a new AI class
+                startGame.putExtra("Player1", p1);
+                startGame.putExtra("Player2", p2);
+                startGame.putExtra("isAI", true);
+                startActivity(startGame);
+                finish();
+            }
+        }
+        else
+        {
+            AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
+            deletePrompt.setMessage("You must place five ships");
+            deletePrompt.setCancelable(false);
+            deletePrompt.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog alert = deletePrompt.create();
+            alert.show();
+        }
+
     }
 
 

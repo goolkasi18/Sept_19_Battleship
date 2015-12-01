@@ -1,10 +1,12 @@
 package com.example.administrator.battleship;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import java.util.logging.Handler;
 
 /*
 * @authors: Jared, Daniel, Will
@@ -47,6 +51,8 @@ public class MainActivity extends ActionBarActivity {
     private int activePlayer = 1;
     private boolean isAI;
 
+    Vibrator vibrate;
+
     /*
     * method: onCreate
     * purpose: starts the activity
@@ -58,6 +64,7 @@ public class MainActivity extends ActionBarActivity {
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         isAI = (Boolean)getIntent().getExtras().getBoolean("isAI");
+        vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         players[0] = p1;
         //there might not be a difference with what is below
@@ -136,12 +143,46 @@ public class MainActivity extends ActionBarActivity {
 
             if(players[activePlayer].attack(row,col)) {
                 if(activePlayer == 0)
+                {
+                    vibrate.vibrate(1000);
+                    Thread closeActivity = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Thread.sleep(3000);
+                            } catch (Exception e) {
+                                e.getLocalizedMessage();
+                            }
+                        }
+                    });
+                    vibrate.vibrate(1000);
                     view.setBackgroundResource(R.drawable.hit_right);
+                }
+
                 else
+                {
+                    vibrate.vibrate(1000);
+                    // This doesn't delay for some reason
+                    Thread thread = new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Thread.sleep(3000);
+
+                            } catch (Exception e) {
+                                e.getLocalizedMessage();
+                            }
+                        }
+                    });
+                    thread.start();
+                    vibrate.vibrate(1000);
                     view.setBackgroundResource(R.drawable.hit_left);
+                }
 
                 if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
                 {
+                    vibrate.vibrate(1000);
+
                     Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
                     int index = players[activePlayer].squares[row][col]-1;
                     if(index > 4)
@@ -154,6 +195,7 @@ public class MainActivity extends ActionBarActivity {
                 }
                 if (players[activePlayer].checkWin())
                 {
+                    vibrate.vibrate(1000);
                     Log.i("Win:", "Player " + activePlayer);
                     //do whatever we want to end game and show win screen
                     exitToStart(null);
@@ -202,9 +244,12 @@ public class MainActivity extends ActionBarActivity {
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
+            vibrate.vibrate(1000);
             testing2.setBackgroundResource(R.drawable.hit_right);
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
             {
+                vibrate.vibrate(1000);
+
                 Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
@@ -215,6 +260,9 @@ public class MainActivity extends ActionBarActivity {
             }
             if (players[activePlayer].checkWin())
             {
+                vibrate.vibrate(1000);
+                vibrate.vibrate(1000);
+                vibrate.vibrate(1000);
                 Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
                 exitToStart(null); //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
