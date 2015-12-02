@@ -280,7 +280,7 @@ public class MainActivity extends ActionBarActivity {
                 vibrate.vibrate(1000);
                 Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
-                if(activePlayer == 0)
+                if (activePlayer == 0)
                     activePlayer = 1;
                 else
                     activePlayer = 0;
