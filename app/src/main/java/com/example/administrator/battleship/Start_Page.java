@@ -25,7 +25,6 @@ public class Start_Page extends ActionBarActivity {
     Button helpBtn, settingsBtn, vsAIBtn, vsPlayerBtn, muteBtn, vibroBtn;
     LinearLayout vsLayout, helperBtns;
     FrameLayout helpFrame, settingsFrame;
-    Vibrator vibrate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,6 @@ public class Start_Page extends ActionBarActivity {
         helperBtns = (LinearLayout) findViewById(R.id.helperButtons);
         helpFrame = (FrameLayout) findViewById(R.id.helpFrame);
         settingsFrame = (FrameLayout) findViewById(R.id.settingsFrame);
-        vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
     }
 
     public void switchToSelectShips(View view) {
@@ -55,7 +53,6 @@ public class Start_Page extends ActionBarActivity {
     }
 
     public void showHelp(View view) {
-        vibrate.vibrate(2000);
         helpBtn.setEnabled(false);
         vsAIBtn.setEnabled(false);
         vsPlayerBtn.setEnabled(false);
