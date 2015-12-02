@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Point;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
@@ -17,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.logging.Handler;
 
@@ -95,11 +98,15 @@ public class MainActivity extends ActionBarActivity {
         player2Remaining[2] = (ImageView)findViewById(R.id.LShip3);
         player2Remaining[3] = (ImageView)findViewById(R.id.LShip4);
         player2Remaining[4] = (ImageView)findViewById(R.id.LShip5);
+
         player2Down[0] = R.drawable.l_vertical2_down;
         player2Down[1] = R.drawable.l_vertical3_down;
         player2Down[2] = R.drawable.l_vertical3_down;
         player2Down[3] = R.drawable.l_vertical4_down;
         player2Down[4] = R.drawable.l_vertical5_down;
+
+        ((ImageView)findViewById(R.id.Player1ProfilePic)).setBackgroundResource(players[0].getProfilePicID());
+        ((ImageView)findViewById(R.id.Player2ProfilePic)).setBackgroundResource(players[1].getProfilePicID());
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
         // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));

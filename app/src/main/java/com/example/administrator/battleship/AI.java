@@ -14,7 +14,7 @@ import java.util.Random;
  * Class AI is a descendant of Player. However it is distinct in the fact that it will choose random positions for the ships,
  * and will attack on its own
  */
-public class AI extends Player{
+public class AI extends Player implements Serializable{
 
     private int xInterval, yInterval;
     private int difficultyLevel; //Represents the difficulty level of the AI. higher the difficulty, lower the chance of missing
@@ -36,7 +36,7 @@ public class AI extends Player{
         turn = false;
         playerName = initPlayerName;
         //Both of these are set in the configurations activity
-        profilePicID = -1;
+        profilePicID = R.drawable.hit_left;
         colorChoiceID = -1;
         ships = new Ship[10];
         hasHit = false;
@@ -53,7 +53,7 @@ public class AI extends Player{
         squares = new int[10][10];
         initSquares();
         turn = false;
-        profilePicID = -1;
+        profilePicID = R.drawable.hit_left;
         colorChoiceID = -1;
         ships = new Ship[10];
         difficultyLevel = 50;

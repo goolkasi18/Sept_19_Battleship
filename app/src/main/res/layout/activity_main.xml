@@ -2020,7 +2020,7 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:id="@+id/imageView16"
+        android:id="@+id/Player2ProfilePic"
         android:layout_below="@+id/left_button_grid"
         android:layout_toRightOf="@+id/left_pieces_remaining"
         android:layout_toEndOf="@+id/left_pieces_remaining"
@@ -2030,7 +2030,7 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:id="@+id/imageView17"
+        android:id="@+id/Player1ProfilePic"
         android:layout_above="@+id/right_button_grid"
         android:layout_toLeftOf="@+id/right_pieces_remaining"
         android:layout_toStartOf="@+id/right_pieces_remaining"
