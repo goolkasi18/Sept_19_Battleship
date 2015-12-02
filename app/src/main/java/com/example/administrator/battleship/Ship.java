@@ -43,6 +43,8 @@ public class Ship implements Serializable{
         viewID = 0;
     }
 
+    public boolean getPlaced() {return placed;}
+
     public void togglePlaced()
     {
         placed = !placed;
