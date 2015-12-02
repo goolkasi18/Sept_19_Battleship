@@ -63,9 +63,9 @@
             android:layout_gravity="center_horizontal" />
 
         <HorizontalScrollView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="150dp"
-            android:id="@+id/horizontalScrollView"
+            android:id="@+id/Player1_Scroll"
             android:layout_gravity="center_horizontal"
             android:fillViewport="false">
 
@@ -73,7 +73,32 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/Images_1"></LinearLayout>
+                android:id="@+id/Player1_Images">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p1pic1"
+                    android:background="@drawable/sailor1"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile1Pic"/>
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p1pic2"
+                    android:background="@drawable/sailor2"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile1Pic"/>
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p1pic3"
+                    android:background="@drawable/sailor3"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile1Pic"/>
+            </LinearLayout>
         </HorizontalScrollView>
 
         <Space
@@ -151,9 +176,9 @@
             android:layout_gravity="center_horizontal" />
 
         <HorizontalScrollView
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="150dp"
-            android:id="@+id/Player2_Images"
+            android:id="@+id/Player2_Scroll"
             android:layout_gravity="center_horizontal"
             android:fillViewport="false">
 
@@ -161,7 +186,32 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/Images_2" />
+                android:id="@+id/Player2_Images" >
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p2pic1"
+                    android:background="@drawable/sailor1"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile2Pic"/>
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p2pic2"
+                    android:background="@drawable/sailor2"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile2Pic"/>
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/p2pic3"
+                    android:background="@drawable/sailor3"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="setProfile2Pic"/>
+            </LinearLayout>
         </HorizontalScrollView>
 
         <Space

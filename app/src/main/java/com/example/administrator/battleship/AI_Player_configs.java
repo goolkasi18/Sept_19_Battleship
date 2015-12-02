@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 
 public class AI_Player_configs extends ActionBarActivity {
@@ -22,6 +23,10 @@ public class AI_Player_configs extends ActionBarActivity {
 
     //Player 2 is a robot, and therefore is always ready
     public boolean readyPlayer1 = false;
+    private int[] defaultPics = new int[3]; //change size to how many pics there are
+    private int[] chosenPics = new int[3]; //change size to how many pics there are
+    private int[] p1ProfilePics = new int[3]; //change size to how many pics there are
+    private int[] p2ProfilePics = new int[3]; //change size to how many pics there are
 
     //Text fields that hold the players name
     public EditText p1Name;
@@ -41,10 +46,52 @@ public class AI_Player_configs extends ActionBarActivity {
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
 
+
+        defaultPics[0] = R.drawable.sailor1;
+        defaultPics[1] = R.drawable.sailor2;
+        defaultPics[2] = R.drawable.sailor3;
+
+        p1ProfilePics[0] = R.drawable.r_sailor1;
+        p1ProfilePics[1] = R.drawable.r_sailor2;
+        p1ProfilePics[2] = R.drawable.r_sailor3;
+
+        p2ProfilePics[0] = R.drawable.l_sailor1;
+        p2ProfilePics[1] = R.drawable.l_sailor2;
+        p2ProfilePics[2] = R.drawable.l_sailor3;
+
+
+        chosenPics[0] = R.drawable.sailor1_yes;
+        chosenPics[1] = R.drawable.sailor2_yes;
+        chosenPics[2] = R.drawable.sailor3_yes;
         //ImageView background = (ImageView)findViewById(R.id.Background);
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
+    public void setProfile1Pic(View view){
+        LinearLayout p1Pics = (LinearLayout) findViewById(R.id.Player1_Images);
+        int p1Size = p1Pics.getChildCount();
+
+        for(int i = 0; i<p1Size; i++)
+            if(view != p1Pics.getChildAt(i))
+                p1Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
+            else {
+                p1Pics.getChildAt(i).setBackgroundResource(chosenPics[i]);
+                p1.setProfilePicID(p1ProfilePics[i]);
+            }
+    }
+
+    public void setProfile2Pic(View view){
+        LinearLayout p2Pics = (LinearLayout) findViewById(R.id.Player2_Images);
+        int p2Size = p2Pics.getChildCount();
+
+        for(int i = 0; i<p2Size; i++)
+            if(view != p2Pics.getChildAt(i))
+                p2Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
+            else {
+                p2Pics.getChildAt(i).setBackgroundResource(chosenPics[i]);
+                p2.setProfilePicID(p2ProfilePics[i]);
+            }
+    }
 
     /**
      * Once the players are done selecting configurations they will be able to move onto selecting ships
