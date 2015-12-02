@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -72,6 +73,8 @@ public class AI_Player_configs extends ActionBarActivity {
     }
 
     public void startGame(View view){
+        p1.setPlayerName(p1Name.getText().toString());
+        p2.setPlayerName(p2Name.getText().toString());
         Intent switchToSelect = new Intent(this, select_ship_positions_ai.class);
         switchToSelect.putExtra("Player1", p1);
         switchToSelect.putExtra("AI2", p2);

@@ -4,6 +4,7 @@ import android.graphics.Point;
 import android.util.Log;
 import android.widget.ImageView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 

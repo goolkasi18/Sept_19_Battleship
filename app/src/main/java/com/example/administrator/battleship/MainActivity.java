@@ -110,6 +110,13 @@ public class MainActivity extends ActionBarActivity {
         finish();
     }
 
+    public void winScreen(View view)
+    {
+        Intent win = new Intent(this, WinScreen.class);
+        startActivity(win);
+        finish();
+    }
+
     /*
     * Method: checkHit
     * Purpose: Checks the hit upon selection of a square on the grid
@@ -154,9 +161,17 @@ public class MainActivity extends ActionBarActivity {
                 }
                 if (players[activePlayer].checkWin())
                 {
+                    if(activePlayer == 0)
+                        activePlayer = 1;
+                    else
+                        activePlayer = 0;
                     Log.i("Win:", "Player " + activePlayer);
                     //do whatever we want to end game and show win screen
-                    exitToStart(null);
+                    Intent win = new Intent(this, WinScreen.class);
+                    win.putExtra("Player", players[activePlayer].getPlayerName());
+                    startActivity(win);
+                    finish();
+
                 }
             }
             else
@@ -217,7 +232,15 @@ public class MainActivity extends ActionBarActivity {
             {
                 Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
-                exitToStart(null); //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
+                if(activePlayer == 0)
+                    activePlayer = 1;
+                else
+                    activePlayer = 0;
+                Intent win = new Intent(this, WinScreen.class);
+                win.putExtra("Player", players[activePlayer].getPlayerName());
+                startActivity(win);
+                finish();
+                 //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
             }
         }
         else
