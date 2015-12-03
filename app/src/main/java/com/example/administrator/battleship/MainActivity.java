@@ -48,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
     private ImageView[] player2Remaining = new ImageView[5];
     private int[] player1Down = new int[5];
     private int[] player2Down = new int[5];
+    private ImageView turnGui;
 
     //an array to determine the active player
     private Player[] players = new Player[2];
@@ -107,6 +108,8 @@ public class MainActivity extends ActionBarActivity {
 
         ((ImageView)findViewById(R.id.Player1ProfilePic)).setBackgroundResource(players[0].getProfilePicID());
         ((ImageView)findViewById(R.id.Player2ProfilePic)).setBackgroundResource(players[1].getProfilePicID());
+
+        turnGui = (ImageView)findViewById(R.id.PlayerTurn);
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
         // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
@@ -235,10 +238,14 @@ public class MainActivity extends ActionBarActivity {
     * @return: void
      */
     public void endTurn(){
-        if(activePlayer == 0)
+        if(activePlayer == 0) {
             activePlayer = 1;
-        else
+            turnGui.setBackgroundResource(R.drawable.fade2);
+        }
+        else {
             activePlayer = 0;
+            turnGui.setBackgroundResource(R.drawable.fade1);
+        }
     }
 
     public void AITurn(){
