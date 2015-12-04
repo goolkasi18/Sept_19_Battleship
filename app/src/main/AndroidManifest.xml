@@ -46,11 +46,13 @@
         </activity>
         <activity
             android:name=".select_ship_positions_ai"
-            android:label="@string/title_activity_select_ship_positions_ai" >
+            android:label="@string/title_activity_select_ship_positions_ai"
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:name=".WinScreen"
-            android:label="@string/title_activity_win_screen" >
+            android:label="@string/title_activity_win_screen"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 
