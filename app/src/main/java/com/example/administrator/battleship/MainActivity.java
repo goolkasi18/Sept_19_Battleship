@@ -8,6 +8,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -39,7 +41,8 @@ public class MainActivity extends ActionBarActivity {
     private Player p1;
     private Player p2;
     private AI a1;
-
+    public SoundPool soundPool;
+    public int explosion;
     //to be implemented
     private AI AIPlayer;
     private Point guessAI;
@@ -68,6 +71,9 @@ public class MainActivity extends ActionBarActivity {
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         isAI = (Boolean)getIntent().getExtras().getBoolean("isAI");
         vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        explosion = soundPool.load(this, R.raw.explosion, 1);
 
         players[0] = p1;
         //there might not be a difference with what is below
@@ -149,6 +155,7 @@ public class MainActivity extends ActionBarActivity {
             Log.i("Player: ", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
+                soundPool.play(explosion, 1f, 1f, 1, 0, 1.0f);
                 if(activePlayer == 0)
                 {
                     vibrate.vibrate(1000);
@@ -235,6 +242,7 @@ public class MainActivity extends ActionBarActivity {
     * @return: void
      */
     public void endTurn(){
+
         if(activePlayer == 0)
             activePlayer = 1;
         else

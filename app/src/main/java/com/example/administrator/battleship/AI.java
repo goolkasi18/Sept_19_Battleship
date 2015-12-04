@@ -155,6 +155,10 @@ public class AI extends Player implements Serializable{
     public Point findDir(){
         Point guessPoint = new Point(-1,-1);
         int guessIndex = (int)(Math.random()*surroundingSpots.size()-1);
+        if(guessIndex == -1)
+        {
+            return rollTheDice();
+        }
         guessPoint = surroundingSpots.get(guessIndex); //choose a random one of the directional surrounding spots (from 0 to size-1)
         surroundingSpots.remove(guessIndex); //remove that point saying we have now guessed it
 
@@ -234,6 +238,7 @@ public class AI extends Player implements Serializable{
     public Point AIAttack() {
 
         //***** Will ******
+
         if (hasHit)
             if (dirKnown)
                 return guessToKill();

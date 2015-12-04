@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -89,6 +90,8 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
 
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
+        p1Name.setGravity(Gravity.CENTER);
+        p2Name.setGravity(Gravity.CENTER);
 
         defaultPics[0] = R.drawable.sailor1;
         defaultPics[1] = R.drawable.sailor2;

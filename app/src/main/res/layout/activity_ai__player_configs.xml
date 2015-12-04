@@ -14,7 +14,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/linearLayout"
-        android:layout_toStartOf="@+id/linearLayout">
+        android:layout_toStartOf="@+id/linearLayout"
+        android:weightSum="1">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,9 +27,11 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100px"
+            android:maxLength="50"
             android:id="@+id/Player1_Name"
-            android:text="Player 1" />
+            android:text="Player 1"
+            />
 
         <Space
             android:layout_width="match_parent"
@@ -53,7 +56,9 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_weight="0.30"
+            android:id="@+id/space" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,10 +140,12 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100px"
             android:id="@+id/Player2_Name"
             android:layout_gravity="center_horizontal"
-            android:text="Robot" />
+            android:text="Robot"
+            android:maxLength="50"/>
+
 
         <Space
             android:layout_width="match_parent"
@@ -162,9 +169,51 @@
             android:spinnerMode="dropdown"
             android:layout_weight="0.01" />
 
-        <Space
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Choose Difficulty"
+            android:id="@+id/difficulty"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:id="@+id/Easy"
+                android:layout_weight="1"
+                android:backgroundTint="#ff00ff00"
+                android:onClick="setDifficulty" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:id="@+id/Medium"
+                android:layout_weight="1"
+                android:backgroundTint="#ff00ff00"
+                android:onClick="setDifficulty" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:id="@+id/Hard"
+                android:layout_weight="1"
+                android:backgroundTint="#ff00ff00"
+                android:onClick="setDifficulty" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
             android:layout_gravity="center_horizontal" />
 
         <TextView

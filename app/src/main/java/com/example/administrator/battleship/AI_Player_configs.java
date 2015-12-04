@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +25,8 @@ public class AI_Player_configs extends ActionBarActivity {
     public Player p1;
     public AI p2;
 
+    public Button Easy, Medium, Hard;
+    public Button[] diff;
     //Player 2 is a robot, and therefore is always ready
     public boolean readyPlayer1 = false;
     private int[] defaultPics = new int[3]; //change size to how many pics there are
@@ -46,6 +51,8 @@ public class AI_Player_configs extends ActionBarActivity {
 
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
+        p1Name.setGravity(Gravity.CENTER);
+        p2Name.setGravity(Gravity.CENTER);
 
 
         defaultPics[0] = R.drawable.sailor1;
@@ -64,8 +71,42 @@ public class AI_Player_configs extends ActionBarActivity {
         chosenPics[0] = R.drawable.sailor1_yes;
         chosenPics[1] = R.drawable.sailor2_yes;
         chosenPics[2] = R.drawable.sailor3_yes;
+
+        Easy = (Button) this.findViewById(R.id.Easy);
+        Medium = (Button) this.findViewById(R.id.Medium);
+        Hard = (Button) this.findViewById(R.id.Hard);
+        diff = new Button[3];
+        diff[0] = Easy;
+        diff[1] = Medium;
+        diff[2] = Hard;
+
         //ImageView background = (ImageView)findViewById(R.id.Background);
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
+    }
+
+    public void setDifficulty(View view)
+    {
+
+        Button nextDiff = (Button) view;
+        //Set the background of the button clicked to RED to indicate it was clicked
+        nextDiff.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+        for(int i = 0; i<3; i++)
+        {
+            if(nextDiff.getId()==diff[i].getId())
+            {
+                switch (i) {
+                    case 0: p2.setDifficultyLevel(5);
+                        break;
+                    case 1: p2.setDifficultyLevel(10);
+                        break;
+                    case 2: p2.setDifficultyLevel(25);
+                }
+            }
+
+            if(nextDiff.getId()!=diff[i].getId())
+                diff[i].getBackground().setColorFilter(0xFF00FF00, PorterDuff.Mode.MULTIPLY);
+        }
+
     }
 
     public void setProfile1Pic(View view){
