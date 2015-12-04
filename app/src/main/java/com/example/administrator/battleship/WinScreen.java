@@ -15,8 +15,6 @@ import org.w3c.dom.Text;
 
 public class WinScreen extends ActionBarActivity {
 
-
-
     Player player1, player2;
     AI aiPlayer;
     boolean isAI;
@@ -38,9 +36,6 @@ public class WinScreen extends ActionBarActivity {
         else {
             player2 = (Player) getIntent().getSerializableExtra("Player2");
         }
-
-
-      //  mainMenuButton = (Button)(findViewById(R.id.mainMenuButton));
     }
 
 

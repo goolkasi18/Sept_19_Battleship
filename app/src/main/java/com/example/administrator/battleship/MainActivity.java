@@ -34,7 +34,6 @@ import java.util.logging.Handler;
  */
 public class MainActivity extends ActionBarActivity {
 
-
     //the Players to play the game, passed up from configs activity
     private Player p1;
     private Player p2;
