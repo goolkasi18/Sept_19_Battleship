@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     private Player p2;
     private AI a1;
     public SoundPool soundPool;
-    public int explosion, sink;
+    public int explosion, sunk;
     //to be implemented
     private AI AIPlayer;
     private Point guessAI;
@@ -77,7 +77,7 @@ public class MainActivity extends ActionBarActivity {
 
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         explosion = soundPool.load(this, R.raw.explosion, 1);
-        sink = soundPool.load(this, R.raw.sunk, 1);
+        sunk = soundPool.load(this, R.raw.sunk, 1);
 
         players[0] = p1;
         //there might not be a difference with what is below
@@ -205,7 +205,7 @@ public class MainActivity extends ActionBarActivity {
                     sink.run();
 
                     Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col] - 1));
-                    soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
+                    soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
                     int index = players[activePlayer].squares[row][col]-1;
                     if(index > 4)
                         index = index-5;
@@ -285,7 +285,7 @@ public class MainActivity extends ActionBarActivity {
                 sink.run();
 
                 Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
-                soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
+                soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
                 if(index > 4)

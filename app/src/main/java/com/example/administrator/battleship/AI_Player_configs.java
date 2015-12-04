@@ -85,33 +85,7 @@ public class AI_Player_configs extends ActionBarActivity {
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
-    }
-
-    public void setDifficulty(View view)
-    {
-
-        Button nextDiff = (Button) view;
-        //Set the background of the button clicked to RED to indicate it was clicked
-        nextDiff.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
-        for(int i = 0; i<3; i++)
-        {
-            if(nextDiff.getId()==diff[i].getId())
-            {
-                switch (i) {
-                    case 0: p2.setDifficultyLevel(5);
-                        break;
-                    case 1: p2.setDifficultyLevel(10);
-                        break;
-                    case 2: p2.setDifficultyLevel(25);
-                }
-            }
-
-            if(nextDiff.getId()!=diff[i].getId())
-                diff[i].getBackground().setColorFilter(0xFF00FF00, PorterDuff.Mode.MULTIPLY);
-        }
-
-
-        Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinner);
+            Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinner);
         Spinner colorSpinnerP2 = (Spinner) findViewById(R.id.Color2_spinner);
 
         ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
@@ -166,6 +140,30 @@ public class AI_Player_configs extends ActionBarActivity {
 
             }
         });
+    }
+
+    public void setDifficulty(View view) {
+
+        Button nextDiff = (Button) view;
+        //Set the background of the button clicked to RED to indicate it was clicked
+        nextDiff.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+        for (int i = 0; i < 3; i++) {
+            if (nextDiff.getId() == diff[i].getId()) {
+                switch (i) {
+                    case 0:
+                        p2.setDifficultyLevel(5);
+                        break;
+                    case 1:
+                        p2.setDifficultyLevel(10);
+                        break;
+                    case 2:
+                        p2.setDifficultyLevel(25);
+                }
+            }
+
+            if (nextDiff.getId() != diff[i].getId())
+                diff[i].getBackground().setColorFilter(0xFF00FF00, PorterDuff.Mode.MULTIPLY);
+        }
     }
 
     public void setProfile1Pic(View view){
