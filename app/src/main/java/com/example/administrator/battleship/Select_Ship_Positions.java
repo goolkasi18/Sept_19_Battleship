@@ -64,6 +64,8 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
         //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
+
+        ((RelativeLayout)findViewById(R.id.privacy)).setBackgroundColor(p1.getColorChoiceID());
     }
 
     public void ready(View view){
