@@ -79,6 +79,9 @@ public class AI extends Player implements Serializable{
         return true;
     }
 
+    public int getDifficultyLevel() {return difficultyLevel;}
+
+
     /*
     *   Method: setDifficultyLevel
     *   Parameters: diffLevel, represents the difficulty level the user chooses
@@ -232,6 +235,12 @@ public class AI extends Player implements Serializable{
         surroundingSpots.clear();
         xInterval = 0;
         yInterval = 0;
+    }
+
+    public void unInitialize(){
+
+        focusPoint = null;
+        lastHit = null;
     }
 
 

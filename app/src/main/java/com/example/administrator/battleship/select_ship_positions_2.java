@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 public class select_ship_positions_2 extends ActionBarActivity implements View.OnTouchListener{
@@ -61,6 +62,8 @@ public class select_ship_positions_2 extends ActionBarActivity implements View.O
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
        // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player2positionspage, 1000, 600));
+
+        ((RelativeLayout)findViewById(R.id.privacy)).setBackgroundColor(p2.getColorChoiceID());
     }
 
     public void ready(View view){

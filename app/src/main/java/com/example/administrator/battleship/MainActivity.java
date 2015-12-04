@@ -36,7 +36,6 @@ import java.util.logging.Handler;
  */
 public class MainActivity extends ActionBarActivity {
 
-
     //the Players to play the game, passed up from configs activity
     private Player p1;
     private Player p2;
@@ -59,6 +58,9 @@ public class MainActivity extends ActionBarActivity {
     private boolean isAI;
 
     Vibrator vibrate;
+
+    private Thread hit;
+    private Thread sink;
 
     /*
     * method: onCreate
@@ -120,6 +122,32 @@ public class MainActivity extends ActionBarActivity {
 
         //ImageView background = (ImageView)findViewById(R.id.Background);
         // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
+
+        hit = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    vibrate.vibrate(250);
+
+                } catch (Exception e) {
+                    e.getLocalizedMessage();
+                }
+            }
+        });
+
+        sink = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    vibrate.vibrate(250);
+                    sink.sleep(500);
+                    vibrate.vibrate(250);
+
+                } catch (Exception e) {
+                    e.getLocalizedMessage();
+                }
+            }
+        });
     }
 
     /*
@@ -160,46 +188,21 @@ public class MainActivity extends ActionBarActivity {
 
             if(players[activePlayer].attack(row,col)) {
                 soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
+                hit.run();
+
                 if(activePlayer == 0)
                 {
-                    vibrate.vibrate(1000);
-                    Thread closeActivity = new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                Thread.sleep(3000);
-                            } catch (Exception e) {
-                                e.getLocalizedMessage();
-                            }
-                        }
-                    });
-                    vibrate.vibrate(1000);
                     view.setBackgroundResource(R.drawable.hit_right);
                 }
 
                 else
                 {
-                    vibrate.vibrate(1000);
-                    // This doesn't delay for some reason
-                    Thread thread = new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                Thread.sleep(3000);
-
-                            } catch (Exception e) {
-                                e.getLocalizedMessage();
-                            }
-                        }
-                    });
-                    thread.start();
-                    vibrate.vibrate(1000);
                     view.setBackgroundResource(R.drawable.hit_left);
                 }
 
                 if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
                 {
-                    vibrate.vibrate(1000);
+                    sink.run();
 
                     Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col] - 1));
                     soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
@@ -221,10 +224,7 @@ public class MainActivity extends ActionBarActivity {
                     vibrate.vibrate(1000);
                     Log.i("Win:", "Player " + activePlayer);
                     //do whatever we want to end game and show win screen
-                    Intent win = new Intent(this, WinScreen.class);
-                    win.putExtra("Player", players[activePlayer].getPlayerName());
-                    startActivity(win);
-                    finish();
+                    goToWin();
 
                 }
             }
@@ -260,11 +260,9 @@ public class MainActivity extends ActionBarActivity {
     public void AITurn(){
         guessAI = a1.AIAttack();
 
-        int Rrow = guessAI.x;
-        int Rcol = guessAI.y;
+        int row = guessAI.x;
+        int col = guessAI.y;
 
-        int col = Rrow;
-        int row = 9-Rcol;
         Log.i("Jello0", "Row: " + row + "Col: " + col);
 
 
@@ -280,10 +278,11 @@ public class MainActivity extends ActionBarActivity {
         if(players[activePlayer].attack(row,col)) {
             soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
             vibrate.vibrate(1000);
+            hit.run();
+
             testing2.setBackgroundResource(R.drawable.hit_right);
-            if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
-            {
-                vibrate.vibrate(1000);
+            if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
+                sink.run();
 
                 Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
                 soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
@@ -297,18 +296,13 @@ public class MainActivity extends ActionBarActivity {
             if (players[activePlayer].checkWin())
             {
                 vibrate.vibrate(1000);
-                vibrate.vibrate(1000);
-                vibrate.vibrate(1000);
                 Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
                 if (activePlayer == 0)
                     activePlayer = 1;
                 else
                     activePlayer = 0;
-                Intent win = new Intent(this, WinScreen.class);
-                win.putExtra("Player", players[activePlayer].getPlayerName());
-                startActivity(win);
-                finish();
+                goToWin();
                  //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
             }
         }
@@ -317,6 +311,23 @@ public class MainActivity extends ActionBarActivity {
             testing2.setBackgroundResource(R.drawable.miss_right);
         }
         endTurn();
+    }
+
+    public void goToWin(){
+
+        Intent win = new Intent(this, WinScreen.class);
+        win.putExtra("Winner", players[activePlayer].getPlayerName());
+        win.putExtra("Player1", players[0]);
+        if(isAI)
+        {
+            a1.unInitialize();
+            win.putExtra("Player2", a1);
+        }
+        else
+            win.putExtra("Player2", p2);
+        win.putExtra("isAI", isAI);
+        startActivity(win);
+        finish();
     }
 
 

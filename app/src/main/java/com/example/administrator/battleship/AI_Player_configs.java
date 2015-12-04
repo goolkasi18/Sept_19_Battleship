@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,10 +13,13 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 
 public class AI_Player_configs extends ActionBarActivity {
@@ -107,6 +110,62 @@ public class AI_Player_configs extends ActionBarActivity {
                 diff[i].getBackground().setColorFilter(0xFF00FF00, PorterDuff.Mode.MULTIPLY);
         }
 
+
+        Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinner);
+        Spinner colorSpinnerP2 = (Spinner) findViewById(R.id.Color2_spinner);
+
+        ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
+        // Specify the layout to use when the list of choices appears
+        colorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        colorSpinnerP1.setAdapter(colorAdapter);
+        colorSpinnerP2.setAdapter(colorAdapter);
+
+        colorSpinnerP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (parent.getItemAtPosition(position).toString().equals("Blue")) {
+                    p1.setColorChoiceID(Color.BLUE);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Red")) {
+                    p1.setColorChoiceID(Color.RED);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Green")) {
+                    p1.setColorChoiceID(Color.GREEN);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("White")) {
+                    p1.setColorChoiceID(Color.WHITE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        colorSpinnerP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (parent.getItemAtPosition(position).toString().equals("Blue")) {
+                    p2.setColorChoiceID(Color.BLUE);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Red")) {
+                    p2.setColorChoiceID(Color.RED);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Green")) {
+                    p2.setColorChoiceID(Color.GREEN);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("White")) {
+                    p2.setColorChoiceID(Color.WHITE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     public void setProfile1Pic(View view){
