@@ -42,7 +42,7 @@ public class MainActivity extends ActionBarActivity {
     private Player p2;
     private AI a1;
     public SoundPool soundPool;
-    public int explosion;
+    public int explosion, sink;
     //to be implemented
     private AI AIPlayer;
     private Point guessAI;
@@ -75,6 +75,7 @@ public class MainActivity extends ActionBarActivity {
 
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         explosion = soundPool.load(this, R.raw.explosion, 1);
+        sink = soundPool.load(this, R.raw.sunk, 1);
 
         players[0] = p1;
         //there might not be a difference with what is below
@@ -158,7 +159,7 @@ public class MainActivity extends ActionBarActivity {
             Log.i("Player: ", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
-                soundPool.play(explosion, 1f, 1f, 1, 0, 1.0f);
+                soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
                 if(activePlayer == 0)
                 {
                     vibrate.vibrate(1000);
@@ -200,7 +201,8 @@ public class MainActivity extends ActionBarActivity {
                 {
                     vibrate.vibrate(1000);
 
-                    Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                    Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col] - 1));
+                    soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
                     int index = players[activePlayer].squares[row][col]-1;
                     if(index > 4)
                         index = index-5;
@@ -276,6 +278,7 @@ public class MainActivity extends ActionBarActivity {
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
+            soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
             vibrate.vibrate(1000);
             testing2.setBackgroundResource(R.drawable.hit_right);
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
@@ -283,6 +286,7 @@ public class MainActivity extends ActionBarActivity {
                 vibrate.vibrate(1000);
 
                 Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
+                soundPool.play(sink, 1f, 1f, 1, 0, 1.0f);
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
                 if(index > 4)
