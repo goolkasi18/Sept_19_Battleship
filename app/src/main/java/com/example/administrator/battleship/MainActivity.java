@@ -252,11 +252,9 @@ public class MainActivity extends ActionBarActivity {
     public void AITurn(){
         guessAI = a1.AIAttack();
 
-        int Rrow = guessAI.x;
-        int Rcol = guessAI.y;
+        int row = guessAI.x;
+        int col = guessAI.y;
 
-        int col = Rrow;
-        int row = 9-Rcol;
         Log.i("Jello0", "Row: " + row + "Col: " + col);
 
 

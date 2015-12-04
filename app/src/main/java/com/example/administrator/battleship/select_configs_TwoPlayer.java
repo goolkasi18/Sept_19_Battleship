@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -31,9 +32,6 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
     public EditText p1Name;
     public EditText p2Name;
 
-    public Spinner colorSpinnerP1;
-    public Spinner colorSpinnerP2;
-
     private int[] defaultPics = new int[3]; //change size to how many pics there are
     private int[] chosenPics = new int[3]; //change size to how many pics there are
     private int[] p1ProfilePics = new int[3]; //change size to how many pics there are
@@ -51,8 +49,8 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         p1 = new Player();
         p2 = new AI();
 
-        colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinnerP1);
-        colorSpinnerP2 = (Spinner) findViewById(R.id.ColorSpinnerP2);
+        Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinnerP1);
+        Spinner colorSpinnerP2 = (Spinner) findViewById(R.id.ColorSpinnerP2);
 
         ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
         // Specify the layout to use when the list of choices appears
@@ -64,8 +62,17 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         colorSpinnerP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (parent.getItemAtPosition(position).toString() == "Blue") {
-                    // Make player 1's color blue.
+                if (parent.getItemAtPosition(position).toString().equals("Blue")) {
+                    p1.setColorChoiceID(Color.BLUE);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Red")) {
+                    p1.setColorChoiceID(Color.RED);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Green")) {
+                    p1.setColorChoiceID(Color.GREEN);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("White")) {
+                    p1.setColorChoiceID(Color.WHITE);
                 }
             }
 
@@ -78,7 +85,18 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         colorSpinnerP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                if (parent.getItemAtPosition(position).toString().equals("Blue")) {
+                    p2.setColorChoiceID(Color.BLUE);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Red")) {
+                    p2.setColorChoiceID(Color.RED);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("Green")) {
+                    p2.setColorChoiceID(Color.GREEN);
+                }
+                if (parent.getItemAtPosition(position).toString().equals("White")) {
+                    p2.setColorChoiceID(Color.WHITE);
+                }
             }
 
             @Override
