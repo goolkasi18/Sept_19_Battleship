@@ -8,8 +8,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Handler;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -22,8 +24,7 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 /*
 * @authors: Jared, Daniel, Will
@@ -61,6 +62,10 @@ public class MainActivity extends ActionBarActivity {
 
     private Thread hit;
     private Thread sink;
+    private Runnable endTurn;
+    private Runnable endGame;
+    private Handler wait;
+    private Boolean locked;
 
     /*
     * method: onCreate
@@ -108,7 +113,6 @@ public class MainActivity extends ActionBarActivity {
         player2Remaining[2] = (ImageView)findViewById(R.id.LShip3);
         player2Remaining[3] = (ImageView)findViewById(R.id.LShip4);
         player2Remaining[4] = (ImageView)findViewById(R.id.LShip5);
-
         player2Down[0] = R.drawable.l_vertical2_down;
         player2Down[1] = R.drawable.l_vertical3_down;
         player2Down[2] = R.drawable.l_vertical3_down;
@@ -127,6 +131,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
+                    soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
                     vibrate.vibrate(250);
 
                 } catch (Exception e) {
@@ -139,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
+                    soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
                     vibrate.vibrate(250);
                     sink.sleep(500);
                     vibrate.vibrate(250);
@@ -148,6 +154,23 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
+
+        endTurn = new Runnable() {
+            @Override
+            public void run(){
+                endTurn();
+                if(isAI && activePlayer == 0)
+                    AITurn();
+            }
+        };
+        endGame = new Runnable() {
+            @Override
+            public void run(){
+                goToWin();
+            }
+        };
+        wait = new Handler();
+        locked = false;
     }
 
     /*
@@ -169,11 +192,14 @@ public class MainActivity extends ActionBarActivity {
      */
     public void checkHit(View view)
     {
-        if((view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1) || (view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)) {
+
+
+        if(((view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)||(view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1))&&(locked == false)) {
+            locked = true;
             view.setEnabled(false);
             int Rcol = view.getLeft() / 80;
             int Rrow = view.getTop() / 80;
-            int row,col = 1;
+            int row,col;
             if(activePlayer == 0)
             {
                  col = 9-Rrow;
@@ -187,25 +213,22 @@ public class MainActivity extends ActionBarActivity {
             Log.i("Player: ", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
-                soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
                 hit.run();
 
                 if(activePlayer == 0)
                 {
-                    view.setBackgroundResource(R.drawable.hit_right);
+                    view.setBackgroundResource(R.drawable.right_hit_animation);
+                    ((AnimationDrawable)view.getBackground()).start();
                 }
 
                 else
                 {
-                    view.setBackgroundResource(R.drawable.hit_left);
+                    view.setBackgroundResource(R.drawable.left_hit_animation);
+                    ((AnimationDrawable)view.getBackground()).start();
                 }
 
-                if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1]))
-                {
+                if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
                     sink.run();
-
-                    Log.i("Sunk:", "ships[" + (players[activePlayer].squares[row][col] - 1));
-                    soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
                     int index = players[activePlayer].squares[row][col]-1;
                     if(index > 4)
                         index = index-5;
@@ -221,23 +244,21 @@ public class MainActivity extends ActionBarActivity {
                         activePlayer = 1;
                     else
                         activePlayer = 0;
-                    vibrate.vibrate(1000);
-                    Log.i("Win:", "Player " + activePlayer);
-                    //do whatever we want to end game and show win screen
-                    goToWin();
-
+                    wait.postDelayed(endGame, 1000);
                 }
             }
             else
             {
-                if(activePlayer == 0)
-                    view.setBackgroundResource(R.drawable.miss_right);
-                else
-                    view.setBackgroundResource(R.drawable.miss_left);
+                if(activePlayer == 0) {
+                    view.setBackgroundResource(R.drawable.right_miss_animation);
+                    ((AnimationDrawable)view.getBackground()).start();
+                }
+                else {
+                    view.setBackgroundResource(R.drawable.left_miss_animation);
+                    ((AnimationDrawable)view.getBackground()).start();
+                }
             }
-            endTurn();
-            if(isAI)
-                AITurn();
+            wait.postDelayed(endTurn, 1000);
         }
     }
 
@@ -255,37 +276,28 @@ public class MainActivity extends ActionBarActivity {
             activePlayer = 0;
             turnGui.setBackgroundResource(R.drawable.fade1);
         }
+        locked = false;
     }
 
     public void AITurn(){
+        locked = true;
         guessAI = a1.AIAttack();
 
         int row = guessAI.x;
         int col = guessAI.y;
 
-        Log.i("Jello0", "Row: " + row + "Col: " + col);
-
-
-        //dont know if the first gets a whole row or a whole column. need to test
-        //ViewGroup gridChild = (ViewGroup) aiBoard.getChildAt(row);
-        //ImageButton testing = (ImageButton) gridChild.getChildAt(col);
-        //Log.i("the view", "name: " + testing.getId());
-
         //this might also work with the children going from 0 to 99 so we use math to find the spot
-        ImageButton testing2 = (ImageButton) aiBoard.getChildAt(col + row * 10);
+        ImageButton testing2 = (ImageButton) aiBoard.getChildAt(row*10 + col);
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
-            soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
-            vibrate.vibrate(1000);
             hit.run();
 
-            testing2.setBackgroundResource(R.drawable.hit_right);
+            testing2.setBackgroundResource(R.drawable.right_hit_animation);
+            ((AnimationDrawable)testing2.getBackground()).start();
+
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
                 sink.run();
-
-                Log.i("AI Sunk:", "ships[" + (players[activePlayer].squares[row][col]-1));
-                soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
                 if(index > 4)
@@ -295,22 +307,21 @@ public class MainActivity extends ActionBarActivity {
             }
             if (players[activePlayer].checkWin())
             {
-                vibrate.vibrate(1000);
-                Log.i("AI Win:", "Player " + activePlayer);
                 //do whatever we want to end game and show win screen
                 if (activePlayer == 0)
                     activePlayer = 1;
                 else
                     activePlayer = 0;
-                goToWin();
+                wait.postDelayed(endGame, 1000);
                  //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
             }
         }
         else
         {
-            testing2.setBackgroundResource(R.drawable.miss_right);
+            testing2.setBackgroundResource(R.drawable.right_miss_animation);
+            ((AnimationDrawable)testing2.getBackground()).start();
         }
-        endTurn();
+        wait.postDelayed(endTurn, 1000);
     }
 
     public void goToWin(){
