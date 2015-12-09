@@ -283,8 +283,10 @@ public class MainActivity extends ActionBarActivity {
         locked = true;
         guessAI = a1.AIAttack();
 
-        int row = guessAI.x;
-        int col = guessAI.y;
+        int Rrow = guessAI.x;
+        int Rcol = guessAI.y;
+        int col = Rrow;
+        int row = 9-Rcol;
 
         //this might also work with the children going from 0 to 99 so we use math to find the spot
         ImageButton testing2 = (ImageButton) aiBoard.getChildAt(row*10 + col);
