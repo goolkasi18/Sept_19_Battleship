@@ -2,25 +2,25 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android"
                 android:oneshot="true">
     <item
-        android:drawable="@drawable/hit1"
+        android:drawable="@drawable/rhit1"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit2"
+        android:drawable="@drawable/rhit2"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit3"
+        android:drawable="@drawable/rhit3"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit4"
+        android:drawable="@drawable/rhit4"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit5"
+        android:drawable="@drawable/rhit5"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit6"
+        android:drawable="@drawable/rhit6"
         android:duration="80"/>
     <item
-        android:drawable="@drawable/hit7"
+        android:drawable="@drawable/rhit7"
         android:duration="80"/>
 
 </animation-list>
