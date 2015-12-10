@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
@@ -16,17 +14,15 @@ import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import java.util.logging.LogRecord;
 
 /*
 * @authors: Jared, Daniel, Will
