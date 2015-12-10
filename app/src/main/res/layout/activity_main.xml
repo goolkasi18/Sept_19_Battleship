@@ -2050,7 +2050,8 @@
         android:layout_alignEnd="@+id/Player2ProfilePic"
         android:background="#ff000000"
         android:layout_alignParentTop="true"
-        android:id="@+id/P1_Pre">
+        android:id="@+id/P1_Pre"
+        android:onClick="startGame">
 
         <Button
             android:layout_width="wrap_content"
@@ -2070,7 +2071,8 @@
         android:layout_alignLeft="@+id/right_button_grid"
         android:layout_alignStart="@+id/right_button_grid"
         android:layout_alignParentBottom="true"
-        android:id="@+id/P2_Pre">
+        android:id="@+id/P2_Pre"
+        android:onClick="startGame">
 
         <Button
             android:layout_width="wrap_content"
