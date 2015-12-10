@@ -44,7 +44,7 @@ public class MainActivity extends ActionBarActivity {
     private Player p2;
     private AI a1;
     public SoundPool soundPool;
-    public int explosion, sunk;
+    public int explosion, sunk, miss;
     //to be implemented
     private Point guessAI;
     private GridLayout aiBoard;
@@ -92,6 +92,7 @@ public class MainActivity extends ActionBarActivity {
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         explosion = soundPool.load(this, R.raw.explosion, 1);
         sunk = soundPool.load(this, R.raw.sunk, 1);
+        miss = soundPool.load(this, R.raw.splashsoundeffect, 1);
 
         players[0] = p1;
         //there might not be a difference with what is below
@@ -170,7 +171,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
-                    soundPool.play(sunk, 1f, 1f, 1, 0, 1.0f);
+                    soundPool.play(sunk, 1f, 1f, 1, 0, 2.0f);
                     vibrate.vibrate(250);
                     sink.sleep(500);
                     vibrate.vibrate(250);
@@ -285,10 +286,12 @@ public class MainActivity extends ActionBarActivity {
             else
             {
                 if(activePlayer == 0) {
+                    soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
                     view.setBackgroundResource(R.drawable.right_miss_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
                 else {
+                    soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
                     view.setBackgroundResource(R.drawable.left_miss_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
@@ -355,6 +358,7 @@ public class MainActivity extends ActionBarActivity {
         }
         else
         {
+            soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
             testing2.setBackgroundResource(R.drawable.right_miss_animation);
             ((AnimationDrawable)testing2.getBackground()).start();
         }
