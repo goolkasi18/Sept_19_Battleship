@@ -1,5 +1,7 @@
 package com.example.administrator.battleship;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -37,6 +39,10 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
     private int[] chosenPics = new int[3]; //change size to how many pics there are
     private int[] p1ProfilePics = new int[3]; //change size to how many pics there are
     private int[] p2ProfilePics = new int[3]; //change size to how many pics there are
+
+
+    private boolean hasPicPlayer1 = false;
+    private boolean hasPicPlayer2 = false;
 
     /*
     *start the activity
@@ -135,6 +141,7 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
     }
 
     public void setProfile1Pic(View view){
+        hasPicPlayer1 = true;
         LinearLayout p1Pics = (LinearLayout) findViewById(R.id.Player1_Images);
         int p1Size = p1Pics.getChildCount();
 
@@ -148,6 +155,7 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
     }
 
     public void setProfile2Pic(View view){
+        hasPicPlayer2 = true;
         LinearLayout p2Pics = (LinearLayout) findViewById(R.id.Player2_Images);
         int p2Size = p2Pics.getChildCount();
 
@@ -175,12 +183,27 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         p1.setPlayerName(p1Name.getText().toString());
         p2.setPlayerName(p2Name.getText().toString());
 
-        if(readyPlayer1&&readyPlayer2) {
+        if(readyPlayer1&&readyPlayer2&&hasPicPlayer1&&hasPicPlayer2) {
             Intent switchToSelect = new Intent(this, Select_Ship_Positions.class);
             switchToSelect.putExtra("Player1", p1);
             switchToSelect.putExtra("Player2", p2);
             startActivity(switchToSelect);
             finish();
+        }
+
+        else
+        {
+            AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
+            deletePrompt.setMessage("choose a picture for both players");
+            deletePrompt.setCancelable(false);
+            deletePrompt.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog alert = deletePrompt.create();
+            alert.show();
         }
 
     }

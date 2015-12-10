@@ -2043,5 +2043,45 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="17dp" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/Player2ProfilePic"
+        android:layout_alignEnd="@+id/Player2ProfilePic"
+        android:background="#ff000000"
+        android:layout_alignParentTop="true"
+        android:id="@+id/P1_Pre">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 1 ready?"
+            android:id="@+id/p1"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:rotation="90"
+            android:onClick="startGame"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff000000"
+        android:layout_alignLeft="@+id/right_button_grid"
+        android:layout_alignStart="@+id/right_button_grid"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/P2_Pre">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 2 ready?"
+            android:id="@+id/p2"
+            android:rotation="90"
+            android:onClick="startGame"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
 
 </RelativeLayout>
