@@ -1,6 +1,8 @@
 package com.example.administrator.battleship;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -219,9 +221,27 @@ public class MainActivity extends ActionBarActivity {
      */
     public void exitToStart(View view)
     {
-        Intent main = new Intent(this, Start_Page.class);
-        startActivity(main);
-        finish();
+        final Intent main = new Intent(this, Start_Page.class);
+        AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
+        deletePrompt.setMessage("Are you sure you want to exit the game?");
+        deletePrompt.setCancelable(false);
+        deletePrompt.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+                startActivity(main);
+                finish();
+
+            }
+        });
+        deletePrompt.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = deletePrompt.create();
+        alert.show();
+
     }
 
     /*
