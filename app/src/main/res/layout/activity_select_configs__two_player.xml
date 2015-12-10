@@ -22,14 +22,16 @@
             android:text="Enter Name Player 1"
             android:id="@+id/Player1Text"
             android:layout_gravity="center_horizontal"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            />
 
         <EditText
             android:layout_width="match_parent"
             android:id="@+id/Player1_Name"
             android:text="Player 1 "
             android:layout_height="100px"
-            android:maxLength="12"/>
+            android:maxLength="12"
+            />
 
         <Space
             android:layout_width="match_parent"

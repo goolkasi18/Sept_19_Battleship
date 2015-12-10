@@ -34,12 +34,14 @@
         <activity
             android:name=".select_configs_TwoPlayer"
             android:label="@string/title_activity_select_configs__two_player"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".AI_Player_configs"
             android:label="@string/title_activity_ai__player_configs"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".select_ship_positions_2"

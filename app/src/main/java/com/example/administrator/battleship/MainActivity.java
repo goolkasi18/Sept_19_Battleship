@@ -209,8 +209,15 @@ public class MainActivity extends ActionBarActivity {
 
     public void startGame(View view)
     {
-        RelativeLayout lay = (RelativeLayout) view.getParent();
-        lay.setVisibility(View.GONE);
+        if(view instanceof RelativeLayout)
+        {
+            view.setVisibility(View.GONE);
+        }
+
+        else {
+            RelativeLayout lay = (RelativeLayout) view.getParent();
+            lay.setVisibility(View.GONE);
+        }
 
     }
 
