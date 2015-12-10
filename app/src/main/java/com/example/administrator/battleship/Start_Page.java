@@ -21,7 +21,7 @@ import android.widget.RelativeLayout;
 
 public class Start_Page extends ActionBarActivity {
 
-    int muteToggle, vibroToggle = 0;
+   static int muteToggle, vibroToggle = 0;
     Button helpBtn, settingsBtn, vsAIBtn, vsPlayerBtn, muteBtn, vibroBtn;
     LinearLayout vsLayout, helperBtns;
     FrameLayout helpFrame, settingsFrame;
@@ -74,6 +74,15 @@ public class Start_Page extends ActionBarActivity {
         vsPlayerBtn.setEnabled(false);
         settingsBtn.setEnabled(false);
         settingsFrame.setVisibility(View.VISIBLE);
+        if(muteToggle == 0)
+            muteBtn.setBackgroundResource(R.drawable.sound_onbg);
+        else
+            muteBtn.setBackgroundResource(R.drawable.sound_offbg);
+
+        if(vibroToggle == 0)
+            vibroBtn.setBackgroundResource(R.drawable.vibro_onbg);
+        else
+            vibroBtn.setBackgroundResource(R.drawable.vibro_offbg);
     }
 
     public void closeSettings(View view) {

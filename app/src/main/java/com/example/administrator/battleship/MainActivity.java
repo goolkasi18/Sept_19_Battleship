@@ -158,8 +158,10 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
-                    soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
-                    vibrate.vibrate(250);
+                    if(Start_Page.muteToggle == 0)
+                        soundPool.play(explosion, 1f, 1f, 1, 0, 2.0f);
+                    if(Start_Page.vibroToggle == 0)
+                        vibrate.vibrate(250);
 
                 } catch (Exception e) {
                     e.getLocalizedMessage();
@@ -171,10 +173,14 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
                 try {
-                    soundPool.play(sunk, 1f, 1f, 1, 0, 2.0f);
-                    vibrate.vibrate(250);
-                    sink.sleep(500);
-                    vibrate.vibrate(250);
+                    if (Start_Page.muteToggle == 0)
+                        soundPool.play(sunk, 1f, 1f, 1, 0, 2.0f);
+
+                    if (Start_Page.vibroToggle == 0) {
+                        vibrate.vibrate(250);
+                        sink.sleep(500);
+                        vibrate.vibrate(250);
+                    }
 
                 } catch (Exception e) {
                     e.getLocalizedMessage();
@@ -249,6 +255,7 @@ public class MainActivity extends ActionBarActivity {
             }
 
             if(players[activePlayer].attack(row,col)) {
+
                 hit.run();
 
                 if(activePlayer == 0)
@@ -286,12 +293,15 @@ public class MainActivity extends ActionBarActivity {
             else
             {
                 if(activePlayer == 0) {
-                    soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
+                    if(Start_Page.muteToggle == 0)
+                        soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
+
                     view.setBackgroundResource(R.drawable.right_miss_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
                 else {
-                    soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
+                    if(Start_Page.muteToggle == 0)
+                        soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
                     view.setBackgroundResource(R.drawable.left_miss_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
@@ -337,6 +347,7 @@ public class MainActivity extends ActionBarActivity {
             ((AnimationDrawable)testing2.getBackground()).start();
 
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
+
                 sink.run();
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
@@ -358,7 +369,8 @@ public class MainActivity extends ActionBarActivity {
         }
         else
         {
-            soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
+            if(Start_Page.muteToggle == 0)
+                soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
             testing2.setBackgroundResource(R.drawable.right_miss_animation);
             ((AnimationDrawable)testing2.getBackground()).start();
         }
