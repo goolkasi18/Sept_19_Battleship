@@ -36,7 +36,7 @@ public class Player implements Serializable{
         initSquares();
         turn = false;
         playerName=initPlayerName;
-        profilePicID = R.drawable.hit_left;
+        profilePicID = R.drawable.lmiss1;
         colorChoiceID = Color.BLUE;
         ships = new Ship[10];
     }
@@ -49,7 +49,7 @@ public class Player implements Serializable{
         initSquares();
         turn = false;
         playerName = "default";
-        profilePicID = R.drawable.hit_left;
+        profilePicID = R.drawable.lmiss1;
         colorChoiceID = Color.BLUE;
         ships = new Ship[10];
     }

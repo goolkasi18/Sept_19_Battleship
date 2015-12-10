@@ -36,7 +36,7 @@ public class AI extends Player implements Serializable{
         turn = false;
         playerName = initPlayerName;
         //Both of these are set in the configurations activity
-        profilePicID = R.drawable.hit_left;
+        profilePicID = R.drawable.lmiss1;
         colorChoiceID = -1;
         ships = new Ship[10];
         hasHit = false;
@@ -53,7 +53,7 @@ public class AI extends Player implements Serializable{
         squares = new int[10][10];
         initSquares();
         turn = false;
-        profilePicID = R.drawable.hit_left;
+        profilePicID = R.drawable.lmiss1;
         colorChoiceID = -1;
         ships = new Ship[10];
         difficultyLevel = 50;
