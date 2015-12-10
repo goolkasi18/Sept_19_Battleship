@@ -29,7 +29,7 @@
             android:id="@+id/Player1_Name"
             android:text="Player 1 "
             android:layout_height="100px"
-            android:maxLength="50"/>
+            android:maxLength="12"/>
 
         <Space
             android:layout_width="match_parent"
@@ -140,7 +140,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Player 2"
             android:layout_height="100px"
-            android:maxLength="50"/>
+            android:maxLength="12"/>
 
         <Space
             android:layout_width="match_parent"

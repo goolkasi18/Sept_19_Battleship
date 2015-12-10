@@ -2043,5 +2043,42 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="17dp" />
 
+    <FrameLayout
+        android:layout_width="30dp"
+        android:layout_height="140dp"
+        android:layout_alignTop="@+id/Player2ProfilePic"
+        android:layout_toRightOf="@+id/Player2ProfilePic"
+        android:layout_toEndOf="@+id/Player2ProfilePic">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Your Enemy: Player2"
+            android:id="@+id/LeftPlayerName"
+            android:layout_gravity="center"
+            android:rotation="90"
+            android:textStyle="bold"
+            android:textColor="#FFFF0003" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="30dp"
+        android:layout_height="140dp"
+        android:layout_alignTop="@+id/Player1ProfilePic"
+        android:layout_toLeftOf="@+id/Player1ProfilePic"
+        android:layout_toStartOf="@+id/Player1ProfilePic"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="Your Enemy: Player2"
+            android:id="@+id/RightPlayerName"
+            android:layout_gravity="center"
+            android:rotation="-90"
+            android:textStyle="bold"
+            android:textColor="#ffff0003" />
+    </FrameLayout>
+
 
 </RelativeLayout>

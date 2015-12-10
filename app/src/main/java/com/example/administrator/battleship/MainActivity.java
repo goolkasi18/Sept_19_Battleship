@@ -44,7 +44,6 @@ public class MainActivity extends ActionBarActivity {
     public SoundPool soundPool;
     public int explosion, sunk;
     //to be implemented
-    private AI AIPlayer;
     private Point guessAI;
     private GridLayout aiBoard;
     private ImageView[] player1Remaining = new ImageView[5];
@@ -171,6 +170,9 @@ public class MainActivity extends ActionBarActivity {
         };
         wait = new Handler();
         locked = false;
+
+        ((TextView)findViewById(R.id.RightPlayerName)).setText("Your Enemy: " + players[0].getPlayerName());
+        ((TextView)findViewById(R.id.LeftPlayerName)).setText("Your Enemy: " + players[1].getPlayerName());
     }
 
     /*
@@ -210,7 +212,6 @@ public class MainActivity extends ActionBarActivity {
                  col = Rrow;
                  row = 9-Rcol;
             }
-            Log.i("Player: ", "Row: " + row + "Col: " + col);
 
             if(players[activePlayer].attack(row,col)) {
                 hit.run();
@@ -283,13 +284,13 @@ public class MainActivity extends ActionBarActivity {
         locked = true;
         guessAI = a1.AIAttack();
 
-        int Rrow = guessAI.x;
-        int Rcol = guessAI.y;
-        int col = Rrow;
-        int row = 9-Rcol;
+        int row = guessAI.x;
+        int col = guessAI.y;
+        int Rcol = row;
+        int Rrow = 9-col;
 
         //this might also work with the children going from 0 to 99 so we use math to find the spot
-        ImageButton testing2 = (ImageButton) aiBoard.getChildAt(row*10 + col);
+        ImageButton testing2 = (ImageButton) aiBoard.getChildAt(Rrow*10 + Rcol);
 
         //needs to impliment below
         if(players[activePlayer].attack(row,col)) {
