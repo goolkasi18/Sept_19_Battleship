@@ -17,22 +17,23 @@
         android:textSize="25dp" />
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="250dp"
         android:layout_height="fill_parent"
         android:id="@+id/imageView"
-        android:background="@mipmap/winship"
-        android:layout_alignTop="@+id/PlayerWin"
+        android:background="@mipmap/winimage"
+        android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/PlayerWin"
-        android:layout_toStartOf="@+id/PlayerWin" />
+        android:layout_toStartOf="@+id/PlayerWin"
+        android:layout_below="@+id/imageView2" />
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="250dp"
         android:layout_height="fill_parent"
         android:id="@+id/imageView2"
-        android:background="@mipmap/winship"
-        android:layout_toEndOf="@+id/PlayerWin"
+        android:background="@mipmap/winimage"
         android:layout_above="@+id/PlayerWin"
-        android:layout_toRightOf="@+id/PlayerWin" />
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
 
     <Button
         android:layout_width="wrap_content"

@@ -1,5 +1,7 @@
 package com.example.administrator.battleship;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -40,6 +42,10 @@ public class AI_Player_configs extends ActionBarActivity {
     //Text fields that hold the players name
     public EditText p1Name;
     public EditText p2Name;
+
+    private boolean hasDifficulty = false;
+    private boolean hasPictureAI = false;
+    private boolean hasPictureHuman = false;
     /*
     *start the activity
      */
@@ -143,7 +149,7 @@ public class AI_Player_configs extends ActionBarActivity {
     }
 
     public void setDifficulty(View view) {
-
+        hasDifficulty = true;
         Button nextDiff = (Button) view;
         //Set the background of the button clicked to RED to indicate it was clicked
         nextDiff.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
@@ -169,7 +175,7 @@ public class AI_Player_configs extends ActionBarActivity {
     public void setProfile1Pic(View view){
         LinearLayout p1Pics = (LinearLayout) findViewById(R.id.Player1_Images);
         int p1Size = p1Pics.getChildCount();
-
+        hasPictureHuman = true;
         for(int i = 0; i<p1Size; i++)
             if(view != p1Pics.getChildAt(i))
                 p1Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
@@ -180,6 +186,7 @@ public class AI_Player_configs extends ActionBarActivity {
     }
 
     public void setProfile2Pic(View view){
+        hasPictureAI = true;
         LinearLayout p2Pics = (LinearLayout) findViewById(R.id.Player2_Images);
         int p2Size = p2Pics.getChildCount();
 
@@ -218,13 +225,31 @@ public class AI_Player_configs extends ActionBarActivity {
     }
 
     public void startGame(View view){
-        p1.setPlayerName(p1Name.getText().toString());
-        p2.setPlayerName(p2Name.getText().toString());
-        Intent switchToSelect = new Intent(this, select_ship_positions_ai.class);
-        switchToSelect.putExtra("Player1", p1);
-        switchToSelect.putExtra("AI2", p2);
-        startActivity(switchToSelect);
-        finish();
+        if(hasDifficulty && hasPictureAI && hasPictureHuman){
+            p1.setPlayerName(p1Name.getText().toString());
+            p2.setPlayerName(p2Name.getText().toString());
+            Intent switchToSelect = new Intent(this, select_ship_positions_ai.class);
+            switchToSelect.putExtra("Player1", p1);
+            switchToSelect.putExtra("AI2", p2);
+            startActivity(switchToSelect);
+            finish();
+
+        }
+
+        else{
+            AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
+            deletePrompt.setMessage("choose a picture for both players, and a difficulty");
+            deletePrompt.setCancelable(false);
+            deletePrompt.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+
+            AlertDialog alert = deletePrompt.create();
+            alert.show();
+        }
+
     }
 
     /**

@@ -20,9 +20,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import java.util.logging.LogRecord;
 
@@ -66,6 +68,12 @@ public class MainActivity extends ActionBarActivity {
     private Handler wait;
     private Boolean locked;
 
+    private RelativeLayout p1Layout;
+    private RelativeLayout p2Layout;
+
+    private Button p1_pre;
+    private Button p2_pre;
+
     /*
     * method: onCreate
     * purpose: starts the activity
@@ -74,6 +82,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         isAI = (Boolean)getIntent().getExtras().getBoolean("isAI");
@@ -96,6 +106,23 @@ public class MainActivity extends ActionBarActivity {
             players[1] = p2;
         }
 
+        p1Layout = (RelativeLayout) this.findViewById(R.id.P1_Pre);
+        p2Layout = (RelativeLayout) this.findViewById(R.id.P2_Pre);
+
+        p1_pre = (Button) this.findViewById(R.id.p1);
+        p2_pre = (Button) this.findViewById(R.id.p2);
+        p1_pre.setText(p1.getPlayerName() + " Ready?");
+        if(!isAI) {
+            Log.i("Message", "Message");
+            p2_pre.setText(p2.getPlayerName() + " Ready?");
+            p2Layout.setBackgroundColor(p2.colorChoiceID);
+        }
+
+        p1Layout.setBackgroundColor(p1.colorChoiceID);
+
+
+        if(isAI)
+            p2Layout.setVisibility(View.GONE);
         player1Remaining[0] = (ImageView)findViewById(R.id.RShip1);
         player1Remaining[1] = (ImageView)findViewById(R.id.RShip2);
         player1Remaining[2] = (ImageView)findViewById(R.id.RShip3);
@@ -173,6 +200,13 @@ public class MainActivity extends ActionBarActivity {
 
         ((TextView)findViewById(R.id.RightPlayerName)).setText("Your Enemy: " + players[0].getPlayerName());
         ((TextView)findViewById(R.id.LeftPlayerName)).setText("Your Enemy: " + players[1].getPlayerName());
+    }
+
+    public void startGame(View view)
+    {
+        RelativeLayout lay = (RelativeLayout) view.getParent();
+        lay.setVisibility(View.GONE);
+
     }
 
     /*
