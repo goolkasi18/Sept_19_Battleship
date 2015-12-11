@@ -238,7 +238,7 @@ public class AI extends Player implements Serializable{
     }
 
     public void unInitialize(){
-
+        surroundingSpots.clear();
         focusPoint = null;
         lastHit = null;
     }

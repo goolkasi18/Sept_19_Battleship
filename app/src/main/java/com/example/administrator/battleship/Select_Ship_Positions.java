@@ -69,6 +69,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     }
 
     public void ready(View view){
+        if(p1 == null || p2 == null)
+        {
+            p1 = (Player)getIntent().getSerializableExtra("Player1");
+            p2 = (Player)getIntent().getSerializableExtra("Player2");
+        }
         s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, R.drawable.r_vertical2, R.id.Ship1);
         s2 = new Ship(Vship2.getX(), Vship2.getY(), 0, 3, 2, R.drawable.r_vertical3, R.id.Ship2);
         s3 = new Ship(Vship3.getX(), Vship3.getY(), 0, 3, 3, R.drawable.r_vertical3, R.id.Ship3);

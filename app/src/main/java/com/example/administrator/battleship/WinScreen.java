@@ -77,7 +77,7 @@ public class WinScreen extends ActionBarActivity {
             newPlayer2.setColorChoiceID(player2.getColorChoiceID());
             newPlayer2.setProfilePicID(player2.getProfilePicID());
 
-            Intent restart = new Intent(this, select_ship_positions_ai.class);
+            Intent restart = new Intent(this, Select_Ship_Positions.class);
             restart.putExtra("Player1", newPlayer1);
             restart.putExtra("Player2", newPlayer2);
 

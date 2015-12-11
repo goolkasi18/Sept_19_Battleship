@@ -306,11 +306,8 @@ public class MainActivity extends ActionBarActivity {
                 }
                 if (players[activePlayer].checkWin())
                 {
-                    if(activePlayer == 0)
-                        activePlayer = 1;
-                    else
-                        activePlayer = 0;
                     wait.postDelayed(endGame, 1000);
+                    return;
                 }
             }
             else
@@ -318,7 +315,6 @@ public class MainActivity extends ActionBarActivity {
                 if(activePlayer == 0) {
                     if(Start_Page.muteToggle == 0)
                         soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
-
                     view.setBackgroundResource(R.drawable.right_miss_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
@@ -401,9 +397,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void goToWin(){
-
+        int winningPlayer;
+        if(activePlayer == 0)
+            winningPlayer = 1;
+        else
+            winningPlayer = 0;
         Intent win = new Intent(this, WinScreen.class);
-        win.putExtra("Winner", players[activePlayer].getPlayerName());
+        win.putExtra("Winner", players[winningPlayer].getPlayerName());
         win.putExtra("Player1", players[0]);
         if(isAI)
         {
