@@ -91,6 +91,15 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         findViewById(R.id.privacy).setVisibility(View.GONE);
     }
 
+    /**
+     External Citation
+     Date: 25 November 2015
+     Problem: Could not drag and drop ships
+     Resource:
+     http://developer.android.com/reference/android/view/MotionEvent.html
+     Solution: We used a MotionEvent
+     */
+
     float x,y, diffX, diffY = 0.0f;
     boolean moving=false;
     int column,row,index;
@@ -198,6 +207,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         return r;
     }
 
+
     public void reset(Ship ship)
     {
         for(index = 0; index<=ships.length; index++)
@@ -262,6 +272,26 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     }
 
 
+    /**
+     External Citation
+     Date: 1 December 2015
+     Problem: Need to send data in between activities.
+     Resource:
+     http://stackoverflow.com/questions/5265913/how-to-
+     use-putextra-and-getextra-for-string-data
+     Solution: We used the putExtra to pass the players in the intent.
+     */
+
+    /**
+     External Citation
+     Date: 4 December 2015
+     Problem: Could not implement pop-up with a selectable options
+     Resource:
+     http://stackoverflow.com/questions/2115758/
+     how-to-display-alert-dialog-in-android
+     Solution: We used a modified AlertDialog from the resource example.
+     */
+
     /*
     *  Method: startGame
     *  Purpose: finishes the current activity and switches to the game
@@ -297,9 +327,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
             AlertDialog alert = deletePrompt.create();
             alert.show();
         }
-
     }
-
 
 
     @Override

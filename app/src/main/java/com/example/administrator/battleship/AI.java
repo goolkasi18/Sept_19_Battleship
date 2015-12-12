@@ -178,6 +178,14 @@ public class AI extends Player implements Serializable{
         return guessPoint;
     }
 
+    /**
+     External Citation
+     Date: 29 November 2015
+     Problem: Need while loop to run until the spot we find is zero.
+     Resource:
+     https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
+     Solution: We used a do while loop instead.
+     */
     //uses the difficulty to decide weather to return a hit spot or a missed
     public Point rollTheDice(){
         Point guessPoint = new Point(-1,-1);

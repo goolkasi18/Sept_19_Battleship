@@ -5,8 +5,12 @@ import android.widget.ImageView;
 
 import java.io.Serializable;
 
-/**
- * Created by goolkasi18 on 11/8/2015.
+/*
+* @authors: Jared, Daniel, Will
+* @version: November 8th, 2015
+* This class represents the Ship
+* Class handles the following:
+* --Ability to make ships with set dimensions and image
  */
 public class Ship implements Serializable{
     boolean placed;
@@ -16,6 +20,7 @@ public class Ship implements Serializable{
     boolean sunk;
     int viewID;
 
+    // constructor
     public Ship(float initx, float inity, int initLength, int initHeight, int initShipID, int initImageID, int initViewID){
         originx = initx;
         originy = inity;

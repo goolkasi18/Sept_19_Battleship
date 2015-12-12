@@ -255,11 +255,9 @@ public class MainActivity extends ActionBarActivity {
     * Method: checkHit
     * Purpose: Checks the hit upon selection of a square on the grid
     * @param: view - the button that was pressed
-     */
+    */
     public void checkHit(View view)
     {
-
-
         if(((view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)||(view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1))&&(locked == false)) {
             locked = true;
             view.setEnabled(false);

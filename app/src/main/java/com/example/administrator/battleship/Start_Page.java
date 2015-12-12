@@ -18,14 +18,28 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-
+/*
+* @authors: Jared, Daniel, Will
+* @version: December 10, 2015
+* This class represents the main menu page
+* Class handles the following:
+* --Settings to toggle vibration and sound
+* --Switch to ai or player config
+ */
 public class Start_Page extends ActionBarActivity {
 
+    // static variable to keep track of volume and vibration settings
    static int muteToggle, vibroToggle = 0;
+
     Button helpBtn, settingsBtn, vsAIBtn, vsPlayerBtn, muteBtn, vibroBtn;
     LinearLayout vsLayout, helperBtns;
     FrameLayout helpFrame, settingsFrame;
 
+    /*
+     * method: onCreate
+     * purpose: starts the activity
+     * @param: savedInstanceState - a Bundle of info about the activity that will be started
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +66,11 @@ public class Start_Page extends ActionBarActivity {
         startActivity(switchToAIConfig);
     }
 
+    /*
+  * method: showHelp
+  * purpose: Makes help menu visible
+  * @param: view - button that was pressed
+   */
     public void showHelp(View view) {
         helpBtn.setEnabled(false);
         vsAIBtn.setEnabled(false);
@@ -60,6 +79,11 @@ public class Start_Page extends ActionBarActivity {
         helpFrame.setVisibility(View.VISIBLE);
     }
 
+    /*
+  * method: closeHelp
+  * purpose: Closes help menu
+  * @param: view - button that was pressed
+   */
     public void closeHelp(View view) {
         helpBtn.setEnabled(true);
         vsAIBtn.setEnabled(true);
@@ -68,12 +92,20 @@ public class Start_Page extends ActionBarActivity {
         helpFrame.setVisibility(View.GONE);
     }
 
+    /*
+  * method: showSettings
+  * purpose: displays menu with vibration and sound settings
+  * @param: view - button that was pressed
+   */
     public void showSettings(View view) {
+        // Makes menu visible
         helpBtn.setEnabled(false);
         vsAIBtn.setEnabled(false);
         vsPlayerBtn.setEnabled(false);
         settingsBtn.setEnabled(false);
         settingsFrame.setVisibility(View.VISIBLE);
+
+        // changes picture of sound and vibrate button
         if(muteToggle == 0)
             muteBtn.setBackgroundResource(R.drawable.sound_onbg);
         else
@@ -85,6 +117,11 @@ public class Start_Page extends ActionBarActivity {
             vibroBtn.setBackgroundResource(R.drawable.vibro_offbg);
     }
 
+    /*
+  * method: closeSettings
+  * purpose: Makes settings menu invisible
+  * @param: view - button that was pressed
+ */
     public void closeSettings(View view) {
         helpBtn.setEnabled(true);
         vsAIBtn.setEnabled(true);
@@ -93,6 +130,11 @@ public class Start_Page extends ActionBarActivity {
         settingsFrame.setVisibility(View.GONE);
     }
 
+    /*
+     * method: toggleVolume
+     * purpose: changes mute variable and sets background of button
+     * @param: view - button that was pressed
+    */
     public void toggleVolume(View view)
     {
         if(muteToggle == 0)
@@ -109,6 +151,11 @@ public class Start_Page extends ActionBarActivity {
         }
     }
 
+    /*
+     * method: toggleVibro
+     * purpose: changes vibration variable and sets background of button
+     * @param: view - button that was pressed
+    */
     public void toggleVibro(View view)
     {
         if(vibroToggle == 0)

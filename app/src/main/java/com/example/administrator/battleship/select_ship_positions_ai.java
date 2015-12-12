@@ -18,7 +18,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-
+/*
+* @authors: Jared, Daniel, Will
+* @version: November 20th, 2015
+* This class represents the ship selection when playing vs ai
+* Class handles the following:
+* --Saves what positions the player places his/her ships at
+* --Dragging ships onto playing board
+* --Switches to main game page
+ */
 public class select_ship_positions_ai  extends ActionBarActivity implements View.OnTouchListener {
 
     ImageView Vship5,Vship4,Vship3,Vship2,Vship1,Hship5,Hship4,Hship3,Hship2,Hship1;
@@ -27,6 +35,11 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
     Ship s1,s2,s3,s4,s5,s6,s7,s8,s9,s10;
     Ship[] ships = new Ship[10];
 
+    /*
+     * method: onCreate
+     * purpose: starts the activity
+     * @param: savedInstanceState - a Bundle of info about the activity that will be started
+      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,20 +73,24 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (AI)getIntent().getSerializableExtra("AI2");
 
-        //ImageView background = (ImageView)findViewById(R.id.Background);
-        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
-
         ((RelativeLayout)findViewById(R.id.privacy)).setBackgroundColor(p1.getColorChoiceID());
     }
 
+    /*
+     * method: ready
+     * purpose: initializes the ships and puts them in the ships[] array
+     * @param: view - button that was pressed
+     */
     public void ready(View view){
 
+        // Initialize vertical ships
         s1 = new Ship(Vship1.getX(), Vship1.getY(), 0, 2, 1, R.drawable.r_vertical2, R.id.Ship1);
         s2 = new Ship(Vship2.getX(), Vship2.getY(), 0, 3, 2, R.drawable.r_vertical3, R.id.Ship2);
         s3 = new Ship(Vship3.getX(), Vship3.getY(), 0, 3, 3, R.drawable.r_vertical3, R.id.Ship3);
         s4 = new Ship(Vship4.getX(), Vship4.getY(), 0, 4, 4, R.drawable.r_vertical4, R.id.Ship4);
         s5 = new Ship(Vship5.getX(), Vship5.getY(), 0, 5, 5, R.drawable.r_vertical5, R.id.Ship5);
 
+        // Initialize horizontal ships
         s6 = new Ship(Hship1.getX(), Hship1.getY(), 2, 0, 1, R.drawable.horizontal2, R.id.HShip1);
         s7 = new Ship(Hship2.getX(), Hship2.getY(), 3, 0, 2, R.drawable.horizontal3, R.id.HShip2);
         s8 = new Ship(Hship3.getX(), Hship3.getY(), 3, 0, 3, R.drawable.horizontal3, R.id.HShip3);
@@ -88,6 +105,13 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
     float x,y, diffX, diffY = 0.0f;
     boolean moving=false;
     int column,row,index;
+
+    /*
+     * method: onTouch
+     * purpose: handles drag and drop of ships
+     * @param: arg0 - ship being dragged
+     * @param: arg1 - where ship is being dragged
+     */
     @Override
     public boolean onTouch(View arg0, MotionEvent arg1) {
 
@@ -99,7 +123,7 @@ public class select_ship_positions_ai  extends ActionBarActivity implements View
         p1.deleteShip(ships[index]);
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                diffX = arg0.getX()-arg1.getRawX();
+                diffX = arg0.getX() - arg1.getRawX();
                 diffY = arg0.getY() - arg1.getRawY();
                 moving = true;
                 break;

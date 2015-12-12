@@ -12,9 +12,17 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-
+/*
+* @authors: Jared, Daniel, Will
+* @version: December 10, 2015
+* This class represents the game's win screen
+* Class handles the following:
+* --Displays which player won
+* --Ability to restart game or go to main menu
+ */
 public class WinScreen extends ActionBarActivity {
 
+    // variables for players and ai
     Player player1, player2;
     AI aiPlayer;
     boolean isAI;
@@ -23,10 +31,13 @@ public class WinScreen extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_win_screen);
+
+        // gets and sets text to name of winner
         String p2 = (String)getIntent().getStringExtra("Winner");
         TextView win = (TextView) this.findViewById(R.id.PlayerWin);
         win.setText(p2 + "   WINS!!!");
 
+        // gets players passed from last intent
         player1 = (Player)getIntent().getSerializableExtra("Player1");
         isAI = getIntent().getExtras().getBoolean("isAI");
 
@@ -38,16 +49,28 @@ public class WinScreen extends ActionBarActivity {
         }
     }
 
-
+    /*
+     *method: backToMainMenu
+     * Purpose: switches to the main menu
+     * @param: view - the Button that was pressed
+      */
     public void backToMainMenu(View view) {
         Intent backToMainMenu = new Intent(this, Start_Page.class);
         startActivity(backToMainMenu);
         finish();
     }
 
+   /*
+    *method: restart
+    * Purpose: switches to the ship selection page
+    * @param: view - the Button that was pressed
+     */
+
     public void restart(View view) {
+        // If you are playing an ai
         if(isAI)
         {
+            // Saves the player's and ai's configs from last game and
             Player newPlayer1 = new Player();
             newPlayer1.setPlayerName(player1.getPlayerName());
             newPlayer1.setColorChoiceID(player1.getColorChoiceID());
@@ -59,6 +82,7 @@ public class WinScreen extends ActionBarActivity {
             newAIPlayer.setColorChoiceID(aiPlayer.getColorChoiceID());
             newAIPlayer.setProfilePicID(aiPlayer.getProfilePicID());
 
+            // sends configs in the intent to new ship selection page
             Intent restart = new Intent(this, select_ship_positions_ai.class);
             restart.putExtra("AI2", newAIPlayer);
             restart.putExtra("Player1", newPlayer1);
@@ -67,6 +91,8 @@ public class WinScreen extends ActionBarActivity {
         }
         else
         {
+            // Same as above, saves both player's configs and sends
+            // them for next game
             Player newPlayer1 = new Player();
             newPlayer1.setPlayerName(player1.getPlayerName());
             newPlayer1.setColorChoiceID(player1.getColorChoiceID());
