@@ -376,10 +376,7 @@ public class MainActivity extends ActionBarActivity {
             if (players[activePlayer].checkWin())
             {
                 //do whatever we want to end game and show win screen
-                if (activePlayer == 0)
-                    activePlayer = 1;
-                else
-                    activePlayer = 0;
+
                 wait.postDelayed(endGame, 1000);
                  //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
             }
