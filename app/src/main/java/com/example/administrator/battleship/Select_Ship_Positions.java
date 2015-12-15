@@ -62,8 +62,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         p1 = (Player)getIntent().getSerializableExtra("Player1");
         p2 = (Player)getIntent().getSerializableExtra("Player2");
 
-        //ImageView background = (ImageView)findViewById(R.id.Background);
-        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.player1positionspage, 1000, 600));
+
 
         ((RelativeLayout)findViewById(R.id.privacy)).setBackgroundColor(p1.getColorChoiceID());
     }
@@ -104,14 +103,18 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     boolean moving=false;
     int column,row,index;
     @Override
+    /**
+     * Method: onTouch
+     * @return boolean to indicate whether the player successfuly added a ship
+     */
     public boolean onTouch(View arg0, MotionEvent arg1) {
-
+        //Find the ship that the player touched
         for(index = 0; index<ships.length; index++)
             if(arg0 == findViewById(ships[index].viewID))
                 break;
-
-        Log.i("SHIP: "+ ships[index].shipID + "", arg0.getX()+ " " + arg0.getY());
+        //We will assume that the user is moving a ship every time they press it
         p1.deleteShip(ships[index]);
+        //Get the location fo their touch
         switch (arg1.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 diffX = arg0.getX()-arg1.getRawX();
@@ -124,8 +127,9 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                     y = arg1.getRawY() + diffY;
                     arg0.setX(x);
                     arg0.setY(y);
-                    Log.i("X Position : Y Position", x + "  " + y);
 
+                    //Takes care of the GUI between dragging the ship and placing it. makes the effect of the ship "jumping"
+                    //between valid locations
                     if(x<250)arg0.setX(149.47f);
                     else if(x<350 && x >250) arg0.setX(254.21f);
                     else if(x<460 && x >350) arg0.setX(355.61f);
@@ -149,7 +153,7 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                         else if (y < 1081.06 && y > 980.09) arg0.setY(980.09f);
                         else if (y < 1190 && y > 1081.1) arg0.setY(1081.06f);
                     }
-
+                    //set the row and column of the ship
                     column = setColumn(x);
                     row = setRow(y);
                     if(column+ships[index].length > 10 || row+ships[index].height > 10) findViewById(ships[index].viewID).setBackgroundColor(Color.RED);
@@ -158,12 +162,13 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i("X : Y", column + " " + row);
+                //add the ship to the grid if it is a valid spot
                 Boolean worked = p1.addShipToGrid(row,column, ships[index]);
                 if(worked)
                 {
                     ships[index].togglePlaced();
                 }
+                //if the spot wasnt valid, reset the ship
                 else if(!worked)
                 {
                     reset(ships[index]);
@@ -174,6 +179,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         return true;
     }
 
+    /**
+     * method: setColumn
+     * @param x the x position of the touch on the screen
+     * @return  c the column that the player placed their ship
+     */
     public int setColumn(float x)
     {
         int c = -1;
@@ -191,6 +201,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         return c;
     }
 
+    /**
+     * method: setRow
+     * @param y the y position of the touch on the screen
+     * @return r, the row that the player placed the ship
+     */
     public int setRow(float y){
         int r = -1;
         if(y<250) r = 0;
@@ -237,6 +252,11 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
     }
 
     boolean horizontal = false;
+
+    /**
+     * Method takes care of rotating the ships
+     * @param view the rotate ships button
+     */
     public void rotateShips(View view)
     {
         if(!horizontal) {
@@ -352,42 +372,5 @@ public class Select_Ship_Positions extends ActionBarActivity implements View.OnT
         return super.onOptionsItemSelected(item);
     }
 
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
 
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-    }
 }

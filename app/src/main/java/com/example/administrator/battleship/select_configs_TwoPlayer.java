@@ -111,7 +111,9 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
 
             }
         });
-
+        /**
+         * Find and declare all the GUI needed for the activity on the code end
+         */
         p1Name = (EditText) this.findViewById(R.id.Player1_Name);
         p2Name = (EditText) this.findViewById(R.id.Player2_Name);
         p1Name.setGravity(Gravity.CENTER);
@@ -134,17 +136,17 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         chosenPics[1] = R.drawable.sailor2_yes;
         chosenPics[2] = R.drawable.sailor3_yes;
 
-
-
-        //ImageView background = (ImageView)findViewById(R.id.Background);
-        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
     }
 
+    /**
+     * Method: setProfile1Pic
+     * @param view the picture that the person clicked
+     */
     public void setProfile1Pic(View view){
         hasPicPlayer1 = true;
         LinearLayout p1Pics = (LinearLayout) findViewById(R.id.Player1_Images);
         int p1Size = p1Pics.getChildCount();
-
+        //Loop through the pictures and set the correct one
         for(int i = 0; i<p1Size; i++)
             if(view != p1Pics.getChildAt(i))
                 p1Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
@@ -153,12 +155,15 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
                 p1.setProfilePicID(p1ProfilePics[i]);
             }
     }
-
+    /**
+     * Method: setProfile2Pic
+     * @param view the picture that the person clicked
+     */
     public void setProfile2Pic(View view){
         hasPicPlayer2 = true;
         LinearLayout p2Pics = (LinearLayout) findViewById(R.id.Player2_Images);
         int p2Size = p2Pics.getChildCount();
-
+        //Loop through the pictures and set the correct one
         for(int i = 0; i<p2Size; i++)
             if(view != p2Pics.getChildAt(i))
                 p2Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
@@ -190,7 +195,7 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
             startActivity(switchToSelect);
             finish();
         }
-
+        //If the players have not selected the correct info from the page, then alert them
         else
         {
             AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
@@ -287,42 +292,5 @@ public class select_configs_TwoPlayer extends ActionBarActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
 
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-    }
 }

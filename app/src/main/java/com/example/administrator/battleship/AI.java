@@ -93,17 +93,22 @@ public class AI extends Player implements Serializable{
         difficultyLevel = diffLevel;
     }
 
+    /**
+     * Method: guessToKill
+     * @returns the next point to attack
+     */
     //after having found the direction from the ArrayList, do it until it finds a sink.
     public Point guessToKill(){
         Point guessPoint = new Point(-1,-1);
-
-        if(!(lastHit.y+(1*yInterval) < 10 && lastHit.y+(1*yInterval) > -1 && lastHit.x+(1*xInterval) < 10 && lastHit.x+(1*xInterval) > -1)) //if the spot in the direction is not in bounds
+        //if the spot in the direction is not in bounds
+        if(!(lastHit.y+(1*yInterval) < 10 && lastHit.y+(1*yInterval) > -1 && lastHit.x+(1*xInterval) < 10 && lastHit.x+(1*xInterval) > -1))
         {
             lastHit = focusPoint; //go back to the first spot and
             xInterval = -1 * xInterval; //go the opposite direction
             yInterval = -1 * yInterval; //go the opposite direction
             return guessToKill(); //then guess that new point (yes, this is recursive... can only cause infinite loop with a ship that is 10 long(nonexistant)
         }
+        //find the next point to guess
         guessPoint.x = lastHit.x + 1*xInterval;
         guessPoint.y = lastHit.y + 1*yInterval;
 
@@ -113,9 +118,8 @@ public class AI extends Player implements Serializable{
         if(cheater[guessPoint.x][guessPoint.y] > 0) //if the new spot is a hit
         {
             lastHit = guessPoint;
-            //check sink? might have to be done in main method so assume the sink case is handled already
-            // nothing special.. should just keep going next time till a miss (important)
         }
+
         else if(cheater[guessPoint.x][guessPoint.y] == -1)
         {
             lastHit = focusPoint; //go back to the first spot and
@@ -128,24 +132,14 @@ public class AI extends Player implements Serializable{
             else
                 return guessToKill(); //then guess again going the new way that new point (yes, this is recursive... can only cause infinite loop with a ship that is 10 long(nonexistant)
         }
-        else if(cheater[guessPoint.x][guessPoint.y] == 0) //if the new spot missed (should be able to be changed to just else by final release)
+        //if the new spot missed then go back to the first spot hit and start over
+        else if(cheater[guessPoint.x][guessPoint.y] == 0)
         {
             lastHit = focusPoint; //go back to the first spot and
             xInterval = -1 * xInterval; //go the opposite direction
             yInterval = -1 * yInterval; //go the opposite direction
             if(cheater[focusPoint.x + 1*xInterval][focusPoint.y + 1*yInterval] == -1) //if after missing direction and the other is also guessed.....
-            { //then we either screwed up calling the AI to "forget" or it thought it was a horizontal ship when really was two verticals side by side.
-
-                    /*for(int i = 0; i<surroundingSpots.size(); i++)
-                    {
-                        if(guessPoint == surroundingSpots.get(i))
-                        {
-                            surroundingSpots.remove(i);
-                            break;
-                        }
-
-                    } */
-
+            {
                 dirKnown = false; //will go through the other directions to re-do this process the opposite direction(assuming later case) next time the AI attacks(this attack is the miss)
             }
         }
@@ -154,10 +148,15 @@ public class AI extends Player implements Serializable{
         return guessPoint;
     }
 
-    //go through the Arraylist until it finds a direction that is a hit
+    /**
+     * go through the Arraylist until it finds a direction that is a hit
+     * @returns a point for the ai to attack
+     */
+
     public Point findDir(){
         Point guessPoint = new Point(-1,-1);
         int guessIndex = (int)(Math.random()*surroundingSpots.size()-1);
+        //If the surrounding spots have allready been guessed or are empty then guess a random spot
         if(guessIndex == -1)
         {
             return rollTheDice();
@@ -186,6 +185,10 @@ public class AI extends Player implements Serializable{
      https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html
      Solution: We used a do while loop instead.
      */
+    /**
+     * rollTheDice picks a random point and attacks it
+     * @returns a random point to attack
+     */
     //uses the difficulty to decide weather to return a hit spot or a missed
     public Point rollTheDice(){
         Point guessPoint = new Point(-1,-1);
@@ -210,13 +213,19 @@ public class AI extends Player implements Serializable{
         lastHit = guessPoint;
         return guessPoint;
     }
-
+    /**
+     * Copy the board for the AI to be able to use
+     */
     public void copyBoard(int[][] p1Board){
         for(int r = 0; r<p1Board.length; r++)
             for(int c = 0; c<p1Board.length; c++)
                 cheater[r][c] = p1Board[r][c];
     }
 
+    /**
+     * Method: fillSurroundingSpots
+     * Purpose: To find all spots around a hit that are either above, below to the left or right that have not been hit yet
+     */
     public void fillSurroundingSpots(){
         //check the bounds of all points that are directly above below.. etc to make sure we should try them
         //And check to see if AI has already attacked that spot
@@ -234,6 +243,9 @@ public class AI extends Player implements Serializable{
             surroundingSpots.add(new Point(focusPoint.x , focusPoint.y+1));
     }
 
+    /**
+     * Essentially reset the AI
+     */
     public void forget()
     {
         hasHit = false;
@@ -245,13 +257,22 @@ public class AI extends Player implements Serializable{
         yInterval = 0;
     }
 
+    /**
+     * For use when passing the AI back to restart a game
+     */
     public void unInitialize(){
         surroundingSpots.clear();
         focusPoint = null;
         lastHit = null;
     }
 
-
+    /**
+     * AIAttack calls the methods in the correct order for hits and misses.
+     * guessToKill is when the direction is known
+     * findDir will search around the hit to find which direction the ship is going
+     * rollTheDice will guess a random spot
+     * @returns the point that the AI attacked
+     */
     public Point AIAttack() {
 
         //***** Will ******

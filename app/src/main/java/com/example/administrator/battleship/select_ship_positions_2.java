@@ -18,7 +18,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-
+//FOR COMMENTS, see Select_Ship_Positions, these classes use similar code on three different activities to improve flow of the
+//game
 public class select_ship_positions_2 extends ActionBarActivity implements View.OnTouchListener{
 
     ImageView Vship5,Vship4,Vship3,Vship2,Vship1,Hship5,Hship4,Hship3,Hship2,Hship1;

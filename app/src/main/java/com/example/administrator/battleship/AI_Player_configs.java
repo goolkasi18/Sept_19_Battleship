@@ -55,6 +55,10 @@ public class AI_Player_configs extends ActionBarActivity {
         setContentView(R.layout.activity_ai__player_configs);
         Button startB = (Button) this.findViewById(R.id.select_ships);
         startB.setVisibility(View.GONE);
+
+        /**
+         * Following lines of code instantiate pictures and buttons that we use for the config page
+         */
         p1 = new Player();
         p2 = new AI();
 
@@ -89,9 +93,10 @@ public class AI_Player_configs extends ActionBarActivity {
         diff[1] = Medium;
         diff[2] = Hard;
 
-        //ImageView background = (ImageView)findViewById(R.id.Background);
-        //background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.title2, 1000, 600));
-            Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinner);
+        /*
+        set up the two spinners we use for the colors
+         */
+        Spinner colorSpinnerP1 = (Spinner) findViewById(R.id.ColorSpinner);
         Spinner colorSpinnerP2 = (Spinner) findViewById(R.id.Color2_spinner);
 
         ArrayAdapter<CharSequence> colorAdapter = ArrayAdapter.createFromResource(this,R.array.colors_array , R.layout.support_simple_spinner_dropdown_item);
@@ -100,7 +105,9 @@ public class AI_Player_configs extends ActionBarActivity {
         // Apply the adapter to the spinner
         colorSpinnerP1.setAdapter(colorAdapter);
         colorSpinnerP2.setAdapter(colorAdapter);
-
+        /**
+         * Spinner Logic so that the player can select the correct color
+         */
         colorSpinnerP1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -123,7 +130,9 @@ public class AI_Player_configs extends ActionBarActivity {
 
             }
         });
-
+        /**
+         * Spinner Logic so that the player can select the correct color
+         */
         colorSpinnerP2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -148,11 +157,20 @@ public class AI_Player_configs extends ActionBarActivity {
         });
     }
 
+    /**
+     * Method: setDifficulty
+     * Purpose: Takes a view (the difficulty selected) and sets the AI difficulty respectively
+     * @param view: the difficulty button that was pressed
+     */
     public void setDifficulty(View view) {
+        //To indicate that the user selected a difficulty
         hasDifficulty = true;
         Button nextDiff = (Button) view;
-        //Set the background of the button clicked to RED to indicate it was clicked
+        //Set the background of the selected button to RED
         nextDiff.getBackground().setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+        /**
+         * Loop through the other buttons and set the difficulty, and all the other buttons to green
+         */
         for (int i = 0; i < 3; i++) {
             if (nextDiff.getId() == diff[i].getId()) {
                 switch (i) {
@@ -172,10 +190,16 @@ public class AI_Player_configs extends ActionBarActivity {
         }
     }
 
+    /**
+     * Method: setProfile1Pic
+     * Purpose: Takes a view which is the picture that the player selected
+     * @param view the pic that the user chose
+     */
     public void setProfile1Pic(View view){
         LinearLayout p1Pics = (LinearLayout) findViewById(R.id.Player1_Images);
         int p1Size = p1Pics.getChildCount();
         hasPictureHuman = true;
+        //Loop through the pictures and set the correct one that the user chose
         for(int i = 0; i<p1Size; i++)
             if(view != p1Pics.getChildAt(i))
                 p1Pics.getChildAt(i).setBackgroundResource(defaultPics[i]);
@@ -185,6 +209,10 @@ public class AI_Player_configs extends ActionBarActivity {
             }
     }
 
+    /**
+     * Sets the picture for player 2
+     * @param view
+     */
     public void setProfile2Pic(View view){
         hasPictureAI = true;
         LinearLayout p2Pics = (LinearLayout) findViewById(R.id.Player2_Images);
@@ -224,6 +252,12 @@ public class AI_Player_configs extends ActionBarActivity {
             startB.setVisibility(View.GONE);
     }
 
+    /**
+     * Method: startGame
+     * Purpose: start the game and pass in the players to the next activity.
+     *
+     * @param view
+     */
     public void startGame(View view){
         if(hasDifficulty && hasPictureAI && hasPictureHuman){
             p1.setPlayerName(p1Name.getText().toString());
@@ -235,7 +269,7 @@ public class AI_Player_configs extends ActionBarActivity {
             finish();
 
         }
-
+        //Display an alert if any of the players did not select the right items
         else{
             AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
             deletePrompt.setMessage("choose a picture for both players, and a difficulty");
@@ -260,15 +294,6 @@ public class AI_Player_configs extends ActionBarActivity {
         finish();
     }
 
-
-
-
-
-
-
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -290,42 +315,5 @@ public class AI_Player_configs extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
 
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-    }
 }

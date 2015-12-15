@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity {
         miss = soundPool.load(this, R.raw.splashsoundeffect, 1);
 
         players[0] = p1;
-        //there might not be a difference with what is below
+        //If it is in AI game, then cast the second player to an AI
         if(isAI) {
             a1 = (AI) getIntent().getSerializableExtra("Player2");
             a1.copyBoard(p1.squares);
@@ -112,7 +112,7 @@ public class MainActivity extends ActionBarActivity {
         p2_pre = (Button) this.findViewById(R.id.p2);
         p1_pre.setText(p1.getPlayerName() + " Ready?");
         if(!isAI) {
-            Log.i("Message", "Message");
+
             p2_pre.setText(p2.getPlayerName() + " Ready?");
             p2Layout.setBackgroundColor(p2.colorChoiceID);
         }
@@ -149,9 +149,10 @@ public class MainActivity extends ActionBarActivity {
 
         turnGui = (ImageView)findViewById(R.id.PlayerTurn);
 
-        //ImageView background = (ImageView)findViewById(R.id.Background);
-        // background.setImageBitmap(decodeSampledBitmapFromResource(getResources(), R.drawable.board2, 1000, 600));
 
+        /**
+         * the hit thread takes care of playing sound and  vibration when there is a hit
+         */
         hit = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -166,7 +167,9 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-
+        /**
+         * the sink thread takes care of playing sound and vibrations when a ship is sunk
+         */
         sink = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -185,7 +188,9 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-
+        /**
+         * Takes care of the timing between turns
+         */
         endTurn = new Runnable() {
             @Override
             public void run(){
@@ -194,6 +199,9 @@ public class MainActivity extends ActionBarActivity {
                     AITurn();
             }
         };
+        /**
+         * takes care of the timing at the end of the game
+         */
         endGame = new Runnable() {
             @Override
             public void run(){
@@ -206,7 +214,9 @@ public class MainActivity extends ActionBarActivity {
         ((TextView)findViewById(R.id.RightPlayerName)).setText("Your Enemy: " + players[0].getPlayerName());
         ((TextView)findViewById(R.id.LeftPlayerName)).setText("Your Enemy: " + players[1].getPlayerName());
     }
-
+    /*
+    Method clears the layout covering the corresponding users screen and lets them start the game
+     */
     public void startGame(View view)
     {
         if(view instanceof RelativeLayout)
@@ -229,6 +239,7 @@ public class MainActivity extends ActionBarActivity {
     public void exitToStart(View view)
     {
         final Intent main = new Intent(this, Start_Page.class);
+        //Set an alert so the user cant quit without admitting they want to
         AlertDialog.Builder deletePrompt = new AlertDialog.Builder(this);
         deletePrompt.setMessage("Are you sure you want to exit the game?");
         deletePrompt.setCancelable(false);
@@ -258,12 +269,15 @@ public class MainActivity extends ActionBarActivity {
     */
     public void checkHit(View view)
     {
+        //Check to make sure it is the correct players turn on the correct side....
         if(((view.getParent() == findViewById(R.id.right_button_grid) && activePlayer == 0)||(view.getParent() == findViewById(R.id.left_button_grid) && activePlayer == 1))&&(locked == false)) {
             locked = true;
             view.setEnabled(false);
+            //Find the row and col they attacked
             int Rcol = view.getLeft() / 80;
             int Rrow = view.getTop() / 80;
             int row,col;
+            //Manipulate the row and column, in select ships the orientation is different than in the actual game
             if(activePlayer == 0)
             {
                  col = 9-Rrow;
@@ -274,11 +288,11 @@ public class MainActivity extends ActionBarActivity {
                  col = Rrow;
                  row = 9-Rcol;
             }
-
+            //If the row and column was a hit
             if(players[activePlayer].attack(row,col)) {
 
                 hit.run();
-
+                //Start the corresponding hit animations
                 if(activePlayer == 0)
                 {
                     view.setBackgroundResource(R.drawable.right_hit_animation);
@@ -290,7 +304,7 @@ public class MainActivity extends ActionBarActivity {
                     view.setBackgroundResource(R.drawable.left_hit_animation);
                     ((AnimationDrawable)view.getBackground()).start();
                 }
-
+                //If they sunk a ship then set the ships image to display this, and check to see if anybody won
                 if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
                     sink.run();
                     int index = players[activePlayer].squares[row][col]-1;
@@ -302,14 +316,17 @@ public class MainActivity extends ActionBarActivity {
                         player2Remaining[index].setBackgroundResource(player2Down[index]);
                     //draw the new ship on the screen as sunk
                 }
+                //End the game
                 if (players[activePlayer].checkWin())
                 {
                     wait.postDelayed(endGame, 1000);
                     return;
                 }
             }
+            //Otherwise the player must have missed
             else
             {
+                //change the images for that tile on the correct side of the board
                 if(activePlayer == 0) {
                     if(Start_Page.muteToggle == 0)
                         soundPool.play(miss, 1f, 1f, 1, 0, 1.5f);
@@ -344,27 +361,30 @@ public class MainActivity extends ActionBarActivity {
         locked = false;
     }
 
+    /**
+     * AITurn takes care of the AI GUI
+     */
     public void AITurn(){
         locked = true;
         guessAI = a1.AIAttack();
-
+        //get a row and column
         int row = guessAI.x;
         int col = guessAI.y;
         int Rcol = row;
         int Rrow = 9-col;
 
-        //this might also work with the children going from 0 to 99 so we use math to find the spot
+
         ImageButton testing2 = (ImageButton) aiBoard.getChildAt(Rrow*10 + Rcol);
 
-        //needs to impliment below
+        //If the AI hit a ship...
         if(players[activePlayer].attack(row,col)) {
             hit.run();
 
             testing2.setBackgroundResource(R.drawable.right_hit_animation);
             ((AnimationDrawable)testing2.getBackground()).start();
-
+            //If the AI sunk a ship
             if (players[activePlayer].checkSink(players[activePlayer].ships[players[activePlayer].squares[row][col]-1])) {
-
+                //Run the sink thread, and let the AI know they sunk a ship by telling it to forget (essentially reset to random guessing mode)
                 sink.run();
                 a1.forget();
                 int index = players[activePlayer].squares[row][col]-1;
@@ -375,12 +395,13 @@ public class MainActivity extends ActionBarActivity {
             }
             if (players[activePlayer].checkWin())
             {
-                //do whatever we want to end game and show win screen
+
 
                 wait.postDelayed(endGame, 1000);
-                 //this is a pace holder to just pop to main screen upon winning to show that it recognizes it
+                 //this is a place holder to just pop to main screen upon winning to show that it recognizes it
             }
         }
+        //Perform corresponding animations if they missed
         else
         {
             if(Start_Page.muteToggle == 0)
@@ -391,6 +412,9 @@ public class MainActivity extends ActionBarActivity {
         wait.postDelayed(endTurn, 1000);
     }
 
+    /**
+     * Go to the win screen will send the players as extras to the win screen and display the coressponding winners name
+     */
     public void goToWin(){
         int winningPlayer;
         if(activePlayer == 0)
@@ -412,56 +436,4 @@ public class MainActivity extends ActionBarActivity {
         finish();
     }
 
-
-    /*
-    *Method: calculateInSampleSize
-    *purpose: changes the size of an image so our game doesnt run out of memory,
-    *         essentially lowers the resolution of images
-    * @return: int
-     */
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
-    /*
-    *   see above comment, helps to change the resolution of images
-    *   @param: res
-    *   @param: resID
-    *   @param: reqWidth
-    *   @param: reqHeight
-     */
-    public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
-                                                         int reqWidth, int reqHeight) {
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(res, resId, options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeResource(res, resId, options);
-    }
 }

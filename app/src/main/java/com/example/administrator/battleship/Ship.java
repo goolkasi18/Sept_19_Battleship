@@ -48,6 +48,10 @@ public class Ship implements Serializable{
         viewID = 0;
     }
 
+    /**
+     * Setters and Getters
+     *
+     */
     public boolean getPlaced() {return placed;}
 
     public void togglePlaced()
