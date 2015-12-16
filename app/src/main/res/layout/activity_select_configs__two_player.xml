@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.battleship.Select_Configs_2Player">
+    tools:context="com.example.administrator.battleship.Select_Configs_2Player"
+    android:background="@drawable/blank_page">
 
     <LinearLayout
         android:orientation="vertical"
@@ -14,7 +15,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/linearLayout"
-        android:layout_toStartOf="@+id/linearLayout">
+        android:layout_toStartOf="@+id/linearLayout"
+        android:visibility="visible"
+        android:id="@+id/linearLayout2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,7 +129,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/linearLayout"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:visibility="visible">
 
         <TextView
             android:layout_width="wrap_content"
@@ -245,13 +249,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Game"
         android:id="@+id/select_ships"
         android:layout_alignWithParentIfMissing="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignRight="@+id/back_Button"
-        android:layout_alignEnd="@+id/back_Button"
+        android:onClick="switchToSelectShips"
         android:layout_centerVertical="true"
-        android:onClick="switchToSelectShips" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/start" />
 
 </RelativeLayout>
